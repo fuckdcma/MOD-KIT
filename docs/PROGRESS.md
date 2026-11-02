@@ -100,3 +100,10 @@
 - Qwen Guided now matches static tool baseline: **3 exact +1 template +1 unproven (T001 prefab origin)**. Independent evaluator reproduction matches submitted JSON report. This establishes a successful *functional regression on UnityTextLab A* only, not generalization or runtime hooking.
 - Prior guided v0.7 =3 exact +0 template +2 unknown; autonomous v0.5 =1 exact. Never mix strategy scores.
 - Next prioritize private holdout UnityTextLab-B; avoid leaking game/seed/ground truth via public repo. Review [protocol](M04_UNSEEN_HOLDOUT_PROTOCOL.md).
+
+
+## Milestone 04 v0.1 — generator implemented, Windows validation pending
+
+- 20-case cryptographically fresh local holdout generator (15 positives, 5 negatives), with Unity C# lab/Editor scene builder, separate M04 run scripts using frozen M03 v0.8, conservative post-freeze scorer, SHA build manifest and privacy rules.
+- Public release: [source](../source/m04_unseen_v01/), [ZIP](../archives/ModStudioAI_M04_UnseenLab_v01.zip). 26/26 Python unit tests + temporary generation smoke passed. **No Unity 6.3 compilation or build from M04 exists yet; no model score yet.**
+- Next on user Windows: create empty UnityTextLabB project in Unity Hub, import TMP essentials, generate with `Scripts/Create_M04_Local.ps1`, Editor menu scene creation, Mono build; report only build success/Unity errors without source/truth. Do not leak private answers to public repo.

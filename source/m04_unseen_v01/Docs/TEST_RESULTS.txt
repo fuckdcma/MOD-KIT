@@ -1,0 +1,5 @@
+M04 UnseenLab-B Generator v0.1
+Python 3.11 Linux container; static tests only.
+26/26 unittest tests PASSED.
+Temp directory smoke: UnityProject scaffold + private spec/truth created with ephemeral seed, 20 records; temp deleted.
+NOT TESTED: Unity Editor 6000.3.x compile/build, real REA on B, real UnityPy scan on B, Ollama on B.

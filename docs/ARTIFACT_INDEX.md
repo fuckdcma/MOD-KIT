@@ -77,3 +77,12 @@ Không coi `provenance_links.json` v0.3 là đã có trong kho vì người dùn
 - [Original user RAR (all 11 JSON including v0.7 History)](../raw_uploads/Outputs_M03_Ollama_Guided_v08_20261102.rar); [original PowerShell run log](../history/M03_Ollama_v08_Run_Log_20261102.txt); [SHA-256 file manifest](../evidence/m03/runs/20261102_ollama_v08_guided/SHA256_MANIFEST.json).
 - [Independent QA report](../reports/m03/BAO_CAO_XAC_MINH_M03_GUIDED_V08_20261102.md)
 - [M04 unseen holdout testing protocol](M04_UNSEEN_HOLDOUT_PROTOCOL.md). Private seed and answer key must NOT enter this public repo.
+
+
+## M04 v0.1 public generator artifacts (NO private holdout data)
+
+- [Browsable 17 source/test/docs/manifest files](../source/m04_unseen_v01/)
+- [Download release ZIP](../archives/ModStudioAI_M04_UnseenLab_v01.zip)
+- [Source byte SHA-256 manifest](../source/m04_unseen_v01/PUBLIC_SOURCE_SHA256.json)
+- [Privacy/evaluation rules](../source/m04_unseen_v01/Docs/PRIVACY_AND_EVALUATION.md)
+- No generated UnityTextLabB project, seed, case values, private ground truth, Editor build, REA/UnityPy B outputs, or model scores have been uploaded to GitHub. These must remain private until predictions locked.

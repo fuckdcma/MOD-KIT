@@ -1,0 +1,31 @@
+test_hash_manifest_contains_only_file_hashes (test_m04.BuildFingerprintTests.test_hash_manifest_contains_only_file_hashes) ... ok
+test_csharp_quoted_non_ascii_and_escape (test_m04.CaseGenerationTests.test_csharp_quoted_non_ascii_and_escape) ... ok
+test_diagnostic_duplicate_is_not_extra_ui (test_m04.CaseGenerationTests.test_diagnostic_duplicate_is_not_extra_ui) ... ok
+test_distribution_three_per_positive_and_five_distinct_negative (test_m04.CaseGenerationTests.test_distribution_three_per_positive_and_five_distinct_negative) ... ok
+test_dynamic_placeholders_and_snapshot (test_m04.CaseGenerationTests.test_dynamic_placeholders_and_snapshot) ... ok
+test_generated_Csharp_has_actual_literal_and_String_Format (test_m04.CaseGenerationTests.test_generated_Csharp_has_actual_literal_and_String_Format) ... ok
+test_has_exactly_twenty_cases (test_m04.CaseGenerationTests.test_has_exactly_twenty_cases) ... ok
+test_invalid_seed (test_m04.CaseGenerationTests.test_invalid_seed) ... ok
+test_json_resource_unique (test_m04.CaseGenerationTests.test_json_resource_unique) ... ok
+test_private_data_not_shipped_in_template (test_m04.CaseGenerationTests.test_private_data_not_shipped_in_template) ... ok
+test_reproducible_fixed_test_seed (test_m04.CaseGenerationTests.test_reproducible_fixed_test_seed) ... ok
+test_seed_changes_cases_and_ids_not_values_only (test_m04.CaseGenerationTests.test_seed_changes_cases_and_ids_not_values_only) ... ok
+test_generates_private_outputs_and_public_fingerprint_only (test_m04.LocalGenerationTests.test_generates_private_outputs_and_public_fingerprint_only) ... ok
+test_refuses_different_unity_version (test_m04.LocalGenerationTests.test_refuses_different_unity_version) ... ok
+test_refuses_original_lab_name (test_m04.LocalGenerationTests.test_refuses_original_lab_name) ... ok
+test_refuses_overwrite_secret_seed (test_m04.LocalGenerationTests.test_refuses_overwrite_secret_seed) ... ok
+test_refuses_private_inside_project (test_m04.LocalGenerationTests.test_refuses_private_inside_project) ... ok
+test_refuses_public_git_worktree (test_m04.LocalGenerationTests.test_refuses_public_git_worktree) ... ok
+test_all_fifteen_source_text_matches (test_m04.PrivateScorerTests.test_all_fifteen_source_text_matches) ... ok
+test_duplicate_string_not_conflated (test_m04.PrivateScorerTests.test_duplicate_string_not_conflated) ... ok
+test_freeze_copy_hashes_and_public_only_summary (test_m04.PrivateScorerTests.test_freeze_copy_hashes_and_public_only_summary) ... ok
+test_incomplete_refused (test_m04.PrivateScorerTests.test_incomplete_refused) ... ok
+test_negative_log_only_false_positive (test_m04.PrivateScorerTests.test_negative_log_only_false_positive) ... ok
+test_prefab_scene_snapshot_is_not_supported_and_flags_false_claim (test_m04.PrivateScorerTests.test_prefab_scene_snapshot_is_not_supported_and_flags_false_claim) ... ok
+test_repeat_names_are_unique (test_m04.PrivateScorerTests.test_repeat_names_are_unique) ... ok
+test_wrong_dynamic_kind_not_counted (test_m04.PrivateScorerTests.test_wrong_dynamic_kind_not_counted) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.030s
+
+OK

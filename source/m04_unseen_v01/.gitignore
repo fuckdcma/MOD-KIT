@@ -1,0 +1,14 @@
+# This applies to any local copy of the public GENERATOR source, not the generated Unity project.
+PRIVATE_DO_NOT_UPLOAD/
+Runs_LOCAL/
+UnityTextLabB/
+seed_PRIVATE.hex
+ground_truth_PRIVATE.json
+holdout_manifest_PRIVATE.json
+M04HoldoutLocal.json
+M04GeneratedHardcoded.cs
+M04GeneratedFormat.cs
+M04GeneratedDiagnostics.cs
+__pycache__/
+*.pyc
+*.log

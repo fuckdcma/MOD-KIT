@@ -39,3 +39,10 @@ Kiểm tra liệu REA + Unity serialized asset reader + Qwen Guided/Autonomous c
 2. Chạy Unity build Mono; chụp runtime UI, xuất verification evidence giữ kín; tính SHA-256 của exe/dll/assets.
 3. Cấp cho Mod Studio AI chỉ build/REA/asset observations; chạy autonomous và guided với Qwen3.5:4b; giữ cấu hình giống v0.8 rồi thử các điều kiện khác.
 4. QA đối chiếu ở quy trình riêng; công bố score tổng hợp/hashes sau khi test; không công bố answer key nếu muốn tái dùng holdout.
+
+
+## Implementation status v0.1 — 2026-11-02
+
+Protocol implementation: [UnseenLab-B generator and QA source](../source/m04_unseen_v01/) and [ZIP](../archives/ModStudioAI_M04_UnseenLab_v01.zip). 26/26 Python tests pass, generated private test seed deleted afterward; no Unity compiled output exists yet.
+
+The public ZIP contains ONLY generator logic and no hidden answer key. On user Windows the seed and private truth are created outside Git, in `D:\\ModStudioAI\\Milestone04\\PRIVATE_DO_NOT_UPLOAD`; user must keep project source/spec private, run frozen M03 v0.8 agent against build B and freeze outputs before scoring. Do not publish the B answer key in this public repository.

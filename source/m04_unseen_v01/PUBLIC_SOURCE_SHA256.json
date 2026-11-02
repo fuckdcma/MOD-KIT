@@ -1,0 +1,86 @@
+{
+  "schema": "modstudio.m04.public_source_manifest.v0.1",
+  "kind": "PUBLIC GENERATOR SOURCE ONLY",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 341,
+      "sha256": "7d35503f44bdbe6a558531dd431ab89afe168092ac286a408ff217431db12225"
+    },
+    {
+      "path": "Docs/M04_NOTES.md",
+      "bytes": 606,
+      "sha256": "5bad610adf264ba3840bdd16cdd1524c67485c4aa0b14002322f5b8632dc1386"
+    },
+    {
+      "path": "Docs/M04_RELEASE_NOTES.md",
+      "bytes": 1140,
+      "sha256": "aaabb0980dc75074e30915a189ced2a231a454713b2e2b0cc8ada2cf1a8b7958"
+    },
+    {
+      "path": "Docs/PRIVACY_AND_EVALUATION.md",
+      "bytes": 1901,
+      "sha256": "b305a98ab5cb2f2defd372aa9d37c658b093f941c018b967132de0f0d7ec493c"
+    },
+    {
+      "path": "Docs/TEST_RESULTS.txt",
+      "bytes": 329,
+      "sha256": "87bced760a640601e8c2c0c4983244618872b684fcc60593c677bb6e1f70dac8"
+    },
+    {
+      "path": "Docs/TEST_RESULTS_FULL.txt",
+      "bytes": 3151,
+      "sha256": "93a3ab783f515b6bbfe5330362f4b460a0a517981db5110b715137b0d040a2b6"
+    },
+    {
+      "path": "README_VI.md",
+      "bytes": 8980,
+      "sha256": "3966e78a1fb607f732840f846178ca87a1a04944970ce8800b743524af3fda43"
+    },
+    {
+      "path": "Scripts/Create_M04_Local.ps1",
+      "bytes": 944,
+      "sha256": "cde6a8ff3b79a4517b7bff82eaddc9064c6fe87de38d3fa9aabc81f19e4e9607"
+    },
+    {
+      "path": "Scripts/Evaluate_M04_Private.ps1",
+      "bytes": 1932,
+      "sha256": "e807cc0d316afa51dd557f116192d404dbee56928c3d9e579c50b183011e9d53"
+    },
+    {
+      "path": "Scripts/Run_M04.ps1",
+      "bytes": 5974,
+      "sha256": "956fce746b1f9a788b054232b6aa2126a8ee35a4ce4eae5ed299ab29c334cfc6"
+    },
+    {
+      "path": "UnityTemplate/Assets/Editor/M04LabBuilder.cs",
+      "bytes": 9946,
+      "sha256": "c8d2ebb6daac126dc16ca4d841526c984551ae0cf8fb33671b143bac02dff38e"
+    },
+    {
+      "path": "UnityTemplate/Assets/M04/Runtime/M04LabRuntime.cs",
+      "bytes": 1764,
+      "sha256": "7aea5b1404fef297b538d2f6a3528e7ef65c85af88caf3de242fa7574bbf6f4a"
+    },
+    {
+      "path": "src/m04_evaluate.py",
+      "bytes": 9133,
+      "sha256": "7d901a42e47b753613aa4c17a3d0c078fee485aa6121e7de9f9e98b5fa44f30f"
+    },
+    {
+      "path": "src/m04_generate.py",
+      "bytes": 12610,
+      "sha256": "377f4ed1123129878d8f177c284f328eb6b44f00b0d8002e1003f0db8d43ce8f"
+    },
+    {
+      "path": "src/m04_seal.py",
+      "bytes": 2145,
+      "sha256": "c91d7fc4c90ce80fd450e1c67d84d9017c15125154a9aaf96215285964e94a08"
+    },
+    {
+      "path": "tests/test_m04.py",
+      "bytes": 11068,
+      "sha256": "e576756e5e9c397c8fc666af1931b4707c12cc1b546ec69664dcaab74c5d3a33"
+    }
+  ]
+}

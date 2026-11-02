@@ -97,3 +97,10 @@ Không thể tự động chép nguyên văn toàn bộ transcript ChatGPT sang 
 - User Windows **96/96 tests passed**, Qwen3.5 4B Guided `completed=true`, **4 observations**; evaluator **3 exact + 1 runtime template + 1 not proven**, matching the static-rule baseline. T004 `Health: {0}/100` is correctly tagged `runtime_generated` by the model, not auto-fixed. T001 serialized-prefab origin remains unproven.
 - [Original RAR](raw_uploads/Outputs_M03_Ollama_Guided_v08_20261102.rar), [PowerShell log](history/M03_Ollama_v08_Run_Log_20261102.txt), [SHA256 manifest](evidence/m03/runs/20261102_ollama_v08_guided/SHA256_MANIFEST.json). The evaluator was reproduced independently with semantic JSON match.
 - **Next:** [M04 unseen holdout protocol](docs/M04_UNSEEN_HOLDOUT_PROTOCOL.md). Public lab is functional regression, not a secret benchmark; Qwen autonomous and runtime-hook provenance are not solved by this result.
+
+
+## Milestone 04 — Unseen UnityTextLab-B generator v0.1 (2026-11-02)
+
+[Browse M04 source](source/m04_unseen_v01/) · [Release ZIP](archives/ModStudioAI_M04_UnseenLab_v01.zip) · [Windows setup in Vietnamese](source/m04_unseen_v01/README_VI.md).
+
+**26/26 Python tests passed and ephemeral private-seed smoke test passed.** M04 is a **public generator/evaluator**, not a fixed publicly labelled dataset. It creates 20 cases locally (15 UI, 5 negative), a fresh 256-bit seed and private ground truth OUTSIDE public MOD-KIT. M03 v0.8 stays frozen for evaluation. **Unity 6000.3 Editor compile/build and Qwen testing on B have not yet been run.** Never commit generated Unity project, ProjectSettings/M04HoldoutLocal.json, seed, ground truth, or raw model outputs until safe to publish.
