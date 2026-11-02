@@ -1,0 +1,15 @@
+{
+  "schema": "modstudio.m04.v10.public_files.sha256",
+  "package": "ModStudioAI_M04_EvidenceGrounded_v10",
+  "visibility": "PUBLIC_CODE_ONLY",
+  "caveat": "No user B generated strings, private seed, ground truth, or raw agent outputs included",
+  "files": {
+    "Docs/PROTOCOL.md": "3d14d52b29f17bd60934dcca605c4551c3d06953b6db2ebf6e7a2d530f0441d0",
+    "Docs/RELEASE_NOTES.md": "ee48e1d83802b690a8c48e5b8d6d59c9a63fc28db11b859425c59fa4562d18ab",
+    "Docs/TEST_RESULTS.txt": "9a222178973a8fdeeb940e82426bf531c847b9dc9306f54e64b2b8266c78416e",
+    "README_VI.md": "1cc72495df12313d5377f66a4511264e86c782362953ce0e846186c4c5d988c4",
+    "Scripts/Run_M04_EvidenceGrounded_v10.ps1": "2e002fe271d58688fdd324bdbebb73b4d9c4ee6cb74cbd2783598717a0f67bf1",
+    "src/m04_evidence_agent_v10.py": "f1c847229a707ec72d79d9856732e73d9446e2ad166f12226daba04ae7ce30f6",
+    "tests/test_evidence_grounded_v10.py": "32bf4e859a0f96b24845bd4e1dae71da3c88566810c2bf43e1d81d9ad0837a14"
+  }
+}

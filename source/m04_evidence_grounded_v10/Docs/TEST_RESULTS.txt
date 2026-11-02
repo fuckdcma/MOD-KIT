@@ -1,0 +1,29 @@
+test_duplicate_method_names_refused (test_evidence_grounded_v10.EvidenceIndexTests.test_duplicate_method_names_refused) ... ok
+test_empty_catalog_is_incomplete_not_model_success (test_evidence_grounded_v10.EvidenceIndexTests.test_empty_catalog_is_incomplete_not_model_success) ... ok
+test_empty_selection_valid_but_no_claims (test_evidence_grounded_v10.EvidenceIndexTests.test_empty_selection_valid_but_no_claims) ... ok
+test_failing_batch_discards_partial_matches (test_evidence_grounded_v10.EvidenceIndexTests.test_failing_batch_discards_partial_matches) ... ok
+test_hardcoded_literal_in_exact_method_is_validated (test_evidence_grounded_v10.EvidenceIndexTests.test_hardcoded_literal_in_exact_method_is_validated) ... ok
+test_local_ollama_json_selection_only (test_evidence_grounded_v10.EvidenceIndexTests.test_local_ollama_json_selection_only) ... ok
+test_local_ollama_rejects_length_even_if_valid_json (test_evidence_grounded_v10.EvidenceIndexTests.test_local_ollama_rejects_length_even_if_valid_json) ... ok
+test_local_ollama_rejects_unknown_ids_from_json (test_evidence_grounded_v10.EvidenceIndexTests.test_local_ollama_rejects_unknown_ids_from_json) ... ok
+test_log_literal_excluded_even_with_setter (test_evidence_grounded_v10.EvidenceIndexTests.test_log_literal_excluded_even_with_setter) ... ok
+test_missing_tmp_setter_cannot_claim_ui (test_evidence_grounded_v10.EvidenceIndexTests.test_missing_tmp_setter_cannot_claim_ui) ... ok
+test_mixed_assembly_rejected (test_evidence_grounded_v10.EvidenceIndexTests.test_mixed_assembly_rejected) ... ok
+test_model_extra_claim_fields_rejected (test_evidence_grounded_v10.EvidenceIndexTests.test_model_extra_claim_fields_rejected) ... ok
+test_non_textasset_never_promoted_to_external_json (test_evidence_grounded_v10.EvidenceIndexTests.test_non_textasset_never_promoted_to_external_json) ... ok
+test_raw_candidate_not_promoted (test_evidence_grounded_v10.EvidenceIndexTests.test_raw_candidate_not_promoted) ... ok
+test_remote_hosts_blocked_before_any_network (test_evidence_grounded_v10.EvidenceIndexTests.test_remote_hosts_blocked_before_any_network) ... ok
+test_runtime_template_requires_string_format (test_evidence_grounded_v10.EvidenceIndexTests.test_runtime_template_requires_string_format) ... ok
+test_source_qualified_scriptable_old_A_may_pass_but_new_class_does_not (test_evidence_grounded_v10.EvidenceIndexTests.test_source_qualified_scriptable_old_A_may_pass_but_new_class_does_not) ... ok
+test_stable_ids_and_distinct_provenance (test_evidence_grounded_v10.EvidenceIndexTests.test_stable_ids_and_distinct_provenance) ... ok
+test_successfully_selects_exact_id_no_free_text (test_evidence_grounded_v10.EvidenceIndexTests.test_successfully_selects_exact_id_no_free_text) ... ok
+test_textasset_exact_asset_evidence (test_evidence_grounded_v10.EvidenceIndexTests.test_textasset_exact_asset_evidence) ... ok
+test_transient_error_then_valid_id (test_evidence_grounded_v10.EvidenceIndexTests.test_transient_error_then_valid_id) ... ok
+test_unknown_or_duplicate_id_fails_closed (test_evidence_grounded_v10.EvidenceIndexTests.test_unknown_or_duplicate_id_fails_closed) ... ok
+test_unknown_serialized_mono_field_never_promoted (test_evidence_grounded_v10.EvidenceIndexTests.test_unknown_serialized_mono_field_never_promoted) ... ok
+test_wrong_evidence_kind_fails_closed (test_evidence_grounded_v10.EvidenceIndexTests.test_wrong_evidence_kind_fails_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.003s
+
+OK

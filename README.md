@@ -118,3 +118,8 @@ Không thể tự động chép nguyên văn toàn bộ transcript ChatGPT sang 
 The original M03 v0.8 Autonomous r01 failed at step 8 with invalid JSON `finish=length` x3. A separate 2560-token retry against identical SHA-matched REA/UnityPy input **also failed** at the same step with identical three JSON error details. Guided M03 v0.8 completed 3/3 runs (11 observations each, **not scored**). This does not establish an accuracy score or uniquely prove context overflow.
 
 A [new **experimental** v0.9 bounded-history runner](source/m04_autonomous_bounded_v09/) and [Windows ZIP](archives/ModStudioAI_M04_Autonomous_BoundedContext_v09.zip) change Autonomous chat-context management and set native Ollama `num_ctx=8192` (also `num_predict=2560`, 16 steps), without modifying the **frozen M03 v0.8 source**. Includes SHA-fingerprint checks and isolated output directory. **7/7 offline Python tests passed; no live Ollama/Windows run yet.** Private B game labels, ground truth, source, agent outputs and raw traces were not committed.
+
+
+## M04 Evidence-Grounded v1.0 (experimental, 2026-11-02)
+
+Public source: [v1.0](source/m04_evidence_grounded_v10/) | [Windows ZIP](archives/ModStudioAI_M04_EvidenceGrounded_v10.zip). The B mixed-version score was baseline v0.8 3/15 validator-supported, Guided v0.8 0/15 supported, Autonomous v0.9 1/15 supported. New v1.0 lets local Qwen select only exact evidence IDs from frozen M03 v0.8 REA/UnityPy verified records, instead of composing free-form source claims. 24/24 synthetic tests PASS; no live Windows Ollama results yet. The old B is regression only, not a pristine new holdout.
