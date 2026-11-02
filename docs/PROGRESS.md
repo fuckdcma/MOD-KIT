@@ -131,3 +131,10 @@
 - Frozen M03 v0.8 `scan-assets` returned **0 asset text observations**; `baseline` reported 4 observations and `provenance` 23 records, both unscored and **not coverage/accuracy**.
 - Critical next check: collect ONLY the scanner's counts (`files_considered/files_scanned`, MonoBehaviour/TextAsset seen/decoded, error stages, raw_candidate_count, TypeTree loaded/errors) from `Milestone04/Runs_LOCAL/AgentInput/build_assets.json`. Do not upload raw `assets`, strings, private project, seed, ground truth or hash-linked confidential case data to public repo.
 - Until diagnostics distinguish unreadable serialized assets vs simply unsupported source classes, **do not interpret 0 observations as a negative model result**. Preserve M03 v0.8 frozen baseline and existing hash-sealed run; do not tune/fix mid-experiment without a new explicitly labeled protocol.
+
+
+## M04 frozen scanner health check — decoded correctly (2026-11-02)
+
+User executed safe aggregate PowerShell health-check on `Runs_LOCAL/AgentInput/build_assets.json`: `files_considered=6`, `files_scanned=6`, `truncated=false`, `monobehaviours_seen/decoded=33/33`, `textassets_seen/decoded=8/8`, `assets=23`, `raw_candidates=0`, `reader_bindings=0`, `errors=0`, TypeTree imported, one loaded version, zero TypeTree errors. The earlier `scan-assets observations=0` is **CLI summary display only**: M03 v0.8 prints `len(output.get('observations',[]))` for scans, while scan JSON actually uses `assets` (23 records). The frozen M03 v0.8 hard-codes UnityTextLab-A reader class, so 0 reader bindings in B is an expected coverage limitation, not a parsing error.
+
+**Build evidence is technically usable for M04 functional integration trials.** Preserve `seal`, REA, source hash and build-only input without modifying scanner mid-benchmark. Run local Ollama probe, then 3 autonomous and 3 guided repeated trials; only after complete/locked predictions run separate M04 private scorer. Never interpret baseline 4 observations or provenance 23 as correctness scores. No generated case strings, private files or raw traces were committed.
