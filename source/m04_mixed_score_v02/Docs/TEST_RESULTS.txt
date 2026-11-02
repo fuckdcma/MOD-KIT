@@ -1,0 +1,5 @@
+M04 Mixed-Version Private Score v0.2
+2026-11-02
+Synthetic-only Python unit tests: 8/8 PASS.
+Cases: rejected confidence observed; valid status; candidate_only; duplicate hit prioritization; source mismatch; incomplete refusal; private lock + public sanitized; negative control false-positive.
+WARNING: No real Windows PowerShell execution or live M04 private scoring in this container. Source and wrapper must be exercised locally; private truth never leaves user PC.

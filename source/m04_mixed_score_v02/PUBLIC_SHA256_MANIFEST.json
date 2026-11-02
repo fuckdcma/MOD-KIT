@@ -1,0 +1,36 @@
+{
+  "schema": "modstudio.m04.mixed_score_manifest.v0.2",
+  "tests_passed": 8,
+  "files": [
+    {
+      "file": "Docs/PROTOCOL.md",
+      "sha256": "75bb1020e3d34937196bb0f55f277197781d1a3d3c0a8a11f88eeb78ff03b602",
+      "bytes": 977
+    },
+    {
+      "file": "Docs/TEST_RESULTS.txt",
+      "sha256": "273e5abca4dcfdadd26408156098db98c840da4ece040503284b47c0de03b6af",
+      "bytes": 467
+    },
+    {
+      "file": "README_VI.md",
+      "sha256": "3f2f5a4819a9bb9cbdcd321d5d2af575d966075875add488323c74d6e3d11eb7",
+      "bytes": 3607
+    },
+    {
+      "file": "Scripts/Score_M04_MixedVersion_v02.ps1",
+      "sha256": "15f4e3bf098b4a53331831a1b91780ac36e94ec0dc92d6cd8109f06b604f730a",
+      "bytes": 5217
+    },
+    {
+      "file": "src/m04_evaluate_v02.py",
+      "sha256": "77de1425502c5912e972c873c0d96ba177140e77036d113d8e617522af9f69df",
+      "bytes": 9996
+    },
+    {
+      "file": "tests/test_mixed_scoring.py",
+      "sha256": "f50c18a4791fa3decd2b1fcbebe2e967039d98433095fc4a3d6ec516ba0cdc77",
+      "bytes": 4946
+    }
+  ]
+}

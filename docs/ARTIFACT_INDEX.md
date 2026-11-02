@@ -102,3 +102,10 @@ Không coi `provenance_links.json` v0.3 là đã có trong kho vì người dùn
 - [Public SHA256 manifest](../source/m04_autonomous_bounded_v09/PUBLIC_SHA256_MANIFEST.json)
 - Test report: **7/7 offline Python tests**; no live Windows/Ollama benchmark completed; existing first-attempt Autonomous failure preserved.
 - Contains public engine/testing code only: **no user-generated UnityTextLab-B text, answers, seed, AgentInput, model outputs, screenshots or game project files**.
+
+
+## M04 Mixed-Version Private Score v0.2 (exploratory)
+
+- [Public source, verifier, scorer and 8 synthetic tests](../source/m04_mixed_score_v02/)
+- [Download Windows scoring ZIP](../archives/ModStudioAI_M04_MixedVersion_PrivateScore_v02.zip)
+- Fixes evidence-support interpretation: `observed_supported_matches` additionally requires validator `validation_status='observed'`. Does NOT modify frozen M03 v0.8 and does NOT contain any private ground truth/case literals. **8/8 offline tests PASS; Windows execution not yet verified**.
