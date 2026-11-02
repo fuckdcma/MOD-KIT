@@ -1,0 +1,19 @@
+{
+    "schema": "modstudio.provenance.v0.1",
+    "created_utc": "2026-11-02T00:58:43.1637733Z",
+    "project_name": "UnityTextLab",
+    "unity_version": "6000.3.27f2",
+    "record_count": 8,
+    "scene_text_count": 5,
+    "prefab_text_count": 1,
+    "scriptable_key_count": 1,
+    "resources_json_count": 1,
+    "warning_count": 0,
+    "limitations": [
+        "Scene and prefab TMP values are editor-time snapshots, not runtime text provenance.",
+        "Resources JSON parser v0.1 supports objects with id:string and message:string only.",
+        "ScriptableObject parser v0.1 supports entries[] with key/value string fields only.",
+        "Managed hardcoded and runtime-generated strings must come from REA CIL and runtime logs.",
+        "No Unity assets, loaded prefabs, or scene files are written by this collector."
+    ]
+}

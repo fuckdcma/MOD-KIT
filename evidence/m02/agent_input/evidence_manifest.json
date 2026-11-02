@@ -1,0 +1,18 @@
+{
+  "schema": "modstudio.evidence.v0.1",
+  "created_utc": "2026-11-02T01:01:03.413019+00:00",
+  "editor_record_count": 8,
+  "rea_method_evidence_count": 6,
+  "editor_kinds": {
+    "scriptable_object_kv": 1,
+    "resources_json_message": 1,
+    "scene_tmp_serialized": 5,
+    "prefab_tmp_serialized": 1
+  },
+  "rea_assembly_sha256": "ab9cf9e569815b6d1d1f49dbc455521bb426b6118b891c8c0a3052244d24a29e",
+  "notes": [
+    "Editor evidence comes from source project; it is REFERENCE ONLY and prohibited as model input in build-only blind tests.",
+    "REA evidence is static and does not prove runtime display.",
+    "This script does not train an AI model."
+  ]
+}
