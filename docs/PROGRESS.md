@@ -107,3 +107,10 @@
 - 20-case cryptographically fresh local holdout generator (15 positives, 5 negatives), with Unity C# lab/Editor scene builder, separate M04 run scripts using frozen M03 v0.8, conservative post-freeze scorer, SHA build manifest and privacy rules.
 - Public release: [source](../source/m04_unseen_v01/), [ZIP](../archives/ModStudioAI_M04_UnseenLab_v01.zip). 26/26 Python unit tests + temporary generation smoke passed. **No Unity 6.3 compilation or build from M04 exists yet; no model score yet.**
 - Next on user Windows: create empty UnityTextLabB project in Unity Hub, import TMP essentials, generate with `Scripts/Create_M04_Local.ps1`, Editor menu scene creation, Mono build; report only build success/Unity errors without source/truth. Do not leak private answers to public repo.
+
+
+## M04 Unity editor validation: build succeeded but invalid for benchmark (2026-11-02)
+
+- Windows Unity 6000.3 scene/Play renders UI; BuildPipeline created UnityTextLabB.exe; Console reports five missing/no-valid-script warnings on M04 readers and table asset and several UI `...` placeholders.
+- Determined public generator v0.1 has ambiguous MonoBehaviour/ScriptableObject types in one source file. [Repair v0.2](../source/m04_script_binding_fix_v02/) separates types and rebuilds six reader refs/table asset from existing local spec, preserving seed/truth. Adds build guard; 9/9 Python structural tests passed; NO Windows Unity compile/test yet.
+- Block M04 score until a clean rebuild, 15/15 populated UI labels, no missing-script warnings, new sealed build hash. Treat exposed screenshot cases as integration smoke test rather than perfect holdout.

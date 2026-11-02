@@ -104,3 +104,10 @@ Không thể tự động chép nguyên văn toàn bộ transcript ChatGPT sang 
 [Browse M04 source](source/m04_unseen_v01/) · [Release ZIP](archives/ModStudioAI_M04_UnseenLab_v01.zip) · [Windows setup in Vietnamese](source/m04_unseen_v01/README_VI.md).
 
 **26/26 Python tests passed and ephemeral private-seed smoke test passed.** M04 is a **public generator/evaluator**, not a fixed publicly labelled dataset. It creates 20 cases locally (15 UI, 5 negative), a fresh 256-bit seed and private ground truth OUTSIDE public MOD-KIT. M03 v0.8 stays frozen for evaluation. **Unity 6000.3 Editor compile/build and Qwen testing on B have not yet been run.** Never commit generated Unity project, ProjectSettings/M04HoldoutLocal.json, seed, ground truth, or raw model outputs until safe to publish.
+
+
+## M04 UnityTextLab-B build warning diagnosed — Script Binding Fix v0.2 (2026-11-02)
+
+- User demonstrated Unity Editor Play and successful Windows Mono build, but Console shows **5 missing/invalid script warnings** from M04 readers and ScriptableObject, with several UI placeholders still `...`. **Do not evaluate this build yet.**
+- Root cause: the public generator template `M04LabRuntime.cs` defines multiple MonoBehaviour/ScriptableObject classes in one file; their Unity MonoScript asset mapping is ambiguous. [Source/repair instructions](source/m04_script_binding_fix_v02/) · [ZIP](archives/ModStudioAI_M04_ScriptBindingFix_v02.zip).
+- Patch backs up files, splits classes into matching `.cs` names, repairs six readers and rebuilds one ScriptableObject from the EXISTING private local spec (no seed regeneration), and adds a pre-build guard. **9/9 offline static tests pass; Unity Windows compile/rebuild not tested yet.** Only publish public patch code, never screenshot/private spec/seed/cases.

@@ -86,3 +86,10 @@ Không coi `provenance_links.json` v0.3 là đã có trong kho vì người dùn
 - [Source byte SHA-256 manifest](../source/m04_unseen_v01/PUBLIC_SOURCE_SHA256.json)
 - [Privacy/evaluation rules](../source/m04_unseen_v01/Docs/PRIVACY_AND_EVALUATION.md)
 - No generated UnityTextLabB project, seed, case values, private ground truth, Editor build, REA/UnityPy B outputs, or model scores have been uploaded to GitHub. These must remain private until predictions locked.
+
+
+## M04 Script Binding Fix v0.2 — public-only code
+
+- [Source and PowerShell installer](../source/m04_script_binding_fix_v02/) · [ZIP](../archives/ModStudioAI_M04_ScriptBindingFix_v02.zip) · [README](../source/m04_script_binding_fix_v02/README_VI.md).
+- Includes C# editor repair script, Unity runtime classes separated into matching files, backup/build guard script, 9 offline tests and SHA-256 manifest.
+- No user screenshot, private UnityTextLabB scene/spec/ground-truth/seed, regenerated source, or invalid build binary uploaded to public GitHub.

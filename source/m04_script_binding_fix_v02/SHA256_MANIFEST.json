@@ -1,0 +1,53 @@
+{
+  "release": "m04.script_binding_fix.v0.2",
+  "date": "2026-11-02",
+  "verified": "python_static_tests_9_of_9",
+  "unity_windows_compilation": "not_tested",
+  "files": [
+    {
+      "path": "README_VI.md",
+      "bytes": 5330,
+      "sha256": "7a986a19f6403c62314ba34ca118489e067e8eb7554ebc632103d71fd082d8d2"
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "bytes": 990,
+      "sha256": "588de015407f98bd5f00e1fa9954b62c93accd05937a777a17f53262ec39e0d4"
+    },
+    {
+      "path": "Scripts/Install_M04_ScriptBindingFix.ps1",
+      "bytes": 3816,
+      "sha256": "17257c8aff147f7a0cd8ca2eb744aa6fad96cec54140cc4727044fbddafd7e75"
+    },
+    {
+      "path": "UnityPatch/Assets/Editor/M04RepairMissingScripts.cs",
+      "bytes": 11421,
+      "sha256": "f8fe6913b57c4fd66902d3f5371b8a1a8ddc35691c1420146f61d8afd67069d7"
+    },
+    {
+      "path": "UnityPatch/Assets/M04/Runtime/M04JsonPayload.cs",
+      "bytes": 169,
+      "sha256": "51d18ea9fb7de0f9b3ab92c2ebd567a98074ed28609ab66916d63f4e3e36d1e5"
+    },
+    {
+      "path": "UnityPatch/Assets/M04/Runtime/M04JsonReader.cs",
+      "bytes": 549,
+      "sha256": "d6e0998962dd99d82ce7e1afc849513e51309efcb31d9431b20f94bb86c52104"
+    },
+    {
+      "path": "UnityPatch/Assets/M04/Runtime/M04Table.cs",
+      "bytes": 870,
+      "sha256": "aeb05846fecbf9e606c0221c77b27b4dbb21811dd38b3e15a1b23aa6512d5805"
+    },
+    {
+      "path": "UnityPatch/Assets/M04/Runtime/M04TableReader.cs",
+      "bytes": 414,
+      "sha256": "f174234a9a36efbecda0ea1d5e413bd15768ee5f8f0f51445c7b44144ecf37dc"
+    },
+    {
+      "path": "tests/test_patch_structure.py",
+      "bytes": 4119,
+      "sha256": "869a8683ef15a7c9d103f20c934051c94cf54f287eba54a5bbede75550ecbba6"
+    }
+  ]
+}
