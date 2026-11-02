@@ -33,7 +33,7 @@ if ($Mode -eq 'rea') {
   if (-not (Test-Path $assembly)) { throw "Missing B assembly $assembly; build UnityTextLabB with Mono first." }
   if (-not (Get-Command rea -ErrorAction SilentlyContinue)) { throw 'REA executable not found. Activate the REA CLI used in M01–M03.' }
   New-Item -Force -ItemType Directory -Path $ReaDir | Out-Null
-  $utf8 = New-Object System.Text.UTF8Encoding($false)
+  $utf8 = [System.Text.UTF8Encoding]::new($false)
   foreach ($entry in @(@('inspect-managed-artifact','assembly_identity.json'),@('inspect-managed-members','members.json'))) {
     $cmd = $entry[0];$dest = Join-Path $ReaDir $entry[1]
     if (Test-Path $dest) { throw "Existing REA snapshot will NOT be overwritten: $dest" }

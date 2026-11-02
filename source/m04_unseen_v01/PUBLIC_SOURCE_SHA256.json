@@ -49,8 +49,8 @@
     },
     {
       "path": "Scripts/Run_M04.ps1",
-      "bytes": 5974,
-      "sha256": "956fce746b1f9a788b054232b6aa2126a8ee35a4ce4eae5ed299ab29c334cfc6"
+      "bytes": 5970,
+      "sha256": "59fa8fbec0956c3b1bb812e8c27b188ba7491db2e0ca57c9981dd139e6e4046f"
     },
     {
       "path": "UnityTemplate/Assets/Editor/M04LabBuilder.cs",
