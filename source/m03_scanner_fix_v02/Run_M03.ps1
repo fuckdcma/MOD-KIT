@@ -1,4 +1,4 @@
-param(
+﻿param(
   [ValidateSet('baseline','prepare','scan-assets','agent','evaluate','tests')]
   [string]$Mode = 'baseline',
   [string]$Members = 'D:\ModStudioAI\Research\REA\members.json',
