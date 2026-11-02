@@ -1,0 +1,11 @@
+# Unity project transient outputs (if placed inside a Unity repository)
+Library/
+Temp/
+Obj/
+Logs/
+UserSettings/
+Build/
+Builds/
+*.csproj
+*.sln
+.vs/

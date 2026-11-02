@@ -1,0 +1,15 @@
+{
+  "case_id": "T003",
+  "build_id": "SET_AFTER_BUILD",
+  "task": "identify_text_provenance",
+  "observation": "Quest Completed",
+  "evidence": [],
+  "candidate_source": null,
+  "candidate_method": null,
+  "verification": {
+    "status": "unverified",
+    "reason": "Awaiting REA evidence and ground-truth comparison"
+  },
+  "split": "unassigned",
+  "source_license": "own_test_project"
+}
