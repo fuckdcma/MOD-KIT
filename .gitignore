@@ -1,0 +1,20 @@
+# Generated environments / credentials
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.pyc
+Library/
+Temp/
+Obj/
+Logs/
+UserSettings/
+node_modules/
+*.pfx
+*.pem
+*.key
+*.token
+*.secret
+.DS_Store

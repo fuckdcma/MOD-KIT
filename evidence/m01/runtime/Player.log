@@ -1,0 +1,46 @@
+Mono path[0] = 'D:/ModStudioAI/Builds/UnityTextLab/UnityTextLab_Data/Managed'
+Mono config path = 'D:/ModStudioAI/Builds/UnityTextLab/MonoBleedingEdge/etc'
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.3.27f2 (22188f149405)
+[Subsystems] Discovering subsystems at path D:/ModStudioAI/Builds/UnityTextLab/UnityTextLab_Data/UnitySubsystems
+[D3D12 Device Filter] Vendor Name: ATI
+[D3D12 Device Filter] Device Name: AMD Radeon RX 6700 XT
+[D3D12 Device Filter] Driver Version: 32.0.21045.5002
+[D3D12 Device Filter] Feature Level: 12.2
+[D3D12 Device Filter] Graphics Memory: 12242 MB
+[D3D12 Device Filter] Processor Count: 12
+[D3D12 Device Filter] Device Type: Discrete
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        AMD Radeon RX 6700 XT (ID=0x73df)
+    Vendor:          ATI
+    VRAM:            12242 MB
+    App VRAM Budget: 11474 MB
+    Driver:          32.0.21045.5002
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.119 seconds
+- Finished resetting the current domain, in  0.002 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+D3D11 device created for Microsoft Media Foundation video decoding.
+<RI> Initializing input.
+
+Using Windows.Gaming.Input
+UnloadTime: 1.189000 ms
+Curl error 35: Recv failure: Connection was reset
+[ModStudioLab][SDF] object=Prefab_NewGame; font=LiberationSans SDF; material=LiberationSans SDF Material; shader=TextMeshPro/Mobile/Distance Field; fontAtlas=LiberationSans SDF Atlas; materialAtlas=LiberationSans SDF Atlas; sameAtlas=True
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+[d3d12] Unreleased non-evictable resource 000001DE22050F90 (size 4096 B, lastUsedFence 16)

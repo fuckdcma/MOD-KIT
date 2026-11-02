@@ -1,0 +1,6 @@
+case_id,expected_source_type,expected_text,evidence_match,candidate_evidence,review_status
+T001,serialized_prefab,New Game,found_candidate,prefab_tmp_serialized:Assets/Prefabs/Prefab_NewGame.prefab#,HUMAN_REVIEW_REQUIRED
+T002,scriptable_object,Load Game,found_candidate,scriptable_object_kv:Assets/LabStringTable.asset#menu.load,HUMAN_REVIEW_REQUIRED
+T003,hardcoded_managed,Quest Completed,found_candidate,rea:ModStudioLab.HardcodedTextExample.Awake@0x70000221,HUMAN_REVIEW_REQUIRED
+T004,runtime_generated,Health: 75/100,found_candidate,rea:ModStudioLab.RuntimeTextExample.Refresh@0x700002a9,HUMAN_REVIEW_REQUIRED
+T005,external_json,"Hello, Commander",found_candidate,resources_json_message:Assets/Resources/dialogue.json#npc.commander.greeting,HUMAN_REVIEW_REQUIRED

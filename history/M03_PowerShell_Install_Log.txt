@@ -1,0 +1,303 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS D:\ModStudioAI\Milestone03> powershell -NoProfile -ExecutionPolicy Bypass -File .\Run_M03.ps1 -Mode tests
+test_baseline_and_proof (test_m03.TestM03.test_baseline_and_proof) ... ok
+test_eval_honesty (test_m03.TestM03.test_eval_honesty) ... ok
+test_fake_lit_rejected (test_m03.TestM03.test_fake_lit_rejected) ... ok
+test_localhost_only (test_m03.TestM03.test_localhost_only) ... ok
+test_prepare_from_actual_rea (test_m03.TestM03.test_prepare_from_actual_rea) ... ok
+test_sha_and_inventory (test_m03.TestM03.test_sha_and_inventory) ... ok
+test_tool_access (test_m03.TestM03.test_tool_access) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+OK
+Completed: tests
+PS D:\ModStudioAI\Milestone03> powershell -NoProfile -ExecutionPolicy Bypass -File .\Run_M03.ps1 -Mode baseline
+{"command": "baseline", "out": "D:\\ModStudioAI\\Milestone03\\Outputs\\baseline_static.json", "observations": 4, "completed": true}
+Completed: baseline
+PS D:\ModStudioAI\Milestone03>
+PS D:\ModStudioAI\Milestone03> powershell -NoProfile -ExecutionPolicy Bypass -File .\Run_M03.ps1 -Mode evaluate
+{"command": "evaluate", "out": "D:\\ModStudioAI\\Milestone03\\Outputs\\evaluation_private.json", "observations": 0, "completed": true}
+Completed: evaluate
+PS D:\ModStudioAI\Milestone03> py -3 -m pip install UnityPy
+Defaulting to user installation because normal site-packages is not writeable
+Collecting UnityPy
+  Downloading unitypy-1.25.4.tar.gz (389 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting lz4 (from UnityPy)
+  Downloading lz4-4.4.5.tar.gz (172 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting brotli (from UnityPy)
+  Downloading brotli-1.2.1-cp315-cp315-win_amd64.whl.metadata (6.3 kB)
+Requirement already satisfied: Pillow in C:\Users\HP\AppData\Roaming\Python\Python315\site-packages (from UnityPy) (13.0.0)
+Collecting texture2ddecoder>=1.0.5 (from UnityPy)
+  Using cached texture2ddecoder-1.0.6-cp311-abi3-win_amd64.whl.metadata (8.6 kB)
+Collecting etcpak (from UnityPy)
+  Using cached etcpak-0.9.15-cp37-abi3-win_amd64.whl.metadata (6.2 kB)
+Collecting astc-encoder-py>=0.1.12 (from UnityPy)
+  Using cached astc_encoder_py-0.1.12-cp37-abi3-win_amd64.whl.metadata (5.7 kB)
+Collecting fmod_toolkit (from UnityPy)
+  Using cached fmod_toolkit-0.1.3-cp38-abi3.abi3t-win_amd64.whl.metadata (3.7 kB)
+Collecting fsspec (from UnityPy)
+  Using cached fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+Collecting attrs (from UnityPy)
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting tpk_ar (from UnityPy)
+  Using cached tpk_ar-0.2.4.tar.gz (10 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting archspec>=0.2 (from astc-encoder-py>=0.1.12->UnityPy)
+  Downloading archspec-0.2.7-py3-none-any.whl.metadata (4.4 kB)
+Collecting pyfmodex>=0.7.2 (from fmod_toolkit->UnityPy)
+  Using cached pyfmodex-0.7.2-py3-none-any.whl.metadata (2.6 kB)
+Using cached astc_encoder_py-0.1.12-cp37-abi3-win_amd64.whl (2.5 MB)
+Downloading archspec-0.2.7-py3-none-any.whl (87 kB)
+Using cached texture2ddecoder-1.0.6-cp311-abi3-win_amd64.whl (64 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading brotli-1.2.1-cp315-cp315-win_amd64.whl (376 kB)
+Using cached etcpak-0.9.15-cp37-abi3-win_amd64.whl (1.1 MB)
+Using cached fmod_toolkit-0.1.3-cp38-abi3.abi3t-win_amd64.whl (795 kB)
+Using cached pyfmodex-0.7.2-py3-none-any.whl (126 kB)
+Using cached fsspec-2026.9.0-py3-none-any.whl (221 kB)
+Building wheels for collected packages: UnityPy, lz4, tpk_ar
+  Building wheel for UnityPy (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+
+  × Building wheel for UnityPy (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [157 lines of output]
+      C:\Users\HP\AppData\Local\Temp\pip-build-env-6_94c9s0\overlay\Lib\site-packages\setuptools\config\_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+      !!
+
+              ********************************************************************************
+              Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+              By 2027-Feb-18, you need to update your project and remove deprecated calls
+              or your builds will no longer be supported.
+
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+
+      !!
+        corresp(dist, value, root_dir)
+      C:\Users\HP\AppData\Local\Temp\pip-build-env-6_94c9s0\overlay\Lib\site-packages\setuptools\config\_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+
+              License :: OSI Approved :: MIT License
+
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+
+      !!
+        dist._finalize_license_expression()
+      C:\Users\HP\AppData\Local\Temp\pip-build-env-6_94c9s0\overlay\Lib\site-packages\setuptools\dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+
+              License :: OSI Approved :: MIT License
+
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+
+      !!
+        self._finalize_license_expression()
+      running bdist_wheel
+      running build
+      running build_py
+      creating build\lib.win-amd64-cpython-315\UnityPy
+      copying UnityPy\config.py -> build\lib.win-amd64-cpython-315\UnityPy
+      copying UnityPy\environment.py -> build\lib.win-amd64-cpython-315\UnityPy
+      copying UnityPy\exceptions.py -> build\lib.win-amd64-cpython-315\UnityPy
+      copying UnityPy\__init__.py -> build\lib.win-amd64-cpython-315\UnityPy
+      copying UnityPy\__main__.py -> build\lib.win-amd64-cpython-315\UnityPy
+      creating build\lib.win-amd64-cpython-315\UnityPy\classes
+      copying UnityPy\classes\ClassIDTypeToClassMap.py -> build\lib.win-amd64-cpython-315\UnityPy\classes
+      copying UnityPy\classes\generated.py -> build\lib.win-amd64-cpython-315\UnityPy\classes
+      copying UnityPy\classes\math.py -> build\lib.win-amd64-cpython-315\UnityPy\classes
+      copying UnityPy\classes\Object.py -> build\lib.win-amd64-cpython-315\UnityPy\classes
+      copying UnityPy\classes\PPtr.py -> build\lib.win-amd64-cpython-315\UnityPy\classes
+      copying UnityPy\classes\UnknownObject.py -> build\lib.win-amd64-cpython-315\UnityPy\classes
+      copying UnityPy\classes\__init__.py -> build\lib.win-amd64-cpython-315\UnityPy\classes
+      creating build\lib.win-amd64-cpython-315\UnityPy\cli
+      copying UnityPy\cli\update_tpk.py -> build\lib.win-amd64-cpython-315\UnityPy\cli
+      copying UnityPy\cli\__init__.py -> build\lib.win-amd64-cpython-315\UnityPy\cli
+      creating build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\Audio.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\BuildTarget.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\BundleFile.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\ClassIDType.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\ExtendableEnum.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\FileType.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\GfxPrimitiveType.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\GraphicsFormat.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\MeshTopology.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\PassType.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\SerializedPropertyType.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\ShaderCompilerPlatform.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\ShaderGpuProgramType.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\SpriteMeshType.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\SpritePackingMode.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\SpritePackingRotation.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\TextureDimension.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\TextureFormat.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\VertexFormat.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      copying UnityPy\enums\__init__.py -> build\lib.win-amd64-cpython-315\UnityPy\enums
+      creating build\lib.win-amd64-cpython-315\UnityPy\export
+      copying UnityPy\export\AudioClipConverter.py -> build\lib.win-amd64-cpython-315\UnityPy\export
+      copying UnityPy\export\MeshExporter.py -> build\lib.win-amd64-cpython-315\UnityPy\export
+      copying UnityPy\export\MeshRendererExporter.py -> build\lib.win-amd64-cpython-315\UnityPy\export
+      copying UnityPy\export\ShaderConverter.py -> build\lib.win-amd64-cpython-315\UnityPy\export
+      copying UnityPy\export\SpriteHelper.py -> build\lib.win-amd64-cpython-315\UnityPy\export
+      copying UnityPy\export\Texture2DConverter.py -> build\lib.win-amd64-cpython-315\UnityPy\export
+      copying UnityPy\export\__init__.py -> build\lib.win-amd64-cpython-315\UnityPy\export
+      creating build\lib.win-amd64-cpython-315\UnityPy\files
+      copying UnityPy\files\BundleFile.py -> build\lib.win-amd64-cpython-315\UnityPy\files
+      copying UnityPy\files\File.py -> build\lib.win-amd64-cpython-315\UnityPy\files
+      copying UnityPy\files\ObjectReader.py -> build\lib.win-amd64-cpython-315\UnityPy\files
+      copying UnityPy\files\SerializedFile.py -> build\lib.win-amd64-cpython-315\UnityPy\files
+      copying UnityPy\files\WebFile.py -> build\lib.win-amd64-cpython-315\UnityPy\files
+      copying UnityPy\files\__init__.py -> build\lib.win-amd64-cpython-315\UnityPy\files
+      creating build\lib.win-amd64-cpython-315\UnityPy\helpers
+      copying UnityPy\helpers\ArchiveStorageManager.py -> build\lib.win-amd64-cpython-315\UnityPy\helpers
+      copying UnityPy\helpers\CompressionHelper.py -> build\lib.win-amd64-cpython-315\UnityPy\helpers
+      copying UnityPy\helpers\ContainerHelper.py -> build\lib.win-amd64-cpython-315\UnityPy\helpers
+      copying UnityPy\helpers\ImportHelper.py -> build\lib.win-amd64-cpython-315\UnityPy\helpers
+      copying UnityPy\helpers\MeshHelper.py -> build\lib.win-amd64-cpython-315\UnityPy\helpers
+      copying UnityPy\helpers\PackedBitVector.py -> build\lib.win-amd64-cpython-315\UnityPy\helpers
+      copying UnityPy\helpers\ResourceReader.py -> build\lib.win-amd64-cpython-315\UnityPy\helpers
+      copying UnityPy\helpers\TextureSwizzler.py -> build\lib.win-amd64-cpython-315\UnityPy\helpers
+      copying UnityPy\helpers\Tpk.py -> build\lib.win-amd64-cpython-315\UnityPy\helpers
+      copying UnityPy\helpers\TypeTreeGenerator.py -> build\lib.win-amd64-cpython-315\UnityPy\helpers
+      copying UnityPy\helpers\TypeTreeHelper.py -> build\lib.win-amd64-cpython-315\UnityPy\helpers
+      copying UnityPy\helpers\TypeTreeNode.py -> build\lib.win-amd64-cpython-315\UnityPy\helpers
+      copying UnityPy\helpers\UnityVersion.py -> build\lib.win-amd64-cpython-315\UnityPy\helpers
+      copying UnityPy\helpers\__init__.py -> build\lib.win-amd64-cpython-315\UnityPy\helpers
+      creating build\lib.win-amd64-cpython-315\UnityPy\resources
+      copying UnityPy\resources\__init__.py -> build\lib.win-amd64-cpython-315\UnityPy\resources
+      creating build\lib.win-amd64-cpython-315\UnityPy\streams
+      copying UnityPy\streams\EndianBinaryReader.py -> build\lib.win-amd64-cpython-315\UnityPy\streams
+      copying UnityPy\streams\EndianBinaryWriter.py -> build\lib.win-amd64-cpython-315\UnityPy\streams
+      copying UnityPy\streams\__init__.py -> build\lib.win-amd64-cpython-315\UnityPy\streams
+      creating build\lib.win-amd64-cpython-315\UnityPy\tools
+      copying UnityPy\tools\extractor.py -> build\lib.win-amd64-cpython-315\UnityPy\tools
+      copying UnityPy\tools\TpkClassGenerator.py -> build\lib.win-amd64-cpython-315\UnityPy\tools
+      copying UnityPy\tools\__init__.py -> build\lib.win-amd64-cpython-315\UnityPy\tools
+      creating build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\AudioClip.py -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\GameObject.py -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\Mesh.py -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\Renderer.py -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\Shader.py -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\Sprite.py -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\Texture2D.py -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\Texture2DArray.py -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\__init__.py -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      running egg_info
+      writing UnityPy.egg-info\PKG-INFO
+      writing dependency_links to UnityPy.egg-info\dependency_links.txt
+      writing entry points to UnityPy.egg-info\entry_points.txt
+      writing requirements to UnityPy.egg-info\requires.txt
+      writing top-level names to UnityPy.egg-info\top_level.txt
+      reading manifest file 'UnityPy.egg-info\SOURCES.txt'
+      adding license file 'LICENSE'
+      writing manifest file 'UnityPy.egg-info\SOURCES.txt'
+      copying UnityPy\UnityPyBoost.pyi -> build\lib.win-amd64-cpython-315\UnityPy
+      copying UnityPy\py.typed -> build\lib.win-amd64-cpython-315\UnityPy
+      copying UnityPy\resources\lzma.tpk -> build\lib.win-amd64-cpython-315\UnityPy\resources
+      copying UnityPy\classes\legacy_patch\AudioClip.pyi -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\GameObject.pyi -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\Mesh.pyi -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\Renderer.pyi -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\Shader.pyi -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\Sprite.pyi -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\Texture2D.pyi -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      copying UnityPy\classes\legacy_patch\Texture2DArray.pyi -> build\lib.win-amd64-cpython-315\UnityPy\classes\legacy_patch
+      running build_ext
+      building 'UnityPy.UnityPyBoost' extension
+      "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX86\x64\cl.exe" /c /nologo /O2 /W3 /GL /DNDEBUG /MD -IC:\Users\HP\AppData\Local\Temp\pip-install-95wftd0m\unitypy_54e92963c5214d75adf860ee9c668918\UnityPyBoost -IC:\Python315\include -IC:\Python315\Include "-IC:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" "-IC:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" "-IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" /EHsc /TpUnityPyBoost/ArchiveStorageDecryptor.cpp /Fobuild\temp.win-amd64-cpython-315\Release\UnityPyBoost\ArchiveStorageDecryptor.obj /std:c++20
+      ArchiveStorageDecryptor.cpp
+      C:\Python315\include\pyconfig.h(59): fatal error C1083: Cannot open include file: 'io.h': No such file or directory
+      error: Command '['C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX86\\x64\\cl.exe', '/c', '/nologo', '/O2', '/W3', '/GL', '/DNDEBUG', '/MD', '-IC:\\Users\\HP\\AppData\\Local\\Temp\\pip-install-95wftd0m\\unitypy_54e92963c5214d75adf860ee9c668918\\UnityPyBoost', '-IC:\\Python315\\include', '-IC:\\Python315\\Include', '-IC:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include', '-IC:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include', '-IC:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\include\\um', '/EHsc', '/TpUnityPyBoost/ArchiveStorageDecryptor.cpp', '/Fobuild\\temp.win-amd64-cpython-315\\Release\\UnityPyBoost\\ArchiveStorageDecryptor.obj', '/std:c++20']' returned non-zero exit status 2.
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for UnityPy
+  Building wheel for lz4 (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+
+  × Building wheel for lz4 (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [33 lines of output]
+      C:\Users\HP\AppData\Local\Temp\pip-build-env-99inoq6u\overlay\Lib\site-packages\setuptools\_distutils\dist.py:318: UserWarning: Unknown distribution option: 'tests_require'
+        warnings.warn(msg)
+      C:\Users\HP\AppData\Local\Temp\pip-build-env-99inoq6u\overlay\Lib\site-packages\setuptools_scm\_integration\version_inference.py:236: UserWarning: version of lz4 already set
+        warnings.warn(f"version of {self.dist_name} already set")
+      C:\Users\HP\AppData\Local\Temp\pip-build-env-99inoq6u\overlay\Lib\site-packages\setuptools\dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+
+              License :: OSI Approved :: BSD License
+
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+
+      !!
+        self._finalize_license_expression()
+      running bdist_wheel
+      running build
+      running build_py
+      creating build\lib.win-amd64-cpython-315\lz4
+      copying lz4\version.py -> build\lib.win-amd64-cpython-315\lz4
+      copying lz4\__init__.py -> build\lib.win-amd64-cpython-315\lz4
+      creating build\lib.win-amd64-cpython-315\lz4\block
+      copying lz4\block\__init__.py -> build\lib.win-amd64-cpython-315\lz4\block
+      creating build\lib.win-amd64-cpython-315\lz4\frame
+      copying lz4\frame\__init__.py -> build\lib.win-amd64-cpython-315\lz4\frame
+      running build_ext
+      building 'lz4._version' extension
+      "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX86\x64\cl.exe" /c /nologo /O2 /W3 /GL /DNDEBUG /MD -Ilz4libs -IC:\Python315\include -IC:\Python315\Include "-IC:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include" "-IC:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" "-IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" /Tclz4/_version.c /Fobuild\temp.win-amd64-cpython-315\Release\lz4\_version.obj /Ot /Wall /wd4711 /wd4820
+      _version.c
+      C:\Python315\include\pyconfig.h(59): fatal error C1083: Cannot open include file: 'io.h': No such file or directory
+      error: Command '['C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX86\\x64\\cl.exe', '/c', '/nologo', '/O2', '/W3', '/GL', '/DNDEBUG', '/MD', '-Ilz4libs', '-IC:\\Python315\\include', '-IC:\\Python315\\Include', '-IC:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include', '-IC:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include', '-IC:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\include\\um', '/Tclz4/_version.c', '/Fobuild\\temp.win-amd64-cpython-315\\Release\\lz4\\_version.obj', '/Ot', '/Wall', '/wd4711', '/wd4820']' returned non-zero exit status 2.
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for lz4
+  Building wheel for tpk_ar (pyproject.toml) ... done
+  Created wheel for tpk_ar: filename=tpk_ar-0.2.4-py3-none-any.whl size=11134 sha256=303e53829f92e9c5ab3c78d3f659affc390814a27d44539d8c4ae669edd55fb9
+  Stored in directory: c:\users\hp\appdata\local\pip\cache\wheels\6c\43\46\7ca9a6f92db975a1e7adfb3b09e96fb35d714054d77a16f0e2
+Successfully built tpk_ar
+Failed to build UnityPy lz4
+
+[notice] A new release of pip is available: 26.2.1 -> 26.2.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+error: failed-wheel-build-for-install
+
+× Failed to build installable wheels for some pyproject.toml based projects
+╰─> UnityPy, lz4
+PS D:\ModStudioAI\Milestone03>
+PS D:\ModStudioAI\Milestone03> powershell -NoProfile -ExecutionPolicy Bypass -File .\Run_M03.ps1 -Mode scan-assets
+ERROR: Install optional UnityPy first: py -3 -m pip install UnityPy
+Python command failed with exit code 2
+At D:\ModStudioAI\Milestone03\Run_M03.ps1:22 char:30
++ ... DE -ne 0) { throw "Python command failed with exit code $LASTEXITCODE ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Python command failed with exit code 2:String) [], RuntimeException
+    + FullyQualifiedErrorId : Python command failed with exit code 2
+
+PS D:\ModStudioAI\Milestone03>

@@ -1,0 +1,6 @@
+case_id,displayed_text,source_category,source_symbol_or_location,discovery_expectation
+T001,New Game,serialized_prefab,Assets/Prefabs/Prefab_NewGame.prefab,Find serialized TMPro text reference in prefab or scene
+T002,Load Game,scriptable_object,LabStringTable asset key menu.load,Trace TableTextExample.Start to LabStringTable.TryGet and asset data
+T003,Quest Completed,hardcoded_managed,ModStudioLab.HardcodedTextExample.Awake,Find literal and setter call in managed CIL
+T004,Health: 75/100,runtime_generated,ModStudioLab.RuntimeTextExample.Refresh,Find generated string format and changing runtime value
+T005,"Hello, Commander",external_json,Assets/Resources/dialogue.json,Trace Resources.Load and JsonUtility.FromJson
