@@ -1,0 +1,19 @@
+test_catalog_count_diff_rejected (test_score_v10_regression.ScoreRegressionTests.test_catalog_count_diff_rejected) ... ok
+test_incomplete_rejected (test_score_v10_regression.ScoreRegressionTests.test_incomplete_rejected) ... ok
+test_missing_finish_rejected (test_score_v10_regression.ScoreRegressionTests.test_missing_finish_rejected) ... ok
+test_name_order_required (test_score_v10_regression.ScoreRegressionTests.test_name_order_required) ... ok
+test_no_overwrite_even_after_success (test_score_v10_regression.ScoreRegressionTests.test_no_overwrite_even_after_success) ... ok
+test_no_traces_or_input_strings_in_public (test_score_v10_regression.ScoreRegressionTests.test_no_traces_or_input_strings_in_public) ... ok
+test_protocol_error_rejected (test_score_v10_regression.ScoreRegressionTests.test_protocol_error_rejected) ... ok
+test_score_contract_file_unchanged (test_score_v10_regression.ScoreRegressionTests.test_score_contract_file_unchanged) ... ok
+test_scoring_uses_v02_contract_and_locks_sha (test_score_v10_regression.ScoreRegressionTests.test_scoring_uses_v02_contract_and_locks_sha) ... ok
+test_three_required (test_score_v10_regression.ScoreRegressionTests.test_three_required) ... ok
+test_unvalidated_claim_rejected (test_score_v10_regression.ScoreRegressionTests.test_unvalidated_claim_rejected) ... ok
+test_wrong_assembly_rejected (test_score_v10_regression.ScoreRegressionTests.test_wrong_assembly_rejected) ... ok
+test_wrong_confidence_rejected (test_score_v10_regression.ScoreRegressionTests.test_wrong_confidence_rejected) ... ok
+test_wrong_strategy_rejected (test_score_v10_regression.ScoreRegressionTests.test_wrong_strategy_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.023s
+
+OK

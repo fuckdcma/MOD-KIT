@@ -117,3 +117,10 @@ Không coi `provenance_links.json` v0.3 là đã có trong kho vì người dùn
 - [Windows ZIP](../archives/ModStudioAI_M04_EvidenceGrounded_v10.zip)
 - [SHA256 manifest](../source/m04_evidence_grounded_v10/PUBLIC_SHA256_MANIFEST.json)
 - Unrun in Windows/Ollama so far; no user private seed, ground truth, generated B text, raw model reports or AgentInput inside public archive.
+
+
+## M04 Evidence-Grounded v1.0 scoring v0.3 — public wrapper, private scoring
+
+- [Source, independent Windows runner, fixed v0.2 scoring contract, 14 synthetic tests](../source/m04_evidence_grounded_score_v03/)
+- [Download ZIP](../archives/ModStudioAI_M04_EvidenceGrounded_PrivateRegressionScore_v03.zip)
+- Intended for already completed **v1.0 3/3, 6 evidence-observed claims per run** on exposed B. Does not yet establish number of correct text/source matches; no live Windows evaluator run yet. Locks predictions/private scores locally, exposes only aggregates; no generated B/ground-truth strings committed.

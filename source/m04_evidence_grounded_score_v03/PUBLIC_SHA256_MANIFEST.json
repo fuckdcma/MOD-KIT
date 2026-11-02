@@ -1,0 +1,15 @@
+{
+  "schema": "modstudio.m04.v10_regression_scorer_v03_public.sha256",
+  "purpose": "PUBLIC CODE ONLY; no private truth, seed, generated B text, agent outputs or raw traces",
+  "vendor_m04_evaluate_v02_sha256": "77de1425502c5912e972c873c0d96ba177140e77036d113d8e617522af9f69df",
+  "files": {
+    "Docs/PROTOCOL.md": "dbe4140a6572add85d7d48cb161daf5fbcaaaf12464c513efca7b38b8caa95ce",
+    "Docs/RELEASE_NOTES.md": "202f9c65ac957a823e794f86f4be7e35932f3cfbce6dbac535aecd83ff04f9e8",
+    "Docs/TEST_RESULTS.txt": "1b42d88f8e21642156042833744a7fa1f72e28e599acf7f5da9dcbccc040b6b4",
+    "README_VI.md": "16653bc5342e48f9d45855ba990cc6f2199a77c31405995573c43dc94105ad33",
+    "Scripts/Score_M04_EvidenceGrounded_v10_Regression.ps1": "11f05b608c43b7ae2c6a5b8519f89256883a0e09ff53538ff703f0ceb68eb1f9",
+    "src/score_v10_regression.py": "d4e81784ff1721f224985476a629f5b11ecb9e25be964f82d8318a08a0db541d",
+    "tests/test_score_v10_regression.py": "dc80f1fb42c3e9d0a892eb3ec0bd5558854a761f5cc34a987a971c7a7dafbd94",
+    "vendor/m04_evaluate_v02.py": "77de1425502c5912e972c873c0d96ba177140e77036d113d8e617522af9f69df"
+  }
+}

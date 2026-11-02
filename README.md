@@ -123,3 +123,8 @@ A [new **experimental** v0.9 bounded-history runner](source/m04_autonomous_bound
 ## M04 Evidence-Grounded v1.0 (experimental, 2026-11-02)
 
 Public source: [v1.0](source/m04_evidence_grounded_v10/) | [Windows ZIP](archives/ModStudioAI_M04_EvidenceGrounded_v10.zip). The B mixed-version score was baseline v0.8 3/15 validator-supported, Guided v0.8 0/15 supported, Autonomous v0.9 1/15 supported. New v1.0 lets local Qwen select only exact evidence IDs from frozen M03 v0.8 REA/UnityPy verified records, instead of composing free-form source claims. 24/24 synthetic tests PASS; no live Windows Ollama results yet. The old B is regression only, not a pristine new holdout.
+
+
+## M04 Evidence-Grounded v1.0 live Windows result and private regression score v0.3 (2026-11-02)
+
+User's Windows run SHA-confirmed original frozen M03 and both sealed B REA/UnityPy inputs. v1.0 preflight enumerated **10** qualified static candidates (3 hardcoded managed, 3 runtime templates, 4 external JSON), excluding 19 unproven serialized sources. All three local Qwen evidence-ID selection trials **completed with 6/10 selected, 6/6 validator-observed, 0 protocol errors**. This establishes evidence consistency, **not 6 correct UI cases**. [Separate v0.3 private regression scorer](source/m04_evidence_grounded_score_v03/) and [Windows ZIP](archives/ModStudioAI_M04_EvidenceGrounded_PrivateRegressionScore_v03.zip) preserve exact earlier v0.2 scoring semantics, SHA-lock predictions, output aggregate-only results, and label B as exposed integration regression. **14/14 synthetic scorer tests PASS; no v1.0 accuracy score yet**. Create blind B2 only after code freeze.
