@@ -68,3 +68,12 @@ Không coi `provenance_links.json` v0.3 là đã có trong kho vì người dùn
 - [Guided evaluation](../benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_v07_guided_completed/evaluation_private_guided.json) is PUBLIC (separated by convention only).
 - [v0.8 source and tests](../source/m03_semantic_v08/), [ZIP installer](../archives/ModStudioAI_M03_SemanticValidation_Fix_v08.zip), [QA report](../reports/m03/BAO_CAO_XAC_MINH_QWEN_GUIDED_V07_20261102.md).
 - No v0.8 live Ollama report yet; replay file in patch demonstrates only revalidation of prior model output.
+
+
+## M03 v0.8 — latest live result + transition to M04
+
+- [Guided output](../evidence/m03/runs/20261102_ollama_v08_guided/qwen_agent_guided.json)
+- [Guided reference evaluator](../benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_v08_guided/evaluation_private_guided.json) — PUBLIC despite filename, never feed to agent.
+- [Original user RAR (all 11 JSON including v0.7 History)](../raw_uploads/Outputs_M03_Ollama_Guided_v08_20261102.rar); [original PowerShell run log](../history/M03_Ollama_v08_Run_Log_20261102.txt); [SHA-256 file manifest](../evidence/m03/runs/20261102_ollama_v08_guided/SHA256_MANIFEST.json).
+- [Independent QA report](../reports/m03/BAO_CAO_XAC_MINH_M03_GUIDED_V08_20261102.md)
+- [M04 unseen holdout testing protocol](M04_UNSEEN_HOLDOUT_PROTOCOL.md). Private seed and answer key must NOT enter this public repo.

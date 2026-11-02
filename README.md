@@ -89,3 +89,11 @@ Không thể tự động chép nguyên văn toàn bộ transcript ChatGPT sang 
 - [Qwen v0.7 guided run](evidence/m03/runs/20261102_ollama_v07_guided_completed/qwen_agent_guided.json), [evaluator](benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_v07_guided_completed/evaluation_private_guided.json): **completed=true**, 8 observations, **3 exact + 0 format template + 2 unproven**. Tool static baseline: **3 exact + 1 template + 1 unproven**. Ollama probe passed in 5.56 seconds. Trace includes one invalid/truncated JSON reply that was retried successfully.
 - Key gap: Qwen found `Health: {0}/100` but labeled it `hardcoded_managed`, not `runtime_generated`. [v0.8 semantic validation patch](source/m03_semantic_v08/) marks that incorrect assertion `candidate_only` without auto-correcting the model answer. [ZIP](archives/ModStudioAI_M03_SemanticValidation_Fix_v08.zip), [report](reports/m03/BAO_CAO_XAC_MINH_QWEN_GUIDED_V07_20261102.md).
 - **96/96 offline Python tests passed**; v0.8 live Windows/Ollama inference pending. Keep public lab as functional regression only, not a secret holdout.
+
+
+## Verified Qwen Guided v0.8 — M03 regression target achieved (2026-11-02)
+
+- [New guided result](evidence/m03/runs/20261102_ollama_v08_guided/qwen_agent_guided.json) · [evaluation](benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_v08_guided/evaluation_private_guided.json) · [QA report](reports/m03/BAO_CAO_XAC_MINH_M03_GUIDED_V08_20261102.md).
+- User Windows **96/96 tests passed**, Qwen3.5 4B Guided `completed=true`, **4 observations**; evaluator **3 exact + 1 runtime template + 1 not proven**, matching the static-rule baseline. T004 `Health: {0}/100` is correctly tagged `runtime_generated` by the model, not auto-fixed. T001 serialized-prefab origin remains unproven.
+- [Original RAR](raw_uploads/Outputs_M03_Ollama_Guided_v08_20261102.rar), [PowerShell log](history/M03_Ollama_v08_Run_Log_20261102.txt), [SHA256 manifest](evidence/m03/runs/20261102_ollama_v08_guided/SHA256_MANIFEST.json). The evaluator was reproduced independently with semantic JSON match.
+- **Next:** [M04 unseen holdout protocol](docs/M04_UNSEEN_HOLDOUT_PROTOCOL.md). Public lab is functional regression, not a secret benchmark; Qwen autonomous and runtime-hook provenance are not solved by this result.

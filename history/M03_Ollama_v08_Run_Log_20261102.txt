@@ -1,0 +1,132 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\HP\Desktop\ModStudioAI_M03_SemanticValidation_Fix_v08> powershell -NoProfile -ExecutionPolicy Bypass -File .\Install_Fix_v08.ps1
+Patched: src\modstudio_m03.py
+Patched: tests\test_semantics_v08.py
+Backup: D:\ModStudioAI\Milestone03\Backups\M03_Semantic_v08_20261102_122353
+Python .venv, original Unity build, REA, private evaluation and Outputs unchanged.
+Next: run tests, back up old guided reports, run guided AI and evaluate only when completed=True.
+PS C:\Users\HP\Desktop\ModStudioAI_M03_SemanticValidation_Fix_v08> cd D:\ModStudioAI\Milestone03
+PS D:\ModStudioAI\Milestone03>
+PS D:\ModStudioAI\Milestone03> powershell -NoProfile -ExecutionPolicy Bypass -File .\Run_M03.ps1 -Mode tests
+test_bounded_brief (test_guided_v06.GuidedBriefTests.test_bounded_brief) ... ok
+test_brief_never_loads_editor_reference_or_private_csv (test_guided_v06.GuidedBriefTests.test_brief_never_loads_editor_reference_or_private_csv) ... ok
+test_cil_methods_and_format_present (test_guided_v06.GuidedBriefTests.test_cil_methods_and_format_present) ... ok
+test_contains_source_qualified_both_classes (test_guided_v06.GuidedBriefTests.test_contains_source_qualified_both_classes) ... ok
+test_diagnostic_marked_not_removed (test_guided_v06.GuidedBriefTests.test_diagnostic_marked_not_removed) ... ok
+test_source_class_not_inferred_from_unknown (test_guided_v06.GuidedBriefTests.test_source_class_not_inferred_from_unknown) ... ok
+test_unknown_tmp_is_not_prefab_proof (test_guided_v06.GuidedBriefTests.test_unknown_tmp_is_not_prefab_proof) ... ok
+test_baseline_evaluation_still_three_exact_one_template (test_guided_v06.GuidedStrategyTests.test_baseline_evaluation_still_three_exact_one_template) ... ok
+test_diagnostic_candidate_does_not_raise_evaluation_score (test_guided_v06.GuidedStrategyTests.test_diagnostic_candidate_does_not_raise_evaluation_score) ... ok
+test_immediate_finish_receives_broad_evidence (test_guided_v06.GuidedStrategyTests.test_immediate_finish_receives_broad_evidence) ... ok
+test_max_steps_not_false_completion (test_guided_v06.GuidedStrategyTests.test_max_steps_not_false_completion) ... ok
+test_model_results_validated_not_auto_promoted (test_guided_v06.GuidedStrategyTests.test_model_results_validated_not_auto_promoted) ... ok
+test_retries_and_stops_if_model_empty (test_guided_v06.GuidedStrategyTests.test_retries_and_stops_if_model_empty) ... ok
+test_tools_can_still_be_invoked (test_guided_v06.GuidedStrategyTests.test_tools_can_still_be_invoked) ... ok
+test_trace_says_guided_not_autonomous (test_guided_v06.GuidedStrategyTests.test_trace_says_guided_not_autonomous) ... ok
+test_baseline_and_proof (test_m03.TestM03.test_baseline_and_proof) ... ok
+test_eval_honesty (test_m03.TestM03.test_eval_honesty) ... ok
+test_fake_lit_rejected (test_m03.TestM03.test_fake_lit_rejected) ... ok
+test_localhost_only (test_m03.TestM03.test_localhost_only) ... ok
+test_prepare_from_actual_rea (test_m03.TestM03.test_prepare_from_actual_rea) ... ok
+test_sha_and_inventory (test_m03.TestM03.test_sha_and_inventory) ... ok
+test_tool_access (test_m03.TestM03.test_tool_access) ... ok
+test_all_empty_stops_without_claiming_completion (test_ollama_v05.AgentRetryTests.test_all_empty_stops_without_claiming_completion) ... ok
+test_all_invalid_actions_stops_without_fake_tool (test_ollama_v05.AgentRetryTests.test_all_invalid_actions_stops_without_fake_tool) ... ok
+test_invalid_action_is_retried (test_ollama_v05.AgentRetryTests.test_invalid_action_is_retried) ... ok
+test_retries_empty_then_finish (test_ollama_v05.AgentRetryTests.test_retries_empty_then_finish) ... ok
+test_tool_feedback_is_bounded (test_ollama_v05.AgentRetryTests.test_tool_feedback_is_bounded) ... ok
+test_array_is_rejected (test_ollama_v05.OllamaTransportTests.test_array_is_rejected) ... ok
+test_auto_ollama_uses_native_api_and_think_false (test_ollama_v05.OllamaTransportTests.test_auto_ollama_uses_native_api_and_think_false) ... ok
+test_empty_content_produces_diagnostic_not_json_exception (test_ollama_v05.OllamaTransportTests.test_empty_content_produces_diagnostic_not_json_exception) ... ok
+test_explicit_ollama_transport_overrides_custom_port (test_ollama_v05.OllamaTransportTests.test_explicit_ollama_transport_overrides_custom_port) ... ok
+test_incomplete_agent_cannot_be_scored_as_zero_five (test_ollama_v05.OllamaTransportTests.test_incomplete_agent_cannot_be_scored_as_zero_five) ... ok
+test_legacy_llamacpp_still_openai_compatible (test_ollama_v05.OllamaTransportTests.test_legacy_llamacpp_still_openai_compatible) ... ok
+test_malformed_json_has_safe_diagnostic (test_ollama_v05.OllamaTransportTests.test_malformed_json_has_safe_diagnostic) ... ok
+test_missing_api_content_errors_cleanly (test_ollama_v05.OllamaTransportTests.test_missing_api_content_errors_cleanly) ... ok
+test_openai_ollama_uses_reasoning_effort_none (test_ollama_v05.OllamaTransportTests.test_openai_ollama_uses_reasoning_effort_none) ... ok
+test_remote_hosts_disallowed_even_when_ollama_selected (test_ollama_v05.OllamaTransportTests.test_remote_hosts_disallowed_even_when_ollama_selected) ... ok
+test_unexpected_server_path_is_rejected (test_ollama_v05.OllamaTransportTests.test_unexpected_server_path_is_rejected) ... ok
+test_v1_suffix_is_accepted_and_native_api_is_used (test_ollama_v05.OllamaTransportTests.test_v1_suffix_is_accepted_and_native_api_is_used) ... ok
+test_absent_externals_stays_unresolved (test_pointer_v04.ExternalPointerUnitTests.test_absent_externals_stays_unresolved) ... ok
+test_boolean_pointer_ids_rejected (test_pointer_v04.ExternalPointerUnitTests.test_boolean_pointer_ids_rejected) ... ok
+test_duplicate_file_name_never_resolves (test_pointer_v04.ExternalPointerUnitTests.test_duplicate_file_name_never_resolves) ... ok
+test_index_out_of_range_is_never_guessed (test_pointer_v04.ExternalPointerUnitTests.test_index_out_of_range_is_never_guessed) ... ok
+test_index_three_maps_third_external_not_matching_pathid (test_pointer_v04.ExternalPointerUnitTests.test_index_three_maps_third_external_not_matching_pathid) ... ok
+test_key_match_but_wrong_external_file_stays_unresolved (test_pointer_v04.ExternalPointerUnitTests.test_key_match_but_wrong_external_file_stays_unresolved) ... ok
+test_old_v03_output_not_auto_upgraded (test_pointer_v04.ExternalPointerUnitTests.test_old_v03_output_not_auto_upgraded) ... ok
+test_pointer_mapped_but_wrong_target_key_stays_unresolved (test_pointer_v04.ExternalPointerUnitTests.test_pointer_mapped_but_wrong_target_key_stays_unresolved) ... ok
+test_pointer_to_different_table_even_same_key_does_not_link_other_table (test_pointer_v04.ExternalPointerUnitTests.test_pointer_to_different_table_even_same_key_does_not_link_other_table) ... ok
+test_resolved_binding_has_rea_flow_but_no_runtime_execution_claim (test_pointer_v04.ExternalPointerUnitTests.test_resolved_binding_has_rea_flow_but_no_runtime_execution_claim) ... ok
+test_same_file_pointer_zero_can_resolve_if_table_object_exists (test_pointer_v04.ExternalPointerUnitTests.test_same_file_pointer_zero_can_resolve_if_table_object_exists) ... ok
+test_scan_gathers_actual_external_table (test_pointer_v04.ScannerSyntheticIntegrationTests.test_scan_gathers_actual_external_table) ... ok
+test_fake_UnityPy_objects_source_identity_and_reader_binding (test_provenance_v03.BuildOnlyScannerIntegrationTests.test_fake_UnityPy_objects_source_identity_and_reader_binding)
+Mocks UnityPy API boundary; no claim of Unity 6 runtime validation. ... ok
+test_faked_observation_rejected (test_provenance_v03.ProvenanceV03Tests.test_faked_observation_rejected) ... ok
+test_preexisting_v02_is_not_auto_upgraded (test_provenance_v03.ProvenanceV03Tests.test_preexisting_v02_is_not_auto_upgraded) ... ok
+test_real_rea_has_lookup_setter (test_provenance_v03.ProvenanceV03Tests.test_real_rea_has_lookup_setter) ... ok
+test_scriptable_source_can_be_proven_not_runtime_binding (test_provenance_v03.ProvenanceV03Tests.test_scriptable_source_can_be_proven_not_runtime_binding) ... ok
+test_table_pairs_key_and_value (test_provenance_v03.ProvenanceV03Tests.test_table_pairs_key_and_value) ... ok
+test_table_reader_key_pointer_unresolved (test_provenance_v03.ProvenanceV03Tests.test_table_reader_key_pointer_unresolved) ... ok
+test_value_only_not_proven_as_source (test_provenance_v03.ProvenanceV03Tests.test_value_only_not_proven_as_source) ... ok
+test_wrong_class_never_promoted (test_provenance_v03.ProvenanceV03Tests.test_wrong_class_never_promoted) ... ok
+test_wrong_key_never_linked (test_provenance_v03.ProvenanceV03Tests.test_wrong_key_never_linked) ... ok
+test_raw_not_promoted_to_proof (test_scanner_v02.ScannerPatchTests.test_raw_not_promoted_to_proof) ... ok
+test_raw_strings_offsets_and_utf8 (test_scanner_v02.ScannerPatchTests.test_raw_strings_offsets_and_utf8) ... ok
+test_real_textasset_proven_no_type_forgery (test_scanner_v02.ScannerPatchTests.test_real_textasset_proven_no_type_forgery) ... ok
+test_text_only_data_has_no_ground_truth_paths (test_scanner_v02.ScannerPatchTests.test_text_only_data_has_no_ground_truth_paths) ... ok
+test_typed_nested_strings (test_scanner_v02.ScannerPatchTests.test_typed_nested_strings) ... ok
+test_cli_evaluation_prints_scores_not_zero_observations (test_semantics_v08.SemanticConsistencyTests.test_cli_evaluation_prints_scores_not_zero_observations) ... ok
+test_conservative_replay_guided_three_exact_zero_template (test_semantics_v08.SemanticConsistencyTests.test_conservative_replay_guided_three_exact_zero_template) ... ok
+test_correct_dynamic_template_accepted (test_semantics_v08.SemanticConsistencyTests.test_correct_dynamic_template_accepted) ... ok
+test_diagnostic_is_candidate_only (test_semantics_v08.SemanticConsistencyTests.test_diagnostic_is_candidate_only) ... ok
+test_dynamic_without_formatter_not_promoted (test_semantics_v08.SemanticConsistencyTests.test_dynamic_without_formatter_not_promoted) ... ok
+test_guided_does_not_inject_evaluator_knowledge (test_semantics_v08.SemanticConsistencyTests.test_guided_does_not_inject_evaluator_knowledge) ... ok
+test_guided_prompt_explains_format_vs_hardcoded (test_semantics_v08.SemanticConsistencyTests.test_guided_prompt_explains_format_vs_hardcoded) ... ok
+test_il_literal_cannot_claim_prefab (test_semantics_v08.SemanticConsistencyTests.test_il_literal_cannot_claim_prefab) ... ok
+test_il_literal_cannot_claim_scriptable_source (test_semantics_v08.SemanticConsistencyTests.test_il_literal_cannot_claim_scriptable_source) ... ok
+test_literal_braces_without_formatter_not_forcibly_dynamic (test_semantics_v08.SemanticConsistencyTests.test_literal_braces_without_formatter_not_forcibly_dynamic) ... ok
+test_lookup_key_not_ui_proof (test_semantics_v08.SemanticConsistencyTests.test_lookup_key_not_ui_proof) ... ok
+test_missing_il_literal_rejected (test_semantics_v08.SemanticConsistencyTests.test_missing_il_literal_rejected) ... ok
+test_static_baseline_remains_three_plus_one (test_semantics_v08.SemanticConsistencyTests.test_static_baseline_remains_three_plus_one) ... ok
+test_static_hardcoded_text_still_accepted (test_semantics_v08.SemanticConsistencyTests.test_static_hardcoded_text_still_accepted) ... ok
+test_template_as_hardcoded_not_accepted (test_semantics_v08.SemanticConsistencyTests.test_template_as_hardcoded_not_accepted) ... ok
+test_wrong_type_not_counted_for_template (test_semantics_v08.SemanticConsistencyTests.test_wrong_type_not_counted_for_template) ... ok
+test_autonomous_default_fake_chat_compatibility (test_timeout_v07.TimeoutV07Tests.test_autonomous_default_fake_chat_compatibility) ... ok
+test_cli_probe_out_has_status_no_evidence (test_timeout_v07.TimeoutV07Tests.test_cli_probe_out_has_status_no_evidence) ... {"status": "ok", "elapsed_seconds": 1.1}
+ok
+test_cloud_url_rejected_before_model_probe (test_timeout_v07.TimeoutV07Tests.test_cloud_url_rejected_before_model_probe) ... ok
+test_custom_timeout_and_predict_passed (test_timeout_v07.TimeoutV07Tests.test_custom_timeout_and_predict_passed) ... ok
+test_guided_bad_context_rejected (test_timeout_v07.TimeoutV07Tests.test_guided_bad_context_rejected) ... ok
+test_guided_brief_budget_keeps_sources_and_methods (test_timeout_v07.TimeoutV07Tests.test_guided_brief_budget_keeps_sources_and_methods) ... ok
+test_guided_timeout_traces_and_does_not_finish (test_timeout_v07.TimeoutV07Tests.test_guided_timeout_traces_and_does_not_finish) ... ok
+test_native_payload_uses_smaller_predict_and_context4096 (test_timeout_v07.TimeoutV07Tests.test_native_payload_uses_smaller_predict_and_context4096) ... ok
+test_predict_validation (test_timeout_v07.TimeoutV07Tests.test_predict_validation) ... ok
+test_previous_guided_trace_is_http_timeout_not_invalid_json (test_timeout_v07.TimeoutV07Tests.test_previous_guided_trace_is_http_timeout_not_invalid_json) ... ok
+test_private_evaluator_still_does_not_score_failed_run (test_timeout_v07.TimeoutV07Tests.test_private_evaluator_still_does_not_score_failed_run) ... ok
+test_probe_invalid_reply_is_clean_error (test_timeout_v07.TimeoutV07Tests.test_probe_invalid_reply_is_clean_error) ... ok
+test_probe_is_small_no_rea_or_ground_truth (test_timeout_v07.TimeoutV07Tests.test_probe_is_small_no_rea_or_ground_truth) ... ok
+test_timeout_validation (test_timeout_v07.TimeoutV07Tests.test_timeout_validation) ... ok
+
+----------------------------------------------------------------------
+Ran 96 tests in 0.037s
+
+OK
+Completed: tests
+PS D:\ModStudioAI\Milestone03>
+PS D:\ModStudioAI\Milestone03> New-Item -ItemType Directory -Force .\Outputs\History | Out-Null
+PS D:\ModStudioAI\Milestone03>
+PS D:\ModStudioAI\Milestone03> Copy-Item .\Outputs\qwen_agent_guided.json .\Outputs\History\qwen_agent_guided_v07.json -Force
+PS D:\ModStudioAI\Milestone03>
+PS D:\ModStudioAI\Milestone03> Copy-Item .\Outputs\evaluation_private_guided.json .\Outputs\History\evaluation_private_guided_v07.json -Force
+PS D:\ModStudioAI\Milestone03> powershell -NoProfile -ExecutionPolicy Bypass -File .\Run_M03.ps1 -Mode agent -Strategy guided -Transport ollama -Server "http://127.0.0.1:11434" -Model "qwen3.5:4b" -TimeoutSeconds 600 -NumPredict 1280 -BriefChars 3900
+{"command": "agent", "out": "D:\\ModStudioAI\\Milestone03\\Outputs\\qwen_agent_guided.json", "observations": 4, "completed": true}
+Completed: agent
+PS D:\ModStudioAI\Milestone03>
+PS D:\ModStudioAI\Milestone03> (Get-Content .\Outputs\qwen_agent_guided.json -Raw | ConvertFrom-Json).completed
+True
+PS D:\ModStudioAI\Milestone03> powershell -NoProfile -ExecutionPolicy Bypass -File .\Run_M03.ps1 -Mode evaluate -EvaluateTarget guided
+{"command": "evaluate", "out": "D:\\ModStudioAI\\Milestone03\\Outputs\\evaluation_private_guided.json", "total_cases": 5, "exact_text_and_source_proven": 3, "format_template_and_source_proven": 1, "unproven": 1}
+Completed: evaluate
+PS D:\ModStudioAI\Milestone03>

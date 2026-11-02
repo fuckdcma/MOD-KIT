@@ -92,3 +92,11 @@
 - Guided Qwen score = **3 exact + 0 format template + 2 unproven** (T004 source-type wrong, T001 unknown). v0.4 tool baseline = 3 exact + 1 format template + 1 unknown. Autonomous v0.5 = 1 exact.
 - Validator v0.7 classed Health template as `observed` with `hardcoded_managed` despite `String.Format` call; v0.8 marks that assertion `candidate_only`, no auto-correction.
 - v0.8 source/tests/installer packaged and **96/96 local tests passed**; CLI score feedback improved; live Qwen retest pending. Need private game holdout later.
+
+
+## M03 v0.8 — measured Guided Qwen baseline reached (2026-11-02)
+
+- User Windows 96/96 tests; Qwen Guided v0.8 completed true with four observations, `Health: {0}/100` corrected to `runtime_generated`, no diagnostics exposed as UI observations.
+- Qwen Guided now matches static tool baseline: **3 exact +1 template +1 unproven (T001 prefab origin)**. Independent evaluator reproduction matches submitted JSON report. This establishes a successful *functional regression on UnityTextLab A* only, not generalization or runtime hooking.
+- Prior guided v0.7 =3 exact +0 template +2 unknown; autonomous v0.5 =1 exact. Never mix strategy scores.
+- Next prioritize private holdout UnityTextLab-B; avoid leaking game/seed/ground truth via public repo. Review [protocol](M04_UNSEEN_HOLDOUT_PROTOCOL.md).

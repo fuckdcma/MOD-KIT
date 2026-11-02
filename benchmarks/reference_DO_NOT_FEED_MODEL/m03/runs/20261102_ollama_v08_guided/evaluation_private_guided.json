@@ -1,0 +1,46 @@
+{
+  "schema": "modstudio.m03.v0.4",
+  "kind": "private_blind_evaluation",
+  "total_cases": 5,
+  "exact_text_and_source_proven": 3,
+  "format_template_and_source_proven": 1,
+  "unproven": 1,
+  "cases": [
+    {
+      "case_id": "T001",
+      "status": "not_proven",
+      "observed_text": "",
+      "source_category": "serialized_prefab",
+      "observation_id": ""
+    },
+    {
+      "case_id": "T002",
+      "status": "exact_text",
+      "observed_text": "Load Game",
+      "source_category": "scriptable_object",
+      "observation_id": "O0004"
+    },
+    {
+      "case_id": "T003",
+      "status": "exact_text",
+      "observed_text": "Quest Completed",
+      "source_category": "hardcoded_managed",
+      "observation_id": "O0001"
+    },
+    {
+      "case_id": "T004",
+      "status": "template_text",
+      "observed_text": "Health: {0}/100",
+      "source_category": "runtime_generated",
+      "observation_id": "O0002"
+    },
+    {
+      "case_id": "T005",
+      "status": "exact_text",
+      "observed_text": "Hello, Commander",
+      "source_category": "external_json",
+      "observation_id": "O0003"
+    }
+  ],
+  "caveat": "This is a source+text static evidence measure, not AI intelligence, recall of all game strings, nor runtime hook success."
+}

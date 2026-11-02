@@ -1,0 +1,88 @@
+{
+  "schema": "modstudio.m03.v0.4",
+  "mode": "agent",
+  "assembly_sha256": "ab9cf9e569815b6d1d1f49dbc455521bb426b6118b891c8c0a3052244d24a29e",
+  "completed": true,
+  "strategy": "guided",
+  "observations": [
+    {
+      "text": "Quest Completed",
+      "source_type": "hardcoded_managed",
+      "method": "ModStudioLab.HardcodedTextExample.Awake",
+      "source_ref": "0x70000221",
+      "evidence_type": "il_literal",
+      "evidence_value": "Quest Completed",
+      "confidence": "observed",
+      "note": "Direct IL literal in hardcoded method with TMP setter call.",
+      "validation_status": "observed",
+      "validation_reason": "Exact method ldstr and TMP setter observed where applicable; IL stack-to-setter dataflow not proven",
+      "observation_id": "O0001"
+    },
+    {
+      "text": "Health: {0}/100",
+      "source_type": "runtime_generated",
+      "method": "ModStudioLab.RuntimeTextExample.Refresh",
+      "source_ref": "0x700002a9",
+      "evidence_type": "il_literal",
+      "evidence_value": "Health: {0}/100",
+      "confidence": "observed",
+      "note": "Direct IL literal in method calling String.Format and TMP setter.",
+      "validation_status": "observed",
+      "validation_reason": "Exact method ldstr and TMP setter observed where applicable; IL stack-to-setter dataflow not proven",
+      "observation_id": "O0002"
+    },
+    {
+      "text": "Hello, Commander",
+      "source_type": "external_json",
+      "method": "",
+      "source_ref": "resources.assets#path_id=9",
+      "evidence_type": "asset_text",
+      "evidence_value": "Hello, Commander",
+      "confidence": "observed",
+      "note": "TextAsset field value loaded via JSON utility.",
+      "validation_status": "observed",
+      "validation_reason": "Text read from build asset; asset origin may be uncertain",
+      "observation_id": "O0003"
+    },
+    {
+      "text": "Load Game",
+      "source_type": "scriptable_object",
+      "method": "",
+      "source_ref": "sharedassets0.assets#path_id=16",
+      "evidence_type": "asset_text",
+      "evidence_value": "Load Game",
+      "confidence": "observed",
+      "note": "MonoBehaviour entry key value from LabStringTable.",
+      "validation_status": "observed",
+      "validation_reason": "Text read from build asset; asset origin may be uncertain",
+      "observation_id": "O0004"
+    }
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "action": "controller_evidence_brief",
+      "evidence_chars": 4287,
+      "methods_included": 6,
+      "qualified_sources_included": 2,
+      "unverified_ui_snapshots_included": 1,
+      "truncated": true,
+      "model_timeout_seconds": 600,
+      "num_predict": 1280,
+      "brief_budget_chars": 3900,
+      "note": "Controller collected build/REA evidence; classification remains model-generated."
+    },
+    {
+      "step": 1,
+      "action": "finish",
+      "candidate_count": 4,
+      "strategy": "guided_model_synthesis"
+    }
+  ],
+  "limitations": [
+    "No source-project or Editor ground truth is used.",
+    "No code is injected; no hooking is performed.",
+    "Static evidence does not prove runtime behavior.",
+    "Unknown build asset text must not be guessed."
+  ]
+}

@@ -106,3 +106,11 @@ Bản v0.4 đã được đóng gói: [Source](../source/m03_pointer_v04/), [ZIP
 - [Guided evaluation](../benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_v07_guided_completed/evaluation_private_guided.json): **3 exact + 0 template + 2 unproven**, correct T002 ScriptableObject, T003 hardcoded and T005 JSON. Qwen saw `Health: {0}/100` but mislabeled it `hardcoded_managed`; T001 prefab origin still unproven. Static rule baseline: 3 exact + 1 template +1 unproven.
 - [v0.8 fix](../source/m03_semantic_v08/) adds semantic source-type checks, clearer Guided prompt, correct CLI evaluate summary. **96/96 offline tests pass**; revalidation of old Qwen answer keeps score 3/0/2 but downgrades misclassified Health to candidate_only. **v0.8 model inference still pending Windows run**.
 - [QA report](../reports/m03/BAO_CAO_XAC_MINH_QWEN_GUIDED_V07_20261102.md), [ZIP](../archives/ModStudioAI_M03_SemanticValidation_Fix_v08.zip). Public repository ground truth is not a secret blind test.
+
+
+## Latest confirmed Windows run — v0.8 Qwen Guided (2026-11-02)
+
+- [Qwen result](../evidence/m03/runs/20261102_ollama_v08_guided/qwen_agent_guided.json): `completed=true`, 4 verified observations; T002, T003, T005 exact; T004 `Health: {0}/100` correctly tagged `runtime_generated` from `RuntimeTextExample.Refresh`; T001 `serialized_prefab` remains unsupported from build.
+- [Evaluator](../benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_v08_guided/evaluation_private_guided.json) **3 exact +1 template +1 not proven**, matches existing static baseline. Reproduced with same v0.8 evaluator; semantic JSON exact match. [QA details](../reports/m03/BAO_CAO_XAC_MINH_M03_GUIDED_V08_20261102.md).
+- Windows 96/96 Python tests pass. v0.7 backup in RAR had 8 observations, score 3 exact +0 template +2 unknown. v0.8 4 observations (no diagnostic logs); runtime behavior/dataflow not verified. Public lab is not blind.
+- Next milestone: [M04 Unseen Holdout](M04_UNSEEN_HOLDOUT_PROTOCOL.md) with private answers and a new Unity build, not additional v0.9 prompt patch on the existing five known strings.
