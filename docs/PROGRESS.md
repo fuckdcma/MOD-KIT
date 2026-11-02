@@ -147,3 +147,12 @@ User executed safe aggregate PowerShell health-check on `Runs_LOCAL/AgentInput/b
 - `Run_M04.ps1 -Mode guided -Repeats 3` produced `guided_r01/r02/r03.json`, **all `completed=true`**, with 11 observations each. **11 candidate observations are NOT 11 correct cases.**
 - No private scoring yet: protocol requires three completed runs per strategy. Preserve original autonomous failure, existing guided outputs, and frozen M03 v0.8 source. NEXT: inspect **privacy-safe autonomous trace metadata** (step, attempt, action, status, code, error_type, result_count; never request/prompt/text details), distinguish invalid JSON/transport/invalid action/max-steps, then document a controlled recovery or treat the run as failed and score separately.
 - DO NOT upload B source, seed, generated strings, raw agent trace or ground truth to PUBLIC repository. Screenshots already exposed some generated strings, so this B instance remains a functional integration benchmark, not a pristine secret holdout.
+
+
+## M04 Autonomous failure diagnosed to JSON response on step 8 (2026-11-02)
+
+User supplied privacy-safe trace columns from frozen M03 v0.8's first Autonomous run. `completed=false`, 10 trace records: step 1 `list_methods` (5 results), steps 2–6 `inspect_method` (1 result each), step 7 `list_asset_candidates` (0 results), and step 8 `model_response_error code=invalid_json` on attempts 1/2/3. No `transport_error` seen, no completed `finish`. Existing 3 Guided runs completed with 11 candidate observations each, not scored.
+
+Code analysis: `run_agent` accumulates assistant action JSON and tool feedback (up to 4500 chars per result) in the conversation while Ollama is fixed to `num_ctx=4096`. Context pressure/JSON truncation is a *hypothesis*, not proven without seeing safe `detail` fields (`chars, line, column, finish`). Ask only `trace | where code=invalid_json | select step,attempt,detail`; no user private strings or whole trace.
+
+Keep original failed `autonomous_r01.json` intact. M04 Run_M04 refuses overwrite. If rerun for engineering, create a distinct private RunsDir, copy original AgentInput read-only with SHA-256 equality check, label result RETRY, do not replace a failed first attempt or quietly include retries as original 3-run benchmark. Freeze M03 v0.8; controlled bounded-history code improvement must be a separately versioned experiment. No private scoring yet.
