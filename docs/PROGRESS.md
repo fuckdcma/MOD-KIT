@@ -138,3 +138,12 @@
 User executed safe aggregate PowerShell health-check on `Runs_LOCAL/AgentInput/build_assets.json`: `files_considered=6`, `files_scanned=6`, `truncated=false`, `monobehaviours_seen/decoded=33/33`, `textassets_seen/decoded=8/8`, `assets=23`, `raw_candidates=0`, `reader_bindings=0`, `errors=0`, TypeTree imported, one loaded version, zero TypeTree errors. The earlier `scan-assets observations=0` is **CLI summary display only**: M03 v0.8 prints `len(output.get('observations',[]))` for scans, while scan JSON actually uses `assets` (23 records). The frozen M03 v0.8 hard-codes UnityTextLab-A reader class, so 0 reader bindings in B is an expected coverage limitation, not a parsing error.
 
 **Build evidence is technically usable for M04 functional integration trials.** Preserve `seal`, REA, source hash and build-only input without modifying scanner mid-benchmark. Run local Ollama probe, then 3 autonomous and 3 guided repeated trials; only after complete/locked predictions run separate M04 private scorer. Never interpret baseline 4 observations or provenance 23 as correctness scores. No generated case strings, private files or raw traces were committed.
+
+
+## M04 first Qwen holdout run (2026-11-02) — Guided 3/3, Autonomous incomplete
+
+- Same sealed B experiment; Ollama `qwen3.5:4b` localhost probe `status=ok`, elapsed **6.06 seconds**.
+- `Run_M04.ps1 -Mode autonomous -Repeats 3` attempted `autonomous_r01.json`, produced `completed=false` and 0 observations, then correctly stopped. Autonomous r02/r03 were **not run**.
+- `Run_M04.ps1 -Mode guided -Repeats 3` produced `guided_r01/r02/r03.json`, **all `completed=true`**, with 11 observations each. **11 candidate observations are NOT 11 correct cases.**
+- No private scoring yet: protocol requires three completed runs per strategy. Preserve original autonomous failure, existing guided outputs, and frozen M03 v0.8 source. NEXT: inspect **privacy-safe autonomous trace metadata** (step, attempt, action, status, code, error_type, result_count; never request/prompt/text details), distinguish invalid JSON/transport/invalid action/max-steps, then document a controlled recovery or treat the run as failed and score separately.
+- DO NOT upload B source, seed, generated strings, raw agent trace or ground truth to PUBLIC repository. Screenshots already exposed some generated strings, so this B instance remains a functional integration benchmark, not a pristine secret holdout.
