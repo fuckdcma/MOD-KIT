@@ -28,14 +28,14 @@
     },
     {
       "path": "README_VI.md",
-      "sha256": "bbdcca5e7499f99123b08f4039ab05853bcf1a4634544297e1528f65fc578493",
-      "git_blob_sha1": "58a8fb0ce1cd89c055a9ebd971d901cb76c023e6",
+      "sha256": "d4cb826e556997f97c9847fc6161b0dcdf0f5032022cd96421a48fc7f5d97c2b",
+      "git_blob_sha1": "ac3ed3814e975cccba21c22f51f64a0547628089",
       "size": 5076
     },
     {
       "path": "Reports/BAO_CAO_QWEN_FIRST_RUN_VI.md",
-      "sha256": "e266484eb002aa622e244345b29191e126fd37eecc27c9517bdd1e25f62152b5",
-      "git_blob_sha1": "8573a39499befc0eefa5fdb75be9118c511996a2",
+      "sha256": "fd0d2ad2cb329d4d90ec7e4cd58d31d349e2e4085c7c100e9d5844ad1980e01f",
+      "git_blob_sha1": "4e7747852a19ffb59507131616d7f93cce173422",
       "size": 1495
     }
   ]

@@ -66,7 +66,7 @@ Nếu kết quả in một JSON object hợp lệ, kênh Ollama native chạy đ
 
 ## Kết quả đã kiểm thử trong môi trường phát triển
 
-- **50/50 Python unit tests đạt**, gồm 34 tests v0.4 và 16 tests giao tiếp Ollama v0.5; tất cả dùng mock, chưa có truy cập Ollama trên máy của người dùng.
+- **51/51 Python unit tests đạt**, gồm 34 tests v0.4 và 17 tests giao tiếp Ollama v0.5; tất cả dùng mock, chưa có truy cập Ollama trên máy của người dùng.
 - Khi chạy lại `baseline` với chính `build_assets.json` mới tải lên, output **khớp chính xác về JSON** với baseline v0.4. Không thay đổi kết luận provenance của T001/T002.
 - Chưa khẳng định `qwen_agent.json` sẽ `completed:true` cho tới khi thử trên PC Windows.
 

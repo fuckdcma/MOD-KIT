@@ -52,6 +52,6 @@ test_text_only_data_has_no_ground_truth_paths (test_scanner_v02.ScannerPatchTest
 test_typed_nested_strings (test_scanner_v02.ScannerPatchTests.test_typed_nested_strings) ... ok
 
 ----------------------------------------------------------------------
-Ran 51 tests in 0.015s
+Ran 51 tests in 0.027s
 
 OK

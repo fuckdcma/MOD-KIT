@@ -17,7 +17,7 @@ GPU and Ollama inference are running; `qwen_agent.json` lacks a finished answer.
 
 ## Fix v0.5
 
-Native Ollama `think:false` / JSON mode, bounded retry and tool output; keep llama.cpp support. Fail-closed external URL restriction. No evaluation for incomplete agents. 50/50 unit tests pass, baseline remains semantically unchanged on user-provided assets.
+Native Ollama `think:false` / JSON mode, bounded retry and tool output; keep llama.cpp support. Fail-closed external URL restriction. No evaluation for incomplete agents. 51/51 unit tests pass, baseline remains semantically unchanged on user-provided assets.
 
 ## Next check
 
