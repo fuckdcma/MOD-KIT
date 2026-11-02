@@ -62,3 +62,11 @@
 - v0.4 Python 34/34 tests, 3/3 report semantic reproduction. Counts: 3 exact + 1 template + 1 unproven; T001 prefab origin remains unknown. Qwen baseline not run.
 - Archived exact RAR + four JSON + SHA-256 manifest and QA report in repository.
 - Next: local Qwen baseline; no claims of runtime behavior or fully recovered prefab path.
+
+
+## M03 Ollama Qwen first integration attempt (2026-11-02)
+
+- `qwen3.5:4b` loaded in Ollama on RX 6700 XT, 100% GPU, 3.1GB; API was reachable for one successful tool-call.
+- First Qwen run: step1 search_literals(text) returned 2 results; step2 malformed/empty JSON => aborted. `completed=false`. Do not treat 0/5 eval as an AI accuracy number.
+- v0.5 native Ollama JSON mode + thinking off + retries + incomplete-eval guard + 4500-character tool-result bound: **51/51 local tests passed**, no live Windows test yet.
+- Next run v0.5 with existing REA + build_assets (do not rescan) and upload fresh qwen_agent/evaluation files.

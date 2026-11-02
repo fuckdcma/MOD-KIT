@@ -95,3 +95,12 @@ Người dùng tải lên `Outputs.rar` sau khi chạy Pointer Resolver v0.4. B�
 - Evaluator: **3 exact + 1 dynamic template + 1 not_proven**. Same counts as v0.3; v0.4 strengthened pointer proof.
 - Replayed v0.4 `provenance`, `baseline`, `evaluate` with uploaded build JSON: all 3 outputs semantically identical to Windows files; CRLF vs LF only. **34/34 unit tests passed** locally. Unity build itself is not available for independent rescanning here.
 - **Next:** Qwen untrained local baseline (localhost llama-server), keep reference ground truth/Editor evidence away from agent; build a separate private holdout because this public repository contains lab answers. T001 prefab origin should not be invented.
+
+
+## Qwen Agent local lần 1: GPU OK, giao thức Agent lỗi (2026-11-02)
+
+Người dùng cho xem `ollama ps`: `qwen3.5:4b` **100% GPU** (~3.1GB, context4096, runner llamacpp). User upload [RAR](../raw_uploads/Outputs_M03_Ollama_First_20261102.rar) và [qwen_agent.json](../evidence/m03/runs/20261102_ollama_first/qwen_agent.json): `completed=false`, tool step1 `search_literals(text)` trả 2 dòng, step2 lỗi `Expecting value: line 1 column 1`, 0 observations. [Agent evaluator](../benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_first/evaluation_private_agent.json) 0/5 **chỉ do aborted**, không phải kết quả AI thực. Tool baseline remains 3 exact / 1 template / 1 unproven (T001).
+
+Đã viết và kiểm thử [Ollama Fix v0.5](../source/m03_ollama_fix_v05/), [ZIP installer](../archives/ModStudioAI_M03_OllamaAgent_Fix_v05.zip). Python **51/51 tests passed** (34 old + 17 new), run baseline vs uploaded build_assets.json semantically identical. Native Ollama `/api/chat`, `think=false`, `format=json`; controlled retries, safe error trace, bounded context, incomplete evaluation is rejected. **Not yet run with user's live Ollama**.
+
+Next: apply v0.5 on Windows, execute `tests` then `agent -Server http://127.0.0.1:11434 -Model qwen3.5:4b`; inspect `qwen_agent.json.completed`; only if true run `evaluate -EvaluateTarget agent`. Do not put ground truth/Editor provenance into AI inputs. If fails, send trace and PowerShell log; evaluate cause based on error codes, not assume Qwen poor.

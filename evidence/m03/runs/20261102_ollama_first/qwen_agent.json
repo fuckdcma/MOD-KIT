@@ -1,0 +1,28 @@
+{
+  "schema": "modstudio.m03.v0.4",
+  "mode": "agent",
+  "assembly_sha256": "ab9cf9e569815b6d1d1f49dbc455521bb426b6118b891c8c0a3052244d24a29e",
+  "completed": false,
+  "observations": [],
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_literals",
+      "request": {
+        "action": "search_literals",
+        "query": "text"
+      },
+      "result_count": 2
+    },
+    {
+      "step": 2,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    }
+  ],
+  "limitations": [
+    "No source-project or Editor ground truth is used.",
+    "No code is injected; no hooking is performed.",
+    "Static evidence does not prove runtime behavior.",
+    "Unknown build asset text must not be guessed."
+  ]
+}

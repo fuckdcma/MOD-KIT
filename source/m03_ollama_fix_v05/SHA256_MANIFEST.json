@@ -1,0 +1,42 @@
+{
+  "schema": "modstudio.m03.ollama_patch.v0.5",
+  "date": "2026-11-02",
+  "files": [
+    {
+      "path": "src/modstudio_m03.py",
+      "sha256": "fbc172a9df29274b3538c3c93fde68a9cd1a255213f143fe7c63fc6603f9fd8d",
+      "git_blob_sha1": "400ecc1e1115371803fdd749499df3937e5be37b",
+      "size": 47227
+    },
+    {
+      "path": "Run_M03.ps1",
+      "sha256": "d63f63a3ba9d2eed72b73e80967fe6702ec152f0e905339a9854ad32a1c18d9d",
+      "git_blob_sha1": "26a2b75a04517cbb40c6961303d665b560346880",
+      "size": 3622
+    },
+    {
+      "path": "tests/test_ollama_v05.py",
+      "sha256": "65da9c17669861bbdc352ea66ffe63dc1bbf7684df2df3a821da2ac4068b8535",
+      "git_blob_sha1": "dd9240a8c2717fb4b22c007a6ac66fb061871c45",
+      "size": 8474
+    },
+    {
+      "path": "Install_Fix_v05.ps1",
+      "sha256": "687a7110f87bc78cd749cdd4ef9f514165535de349543dc114486bc4aa69fa68",
+      "git_blob_sha1": "a15cdea95d09d17eb0f52de3078a4a47bd4d481a",
+      "size": 2830
+    },
+    {
+      "path": "README_VI.md",
+      "sha256": "bbdcca5e7499f99123b08f4039ab05853bcf1a4634544297e1528f65fc578493",
+      "git_blob_sha1": "58a8fb0ce1cd89c055a9ebd971d901cb76c023e6",
+      "size": 5076
+    },
+    {
+      "path": "Reports/BAO_CAO_QWEN_FIRST_RUN_VI.md",
+      "sha256": "e266484eb002aa622e244345b29191e126fd37eecc27c9517bdd1e25f62152b5",
+      "git_blob_sha1": "8573a39499befc0eefa5fdb75be9118c511996a2",
+      "size": 1495
+    }
+  ]
+}

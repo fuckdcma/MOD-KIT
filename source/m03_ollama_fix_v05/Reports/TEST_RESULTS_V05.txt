@@ -1,0 +1,57 @@
+test_baseline_and_proof (test_m03.TestM03.test_baseline_and_proof) ... ok
+test_eval_honesty (test_m03.TestM03.test_eval_honesty) ... ok
+test_fake_lit_rejected (test_m03.TestM03.test_fake_lit_rejected) ... ok
+test_localhost_only (test_m03.TestM03.test_localhost_only) ... ok
+test_prepare_from_actual_rea (test_m03.TestM03.test_prepare_from_actual_rea) ... ok
+test_sha_and_inventory (test_m03.TestM03.test_sha_and_inventory) ... ok
+test_tool_access (test_m03.TestM03.test_tool_access) ... ok
+test_all_empty_stops_without_claiming_completion (test_ollama_v05.AgentRetryTests.test_all_empty_stops_without_claiming_completion) ... ok
+test_all_invalid_actions_stops_without_fake_tool (test_ollama_v05.AgentRetryTests.test_all_invalid_actions_stops_without_fake_tool) ... ok
+test_invalid_action_is_retried (test_ollama_v05.AgentRetryTests.test_invalid_action_is_retried) ... ok
+test_retries_empty_then_finish (test_ollama_v05.AgentRetryTests.test_retries_empty_then_finish) ... ok
+test_tool_feedback_is_bounded (test_ollama_v05.AgentRetryTests.test_tool_feedback_is_bounded) ... ok
+test_array_is_rejected (test_ollama_v05.OllamaTransportTests.test_array_is_rejected) ... ok
+test_auto_ollama_uses_native_api_and_think_false (test_ollama_v05.OllamaTransportTests.test_auto_ollama_uses_native_api_and_think_false) ... ok
+test_empty_content_produces_diagnostic_not_json_exception (test_ollama_v05.OllamaTransportTests.test_empty_content_produces_diagnostic_not_json_exception) ... ok
+test_explicit_ollama_transport_overrides_custom_port (test_ollama_v05.OllamaTransportTests.test_explicit_ollama_transport_overrides_custom_port) ... ok
+test_incomplete_agent_cannot_be_scored_as_zero_five (test_ollama_v05.OllamaTransportTests.test_incomplete_agent_cannot_be_scored_as_zero_five) ... ok
+test_legacy_llamacpp_still_openai_compatible (test_ollama_v05.OllamaTransportTests.test_legacy_llamacpp_still_openai_compatible) ... ok
+test_malformed_json_has_safe_diagnostic (test_ollama_v05.OllamaTransportTests.test_malformed_json_has_safe_diagnostic) ... ok
+test_missing_api_content_errors_cleanly (test_ollama_v05.OllamaTransportTests.test_missing_api_content_errors_cleanly) ... ok
+test_openai_ollama_uses_reasoning_effort_none (test_ollama_v05.OllamaTransportTests.test_openai_ollama_uses_reasoning_effort_none) ... ok
+test_remote_hosts_disallowed_even_when_ollama_selected (test_ollama_v05.OllamaTransportTests.test_remote_hosts_disallowed_even_when_ollama_selected) ... ok
+test_unexpected_server_path_is_rejected (test_ollama_v05.OllamaTransportTests.test_unexpected_server_path_is_rejected) ... ok
+test_v1_suffix_is_accepted_and_native_api_is_used (test_ollama_v05.OllamaTransportTests.test_v1_suffix_is_accepted_and_native_api_is_used) ... ok
+test_absent_externals_stays_unresolved (test_pointer_v04.ExternalPointerUnitTests.test_absent_externals_stays_unresolved) ... ok
+test_boolean_pointer_ids_rejected (test_pointer_v04.ExternalPointerUnitTests.test_boolean_pointer_ids_rejected) ... ok
+test_duplicate_file_name_never_resolves (test_pointer_v04.ExternalPointerUnitTests.test_duplicate_file_name_never_resolves) ... ok
+test_index_out_of_range_is_never_guessed (test_pointer_v04.ExternalPointerUnitTests.test_index_out_of_range_is_never_guessed) ... ok
+test_index_three_maps_third_external_not_matching_pathid (test_pointer_v04.ExternalPointerUnitTests.test_index_three_maps_third_external_not_matching_pathid) ... ok
+test_key_match_but_wrong_external_file_stays_unresolved (test_pointer_v04.ExternalPointerUnitTests.test_key_match_but_wrong_external_file_stays_unresolved) ... ok
+test_old_v03_output_not_auto_upgraded (test_pointer_v04.ExternalPointerUnitTests.test_old_v03_output_not_auto_upgraded) ... ok
+test_pointer_mapped_but_wrong_target_key_stays_unresolved (test_pointer_v04.ExternalPointerUnitTests.test_pointer_mapped_but_wrong_target_key_stays_unresolved) ... ok
+test_pointer_to_different_table_even_same_key_does_not_link_other_table (test_pointer_v04.ExternalPointerUnitTests.test_pointer_to_different_table_even_same_key_does_not_link_other_table) ... ok
+test_resolved_binding_has_rea_flow_but_no_runtime_execution_claim (test_pointer_v04.ExternalPointerUnitTests.test_resolved_binding_has_rea_flow_but_no_runtime_execution_claim) ... ok
+test_same_file_pointer_zero_can_resolve_if_table_object_exists (test_pointer_v04.ExternalPointerUnitTests.test_same_file_pointer_zero_can_resolve_if_table_object_exists) ... ok
+test_scan_gathers_actual_external_table (test_pointer_v04.ScannerSyntheticIntegrationTests.test_scan_gathers_actual_external_table) ... ok
+test_fake_UnityPy_objects_source_identity_and_reader_binding (test_provenance_v03.BuildOnlyScannerIntegrationTests.test_fake_UnityPy_objects_source_identity_and_reader_binding)
+Mocks UnityPy API boundary; no claim of Unity 6 runtime validation. ... ok
+test_faked_observation_rejected (test_provenance_v03.ProvenanceV03Tests.test_faked_observation_rejected) ... ok
+test_preexisting_v02_is_not_auto_upgraded (test_provenance_v03.ProvenanceV03Tests.test_preexisting_v02_is_not_auto_upgraded) ... ok
+test_real_rea_has_lookup_setter (test_provenance_v03.ProvenanceV03Tests.test_real_rea_has_lookup_setter) ... ok
+test_scriptable_source_can_be_proven_not_runtime_binding (test_provenance_v03.ProvenanceV03Tests.test_scriptable_source_can_be_proven_not_runtime_binding) ... ok
+test_table_pairs_key_and_value (test_provenance_v03.ProvenanceV03Tests.test_table_pairs_key_and_value) ... ok
+test_table_reader_key_pointer_unresolved (test_provenance_v03.ProvenanceV03Tests.test_table_reader_key_pointer_unresolved) ... ok
+test_value_only_not_proven_as_source (test_provenance_v03.ProvenanceV03Tests.test_value_only_not_proven_as_source) ... ok
+test_wrong_class_never_promoted (test_provenance_v03.ProvenanceV03Tests.test_wrong_class_never_promoted) ... ok
+test_wrong_key_never_linked (test_provenance_v03.ProvenanceV03Tests.test_wrong_key_never_linked) ... ok
+test_raw_not_promoted_to_proof (test_scanner_v02.ScannerPatchTests.test_raw_not_promoted_to_proof) ... ok
+test_raw_strings_offsets_and_utf8 (test_scanner_v02.ScannerPatchTests.test_raw_strings_offsets_and_utf8) ... ok
+test_real_textasset_proven_no_type_forgery (test_scanner_v02.ScannerPatchTests.test_real_textasset_proven_no_type_forgery) ... ok
+test_text_only_data_has_no_ground_truth_paths (test_scanner_v02.ScannerPatchTests.test_text_only_data_has_no_ground_truth_paths) ... ok
+test_typed_nested_strings (test_scanner_v02.ScannerPatchTests.test_typed_nested_strings) ... ok
+
+----------------------------------------------------------------------
+Ran 51 tests in 0.015s
+
+OK

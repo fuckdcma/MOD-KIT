@@ -1,0 +1,54 @@
+{
+  "schema": "modstudio.m03.qwen_failure_qa.v0.5",
+  "date": "2026-11-02",
+  "files": [
+    {
+      "filename": "baseline_static.json",
+      "size_bytes": 3732,
+      "sha256": "284bf7593f3e497637431fa1742181438cdd7243ae97993b16b391c3bc0718cf",
+      "git_blob_sha1": "10c30dc7058c8b6a0649c50af57bec049cf044e7"
+    },
+    {
+      "filename": "build_assets.json",
+      "size_bytes": 5595,
+      "sha256": "efab8a832a83cf3092449dd967d795e670fc560e608ce99d3258e98b7818b9b3",
+      "git_blob_sha1": "f722a199431e671598cb56cb14228fffe3fbc3ba"
+    },
+    {
+      "filename": "evaluation_private.json",
+      "size_bytes": 1305,
+      "sha256": "f03be162e106d22e62531d8ac168efae5cf2ba710c873ba1b6c129deff65b786",
+      "git_blob_sha1": "c80e7195c6dca951198d5f88a3a703895b762b00"
+    },
+    {
+      "filename": "evaluation_private_agent.json",
+      "size_bytes": 1227,
+      "sha256": "6453a32299ecd102f47fe1155d271acb67e62b4d2cae5f31e047d4d72a8197d3",
+      "git_blob_sha1": "9ada6773d90d416ad809e336e01cbc4f8a3f81c8"
+    },
+    {
+      "filename": "provenance_links.json",
+      "size_bytes": 5535,
+      "sha256": "4946554a31daf99dc405e92666a98109244c4f43fa785c1d92fb0d5f01c92f5e",
+      "git_blob_sha1": "0eb77b949613751bc34b4265bd4172d03d2c516e"
+    },
+    {
+      "filename": "qwen_agent.json",
+      "size_bytes": 743,
+      "sha256": "f4113675eeb70d6408667b1b9340c1b55b575b2a0074749910d63d9e7a1535b5",
+      "git_blob_sha1": "afc75869b178cf8513f14bfb26f2253a6d17cf28"
+    },
+    {
+      "filename": "Outputs.rar",
+      "size_bytes": 5197,
+      "sha256": "458eb66a7c352ce99671fb937b62eef04d27f0a1ddf96cdd3c6ea0960de084ad",
+      "git_blob_sha1": "10f84c1959be7e369578e4fd8c9edd45fe660ca0"
+    },
+    {
+      "filename": "ModStudioAI_M03_OllamaAgent_Fix_v05.zip",
+      "size_bytes": 24888,
+      "sha256": "7a01066140571344b34f0cdb5c493d64a43f45cbfe601534627c18ed7e308037",
+      "git_blob_sha1": "49e53ead669129fe94d4d70e3a118d629357b3ba"
+    }
+  ]
+}

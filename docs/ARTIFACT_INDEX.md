@@ -37,3 +37,12 @@ Không coi `provenance_links.json` v0.3 là đã có trong kho vì người dùn
 - [ZIP nguyên bản](../archives/ModStudioAI_M03_PointerResolver_Fix_v04.zip)
 - [Báo cáo kỹ thuật v0.4](../reports/m03/BAO_CAO_M03_V04.md)
 - Chưa có Windows scan v0.4; không nhầm với kết quả mới nhất v0.3 trong `evidence/m03/runs/20261102_v03/`.
+
+
+## M03 Ollama Agent v0.5 (latest code)
+
+- [Patch source, Windows installer, tests](../source/m03_ollama_fix_v05/)
+- [ZIP](../archives/ModStudioAI_M03_OllamaAgent_Fix_v05.zip)
+- [QA report](../reports/m03/BAO_CAO_QWEN_FIRST_RUN_VI.md), [input hash manifest](../reports/m03/QA_INPUT_HASHES_OLLAMA_FIRST_20261102.json)
+- [User's aborted Agent trace](../evidence/m03/runs/20261102_ollama_first/qwen_agent.json), [0/5 incomplete evaluation (invalid as AI score)](../benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_first/evaluation_private_agent.json)
+- [Uploaded RAR original](../raw_uploads/Outputs_M03_Ollama_First_20261102.rar). Contains same baseline/build/provenance as M03 v0.4; no duplicated uploads needed.

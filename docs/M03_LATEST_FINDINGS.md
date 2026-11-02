@@ -76,3 +76,11 @@ Bản v0.4 đã được đóng gói: [Source](../source/m03_pointer_v04/), [ZIP
 - v0.4 score **3 exact / 1 template / 1 unproven (T001)**; no Qwen test, no runtime hook. T002 source was already counted as exact v0.3; v0.4 improves proof quality.
 - Independent local reproduction of `provenance_links.json`, `baseline_static.json`, `evaluation_private.json`: semantic JSON matches 3/3, 34/34 unit tests pass. Uploads use CRLF; regenerated files use LF. SHA-256 manifest included.
 - [RAR original](../raw_uploads/Outputs_M03_v04_20261102.rar), [report](../reports/m03/BAO_CAO_XAC_MINH_M03_V04_20261102.md). Respect public repository exposure of evaluation reference.
+
+
+## Current Qwen local integration (2026-11-02)
+
+- `ollama ps` confirmed Qwen3.5 4B 100% GPU, 3.1GB, context4096.
+- First agent run ended at step2 JSON parse (empty/non-JSON content), `completed=false`; no observations. [Trace](../evidence/m03/runs/20261102_ollama_first/qwen_agent.json). `evaluation_private_agent.json` 0/5 is invalid to interpret as performance.
+- [v0.5 native Ollama transport fix](../source/m03_ollama_fix_v05/) tested 51/51 offline; old v0.4 static baseline unchanged. New code switches to `/api/chat` `think:false` `format:'json'` when server port=11434. OpenAI endpoint still supported for localhost llama-server 9931.
+- **Live Windows Qwen retest pending**; no Qwen intelligence score yet. Tool baseline stays 3 exact + 1 dynamic template + 1 unknown (T001).

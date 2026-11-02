@@ -61,3 +61,10 @@ Không thể tự động chép nguyên văn toàn bộ transcript ChatGPT sang 
 
 - [Build evidence v0.4](evidence/m03/runs/20261102_v04/) · [QA report](reports/m03/BAO_CAO_XAC_MINH_M03_V04_20261102.md) · [original RAR](raw_uploads/Outputs_M03_v04_20261102.rar).
 - **1/1 serialized reader pointer resolved** (T002). Baseline remains **3 exact, 1 template, 1 not proven (T001)**; Qwen baseline not yet measured.
+
+
+## M03 Ollama Qwen3.5 first run + agent fix v0.5 (2026-11-02)
+
+- GPU confirmed **100% GPU**, `qwen3.5:4b`, ~3.1 GB, context 4096 from user `ollama ps`.
+- [First-run Agent trace](evidence/m03/runs/20261102_ollama_first/qwen_agent.json): incomplete, first tool call OK, second step invalid JSON. **0/5 evaluation is NOT a valid AI performance measurement**, because `completed=false`.
+- [Fix v0.5 sources](source/m03_ollama_fix_v05/) · [ZIP](archives/ModStudioAI_M03_OllamaAgent_Fix_v05.zip) · [QA report](reports/m03/BAO_CAO_QWEN_FIRST_RUN_VI.md). **51/51 local tests passed**. Windows/Ollama live retest pending.
