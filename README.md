@@ -37,3 +37,7 @@ Không thể tự động chép nguyên văn toàn bộ transcript ChatGPT sang 
 - [Tải toàn bộ hiện vật đã có trong sandbox (ZIP)](archives/MODKIT_Chat_Artifacts_20261102.zip): 88 file, gồm các ZIP/RAR mã nguồn, ảnh, logs, báo cáo và JSON, có manifest SHA-256. **Không phải bản export nguyên văn toàn bộ chat.**
 - [Hồ sơ bàn giao](docs/CHAT_HANDOFF.md) để tiếp tục phiên ChatGPT sau.
 - [Mã nguồn được duyệt trên GitHub](source/) sẽ được đồng bộ thành các tệp riêng; xem [chỉ mục](docs/ARTIFACT_INDEX.md).
+
+### Final synchronization status
+
+[Snapshot status / SHA-256 manifest](docs/SNAPSHOT_STATUS.md): archived 88 available original files, published 47 browsable source/evidence text files. Source copies were checked against original SHA-256/Git object IDs. Raw chat messages are **not** exported.
