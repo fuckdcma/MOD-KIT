@@ -67,3 +67,12 @@ Repo này là **public**. Các file từ ChatGPT chưa được commit đầy đ
 Đã phát triển, test Python **22/22 đạt** và commit [Provenance Linker v0.3](../source/m03_provenance_v03/) cùng [ZIP cài đặt](../archives/ModStudioAI_M03_Provenance_Fix_v03.zip). Bản này đọc key/value serialized trên cùng `LabStringTable`, bảo toàn `TableTextExample.key` và PPtr dưới dạng metadata, phân loại `TMP_Text.m_text` là UI snapshot; không tự nhận prefab origin hoặc runtime binding. Cần **cài bản v0.3 trên máy Windows rồi scan-assets mới**. Trên JSON v0.2 đã được người dùng gửi, điểm vẫn **2 exact / 1 template / 2 unproven**; chỉ khi JSON v0.3 có paired key từ build mới có khả năng nâng T002 lên source+text proven. **Chưa có log thực tế v0.3.**
 
 Chạy PowerShell trong `D:\\ModStudioAI\\Milestone03`: `tests` → `scan-assets` → `provenance` → `baseline` → `evaluate`, theo README tại `source/m03_provenance_v03/README_VI.md`. Gửi `build_assets.json`, `provenance_links.json`, `evaluation_private.json` để tiếp tục.
+
+
+## Xác minh đầu ra Windows v0.3 — 2026-11-02
+
+Đã nhận [bộ JSON v0.3](../evidence/m03/runs/20261102_v03/) từ máy Windows và [báo cáo xác minh](../reports/m03/BAO_CAO_XAC_MINH_M03_V03_20261102.md). UnityPy quét 6/6 file, MonoBehaviour 32/32, TextAsset 5/5, 7 bản ghi, 1 reader binding, **0 errors**. Ground truth evaluator **3 exact (T002, T003, T005) + 1 template (T004) + 1 chưa proven (T001)**. Đã chạy lại offline provenance/baseline/evaluate bằng source v0.3, 3 JSON kết quả trùng nội dung với bản tải lên; 22/22 tests đạt.
+
+**T002** có key/value serialized (`menu.load → Load Game`) đúng class `ModStudioLab.LabStringTable` ở `sharedassets0.assets#path_id=16`. Reader `level0#path_id=40` giữ key `menu.load` và pointer `m_FileID=3,m_PathID=16` nhưng `binding_status=unresolved_build_pointer`. Chưa xác minh target external mapping; **không gọi là runtime binding proven**. **T001** chỉ được thấy như UI snapshot `level0#path_id=35`, chưa chứng minh prefab origin.
+
+Bước tiếp theo: đọc external references table `level0` để chứng minh pointer tới asset; giữ T001 not_proven; sau đó chạy Qwen nền local. **Không dùng evaluation_private.json hoặc Editor provenance trong agent prompt.**

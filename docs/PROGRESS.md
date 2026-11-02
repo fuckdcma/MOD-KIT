@@ -36,3 +36,12 @@
 - New table key/value pairing, reader metadata and build-only provenance output. Validity guard rejects unknown TMP snapshot and ScriptableObject missing entry key.
 - **No Windows v0.3 build scan yet**; v0.2 user upload still 2 exact + 1 template + 2 unknown.
 - Next: install patch on Windows, run scanner and evaluate; then develop one-to-one binding validation and start Qwen baseline if stable.
+
+
+## M03 v0.3 — verified Windows results (2026-11-02)
+
+- Real UnityTextLab build scan: 6/6 files; all 32 MonoBehaviour and 5 TextAsset decoded; 0 warnings/errors.
+- Proof of paired `menu.load → Load Game` in ScriptableObject; T002 exact source+text now accepted by evaluator, but reader PPtr still unresolved.
+- Evaluation: **3 exact + 1 dynamic template + 1 unproven (T001)**, not a Qwen result.
+- Independent offline reproduction matches user's `baseline_static.json`, `provenance_links.json`, `evaluation_private.json`.
+- Next engineering task: external-reference table resolver to bind `level0 (FileID=3, PathID=16)` to correct sharedassets0 target; don't infer prefab source from TMP `m_text`.

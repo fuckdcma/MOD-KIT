@@ -49,3 +49,13 @@ T001 và T002 đã xuất hiện dưới dạng text *trong build*, nhưng `sour
 - PowerShell evaluator mặc định chấm baseline, không tự ưu tiên file Qwen cũ; `-EvaluateTarget agent` là tùy chọn rõ ràng.
 
 [Tải bản vá](../archives/ModStudioAI_M03_Provenance_Fix_v03.zip) · [Báo cáo](../reports/m03/BAO_CAO_M03_V03.md).
+
+
+## Đã xác minh đầu ra Windows v0.3 (2026-11-02)
+
+Kết quả thực tế do người dùng cung cấp trong `Outputs.rar` đã giải nén và lưu nguyên văn vào [evidence/m03/runs/20261102_v03](../evidence/m03/runs/20261102_v03/), [private evaluator](../benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_v03/evaluation_private.json) và [báo cáo](../reports/m03/BAO_CAO_XAC_MINH_M03_V03_20261102.md).
+
+- 6/6 files, 32/32 MonoBehaviour, 5/5 TextAssets, 0 parser errors, 7 assets, 1 reader binding.
+- **T002 now source+key+value proven**: `ModStudioLab.LabStringTable`, `entries[0].key=menu.load`, `entries[0].value=Load Game`, `sharedassets0.assets#path_id=16`. REA sees `TableTextExample.Start → LabStringTable.TryGet → TMP_Text.set_text` but **serialized pointer unresolved** (`m_FileID=3,m_PathID=16`).
+- T001 still **not_proven** as prefab source; a scene TMP snapshot isn't prefab-origin proof.
+- evaluator **3 exact + 1 template + 1 unproven** (tool, not Qwen); independently reproduced with Python v0.3.
