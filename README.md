@@ -31,3 +31,9 @@ Mod Studio AI nghiên cứu nguồn text và font, trích xuất nguồn gốc v
 > **Cảnh báo:** Repository hiện là **public**. Các tệp trong `benchmarks/reference_DO_NOT_FEED_MODEL` chỉ được tách theo quy ước — không hề riêng tư. Việc đưa ground truth công khai có thể làm nhiễm benchmark; muốn một blind test thực sự cần tập đáp án ngoài public repo.
 
 Không thể tự động chép nguyên văn toàn bộ transcript ChatGPT sang đây qua các công cụ hiện có. Kho này lưu bản ghi bàn giao và những file có thể truy xuất; xem [giới hạn](docs/SYNC_AND_PRIVACY.md).
+
+## Snapshot hiện vật 2026-11-02
+
+- [Tải toàn bộ hiện vật đã có trong sandbox (ZIP)](archives/MODKIT_Chat_Artifacts_20261102.zip): 88 file, gồm các ZIP/RAR mã nguồn, ảnh, logs, báo cáo và JSON, có manifest SHA-256. **Không phải bản export nguyên văn toàn bộ chat.**
+- [Hồ sơ bàn giao](docs/CHAT_HANDOFF.md) để tiếp tục phiên ChatGPT sau.
+- [Mã nguồn được duyệt trên GitHub](source/) sẽ được đồng bộ thành các tệp riêng; xem [chỉ mục](docs/ARTIFACT_INDEX.md).
