@@ -1,0 +1,67 @@
+{
+  "schema": "modstudio.m03.v0.1",
+  "mode": "baseline",
+  "assembly_sha256": "ab9cf9e569815b6d1d1f49dbc455521bb426b6118b891c8c0a3052244d24a29e",
+  "completed": true,
+  "observations": [
+    {
+      "text": "",
+      "source_type": "external_json",
+      "method": "ModStudioLab.ExternalTextExample.Start",
+      "source_ref": "Assets/Resources/dialogue.json",
+      "evidence_type": "method_call",
+      "evidence_value": "UnityEngine.Resources.Load",
+      "confidence": "hypothesis",
+      "note": "Reader path is inferred from IL/diagnostic literal; JSON message unknown.",
+      "validation_status": "hypothesis",
+      "validation_reason": "Method call observed; source values are not proven",
+      "observation_id": "O0001"
+    },
+    {
+      "text": "Quest Completed",
+      "source_type": "hardcoded_managed",
+      "method": "ModStudioLab.HardcodedTextExample.Awake",
+      "source_ref": "ModStudioLab.HardcodedTextExample.Awake",
+      "evidence_type": "il_literal",
+      "evidence_value": "Quest Completed",
+      "confidence": "observed",
+      "note": "",
+      "validation_status": "observed",
+      "validation_reason": "Exact ldstr literal in specified method",
+      "observation_id": "O0002"
+    },
+    {
+      "text": "Health: {0}/100",
+      "source_type": "runtime_generated",
+      "method": "ModStudioLab.RuntimeTextExample.Refresh",
+      "source_ref": "ModStudioLab.RuntimeTextExample.Refresh",
+      "evidence_type": "il_literal",
+      "evidence_value": "Health: {0}/100",
+      "confidence": "observed",
+      "note": "Template only; concrete runtime value is not observed.",
+      "validation_status": "observed",
+      "validation_reason": "Exact ldstr literal in specified method",
+      "observation_id": "O0003"
+    },
+    {
+      "text": "",
+      "source_type": "scriptable_object",
+      "method": "ModStudioLab.TableTextExample.Start",
+      "source_ref": "LabStringTable.TryGet",
+      "evidence_type": "method_call",
+      "evidence_value": "ModStudioLab.LabStringTable.TryGet",
+      "confidence": "hypothesis",
+      "note": "Lookup exists; asset data and returned value not observed.",
+      "validation_status": "hypothesis",
+      "validation_reason": "Method call observed; source values are not proven",
+      "observation_id": "O0004"
+    }
+  ],
+  "trace": [],
+  "limitations": [
+    "No source-project or Editor ground truth is used.",
+    "No code is injected; no hooking is performed.",
+    "Static evidence does not prove runtime behavior.",
+    "Unknown build asset text must not be guessed."
+  ]
+}
