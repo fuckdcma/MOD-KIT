@@ -122,3 +122,12 @@
 - This screenshot does **NOT** show the separate `[M04] Validation OK...` message because Console was cleared/Play logs only; formal validation status and a new Windows Mono rebuild still require explicit confirmation. **Do not run M04 AI scoring on prior invalid build.**
 - Required next: exit Play mode, clear Console, run `Tools > Mod Studio AI > M04 > Validate Scene Bindings`, confirm `Validation OK`; then rebuild Windows Mono, inspect current build warnings; only if clean, proceed `seal -> rea -> evidence` against new build.
 - Private screenshot exposes generated case text within chat; **do not upload screenshot or strings to public repo**. The current seed should be treated as integration smoke-test, not pristine secret holdout.
+
+
+## M04 UnityTextLab-B repaired build + REA recorded; asset scan health unresolved
+
+- User's Unity 6000.3 Windows Mono rebuild after M04 script binding fix has **0 console errors and 0 warnings** (only information messages). Prior Play smoke test shows 15 populated UI labels.
+- M04 `seal` succeeded with **8 build files**; REA exported `assembly_identity.json` and `members.json` without error; `prepare` found **21 methods**.
+- Frozen M03 v0.8 `scan-assets` returned **0 asset text observations**; `baseline` reported 4 observations and `provenance` 23 records, both unscored and **not coverage/accuracy**.
+- Critical next check: collect ONLY the scanner's counts (`files_considered/files_scanned`, MonoBehaviour/TextAsset seen/decoded, error stages, raw_candidate_count, TypeTree loaded/errors) from `Milestone04/Runs_LOCAL/AgentInput/build_assets.json`. Do not upload raw `assets`, strings, private project, seed, ground truth or hash-linked confidential case data to public repo.
+- Until diagnostics distinguish unreadable serialized assets vs simply unsupported source classes, **do not interpret 0 observations as a negative model result**. Preserve M03 v0.8 frozen baseline and existing hash-sealed run; do not tune/fix mid-experiment without a new explicitly labeled protocol.
