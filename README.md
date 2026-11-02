@@ -55,3 +55,9 @@ Không thể tự động chép nguyên văn toàn bộ transcript ChatGPT sang 
 - [Source, tests and installer v0.4](source/m03_pointer_v04/) · [Download ZIP](archives/ModStudioAI_M03_PointerResolver_Fix_v04.zip) · [Engineering report](reports/m03/BAO_CAO_M03_V04.md)
 - **34/34 local synthetic unit tests passed.** Unity 6.3 v0.4 build scan has **not** been run on the user's PC; do not claim pointer resolved until new scan.
 - v0.3 real run: **3 exact + 1 template + 1 unproven (T001)**. New resolver checks actual serialized file external table before linking T002 reader to table.
+
+
+## Verified v0.4 Windows run (2026-11-02)
+
+- [Build evidence v0.4](evidence/m03/runs/20261102_v04/) · [QA report](reports/m03/BAO_CAO_XAC_MINH_M03_V04_20261102.md) · [original RAR](raw_uploads/Outputs_M03_v04_20261102.rar).
+- **1/1 serialized reader pointer resolved** (T002). Baseline remains **3 exact, 1 template, 1 not proven (T001)**; Qwen baseline not yet measured.

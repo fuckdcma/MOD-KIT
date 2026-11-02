@@ -83,3 +83,15 @@ Bước tiếp theo: đọc external references table `level0` để chứng min
 [Source v0.4](../source/m03_pointer_v04/) và [ZIP installer](../archives/ModStudioAI_M03_PointerResolver_Fix_v04.zip) đã được tạo, **34/34 unit tests Python đạt**. v0.4 dùng `UnityPy obj.assets_file.externals[m_FileID-1]` để kiểm tra quan hệ PPtr tới bảng ScriptableObject theo file name duy nhất, PathID, class và key. `m_FileID=0` tham chiếu cùng file. Nếu bảng externals không có/khác, vẫn giữ `unresolved_build_pointer` — không suy đoán theo PathID/key. **Đây là proof cấu hình serialized**, không phải chứng cứ runtime đã gọi hàm.
 
 Đã chạy logic v0.4 trên JSON v0.3 cũ: score vẫn `3 exact + 1 template + 1 unproven` và pointer vẫn unresolved vì dữ liệu cũ thiếu external mapping. **Chưa có `build_assets.json` v0.4 từ Windows.** Để tiếp tục, cài bản vá, chạy `tests -> scan-assets -> provenance -> baseline -> evaluate`; gửi mới `build_assets.json`, `provenance_links.json`, `evaluation_private.json`. Giữ T001 chưa chứng minh prefab origin. [README chi tiết](../source/m03_pointer_v04/README_VI.md).
+
+
+## Milestone 03 v0.4 — Windows scan đã xác minh (2026-11-02)
+
+Người dùng tải lên `Outputs.rar` sau khi chạy Pointer Resolver v0.4. Bản gốc và 4 JSON lưu tại [runs/20261102_v04](../evidence/m03/runs/20261102_v04/), [RAR gốc](../raw_uploads/Outputs_M03_v04_20261102.rar), [evaluation riêng](../benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_v04/evaluation_private.json), [báo cáo QA](../reports/m03/BAO_CAO_XAC_MINH_M03_V04_20261102.md).
+
+- UnityPy scan 6/6 files; 32/32 MonoBehaviour decoded, 5/5 TextAsset decoded; 7 asset observations, 0 errors, 1/1 reader pointer resolved.
+- **T002:** `TableTextExample level0#path_id=40` key `menu.load`, PPtr m_FileID=3/m_PathID=16, `level0.externals[2]=sharedassets0.assets`, target `sharedassets0.assets#path_id=16` class `ModStudioLab.LabStringTable` entry `menu.load → Load Game`; `binding_status=serialized_pointer_resolved`. Proof covers serialized configuration and REA method-call flow **not runtime execution**.
+- T001 `New Game` only TMP `m_text` scene observation, `not_proven` source prefab.
+- Evaluator: **3 exact + 1 dynamic template + 1 not_proven**. Same counts as v0.3; v0.4 strengthened pointer proof.
+- Replayed v0.4 `provenance`, `baseline`, `evaluate` with uploaded build JSON: all 3 outputs semantically identical to Windows files; CRLF vs LF only. **34/34 unit tests passed** locally. Unity build itself is not available for independent rescanning here.
+- **Next:** Qwen untrained local baseline (localhost llama-server), keep reference ground truth/Editor evidence away from agent; build a separate private holdout because this public repository contains lab answers. T001 prefab origin should not be invented.

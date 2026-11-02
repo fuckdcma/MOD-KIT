@@ -53,3 +53,12 @@
 - v0.4 scanner mới sẽ cố xác nhận reader `level0#path_id=40` PPtr fileID3/pathID16 tới `sharedassets0.assets#path_id=16` qua external file table, không suy luận từ tên string hay PathID.
 - Chưa chạy v0.4 scanner thực tế trên máy Windows. Replay dữ liệu v0.3 không tự nâng pointer; evaluator vẫn 3 exact + 1 template + 1 unknown.
 - T001 còn thiếu prefab-origin proof; Qwen local chưa kiểm thử.
+
+
+## M03 v0.4 — Verified real Windows output (2026-11-02)
+
+- Real Unity 6000.3.27f2 Mono test build: 6/6 files, 32/32 MB decoded, 5/5 TextAsset decoded, 7 assets, 0 scan errors.
+- One reader binding `level0#path_id=40` mapped via `level0.externals[2]` to `sharedassets0.assets#path_id=16` and LabStringTable `menu.load` entry; `serialized_pointer_resolved` verified from scanner JSON.
+- v0.4 Python 34/34 tests, 3/3 report semantic reproduction. Counts: 3 exact + 1 template + 1 unproven; T001 prefab origin remains unknown. Qwen baseline not run.
+- Archived exact RAR + four JSON + SHA-256 manifest and QA report in repository.
+- Next: local Qwen baseline; no claims of runtime behavior or fully recovered prefab path.

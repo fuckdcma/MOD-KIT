@@ -1,0 +1,160 @@
+{
+  "schema": "modstudio.m03.v0.4",
+  "kind": "build_only_provenance_links",
+  "assets_scanned": 7,
+  "observations": [
+    {
+      "text": "Load Game",
+      "source_ref": "level0#path_id=31",
+      "source_type": "unknown",
+      "field_path": "m_text",
+      "mono_class": "TMPro.TextMeshProUGUI",
+      "source_status": "ui_snapshot_only",
+      "runtime_binding": "not_proven",
+      "proof_refs": [
+        "level0#path_id=31"
+      ],
+      "warning": "TMP m_text in level0 is not proof of prefab/source ownership"
+    },
+    {
+      "text": "Quest Completed",
+      "source_ref": "level0#path_id=32",
+      "source_type": "unknown",
+      "field_path": "m_text",
+      "mono_class": "TMPro.TextMeshProUGUI",
+      "source_status": "ui_snapshot_only",
+      "runtime_binding": "not_proven",
+      "proof_refs": [
+        "level0#path_id=32"
+      ],
+      "warning": "TMP m_text in level0 is not proof of prefab/source ownership"
+    },
+    {
+      "text": "Health: 75/100",
+      "source_ref": "level0#path_id=33",
+      "source_type": "unknown",
+      "field_path": "m_text",
+      "mono_class": "TMPro.TextMeshProUGUI",
+      "source_status": "ui_snapshot_only",
+      "runtime_binding": "not_proven",
+      "proof_refs": [
+        "level0#path_id=33"
+      ],
+      "warning": "TMP m_text in level0 is not proof of prefab/source ownership"
+    },
+    {
+      "text": "Hello, Commander",
+      "source_ref": "level0#path_id=34",
+      "source_type": "unknown",
+      "field_path": "m_text",
+      "mono_class": "TMPro.TextMeshProUGUI",
+      "source_status": "ui_snapshot_only",
+      "runtime_binding": "not_proven",
+      "proof_refs": [
+        "level0#path_id=34"
+      ],
+      "warning": "TMP m_text in level0 is not proof of prefab/source ownership"
+    },
+    {
+      "text": "New Game",
+      "source_ref": "level0#path_id=35",
+      "source_type": "unknown",
+      "field_path": "m_text",
+      "mono_class": "TMPro.TextMeshProUGUI",
+      "source_status": "ui_snapshot_only",
+      "runtime_binding": "not_proven",
+      "proof_refs": [
+        "level0#path_id=35"
+      ],
+      "warning": "TMP m_text in level0 is not proof of prefab/source ownership"
+    },
+    {
+      "text": "Hello, Commander",
+      "source_ref": "resources.assets#path_id=9",
+      "source_type": "external_json",
+      "field_path": "message",
+      "mono_class": "",
+      "source_status": "source_value_observed",
+      "runtime_binding": "not_proven",
+      "proof_refs": [
+        "resources.assets#path_id=9"
+      ]
+    },
+    {
+      "text": "Load Game",
+      "source_ref": "sharedassets0.assets#path_id=16",
+      "source_type": "scriptable_object",
+      "field_path": "entries[0].value",
+      "mono_class": "ModStudioLab.LabStringTable",
+      "source_status": "source_key_value_observed",
+      "runtime_binding": "serialized_pointer_and_lookup_flow_proven_runtime_unverified",
+      "proof_refs": [
+        "sharedassets0.assets#path_id=16",
+        "level0#path_id=40"
+      ],
+      "key": "menu.load",
+      "reader_flow": {
+        "supported": true,
+        "reader_method": "ModStudioLab.TableTextExample.Start",
+        "table_method": "ModStudioLab.LabStringTable.TryGet",
+        "setter": "TMPro.TMP_Text.set_text",
+        "implementation_available": false,
+        "evidence_refs": [
+          "0x0600000f"
+        ]
+      },
+      "serialized_reader_binding": "pointer_to_this_table_proven",
+      "reader_bindings": [
+        {
+          "source_ref": "level0#path_id=40",
+          "reader_class": "ModStudioLab.TableTextExample",
+          "reader_key": "menu.load",
+          "table_pointer": {
+            "m_FileID": 3,
+            "m_PathID": 16
+          },
+          "pointer_file_lookup": {
+            "status": "file_mapped",
+            "source_file": "level0",
+            "m_FileID": 3,
+            "m_PathID": 16,
+            "reference_kind": "external",
+            "file_name": "sharedassets0.assets",
+            "external_index": 2,
+            "external_path": "sharedassets0.assets"
+          },
+          "binding_status": "serialized_pointer_resolved",
+          "resolved_target_ref": "sharedassets0.assets#path_id=16",
+          "resolution_evidence": {
+            "reader_ref": "level0#path_id=40",
+            "serialized_file": "level0",
+            "m_FileID": 3,
+            "m_PathID": 16,
+            "external_index": 2,
+            "external_path": "sharedassets0.assets",
+            "target_ref": "sharedassets0.assets#path_id=16",
+            "target_class": "ModStudioLab.LabStringTable",
+            "target_key": "menu.load",
+            "proof_kind": "build_serialized_pointer_not_runtime_behavior"
+          }
+        }
+      ]
+    }
+  ],
+  "rea_table_call_chain": {
+    "supported": true,
+    "reader_method": "ModStudioLab.TableTextExample.Start",
+    "table_method": "ModStudioLab.LabStringTable.TryGet",
+    "setter": "TMPro.TMP_Text.set_text",
+    "implementation_available": false,
+    "evidence_refs": [
+      "0x0600000f"
+    ]
+  },
+  "limitations": [
+    "No editor data, source project, or ground truth used.",
+    "Unity source prefab path is not recoverable from TMP m_text alone.",
+    "Serialized key/value proves a table source; call path and binding require separate evidence.",
+    "External-table pointer resolution proves serialized instance configuration, not runtime execution."
+  ]
+}

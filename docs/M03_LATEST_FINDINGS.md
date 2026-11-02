@@ -64,3 +64,15 @@ Kết quả thực tế do người dùng cung cấp trong `Outputs.rar` đã gi
 ## Hướng nghiên cứu tiếp — v0.4 (code verified, Windows scan pending)
 
 Bản v0.4 đã được đóng gói: [Source](../source/m03_pointer_v04/), [ZIP](../archives/ModStudioAI_M03_PointerResolver_Fix_v04.zip), [Báo cáo](../reports/m03/BAO_CAO_M03_V04.md). **34/34 unit tests đạt**; chưa có kiểm chứng với bản build Unity 6.3 qua scanner v0.4. Nâng cấp đọc `SerializedFile.externals` theo `m_FileID - 1`, đối chiếu `m_PathID`, class `LabStringTable`, cặp key/value, file basename duy nhất; nếu thiếu, không nâng trạng thái. Score v0.3 người dùng đã tải lên vẫn **3 exact + 1 template + 1 not proven**, không phải Qwen. T001 serialized prefab origin chưa chứng minh.
+
+
+## Latest verified Windows run — Pointer Resolver v0.4 (2026-11-02)
+
+**v0.4 no longer pending.** [Source scan JSON](../evidence/m03/runs/20261102_v04/build_assets.json) and [provenance graph](../evidence/m03/runs/20261102_v04/provenance_links.json) now show a **real scanner-produced serialized pointer resolution**, under conservative validation:
+
+- `reader_ref=level0#path_id=40`, `m_FileID=3, m_PathID=16`, `external_index=2`, `external_path=sharedassets0.assets`, `resolved_target_ref=sharedassets0.assets#path_id=16`, class `ModStudioLab.LabStringTable`, key `menu.load`.
+- `binding_status=serialized_pointer_resolved`; `proof_kind=build_serialized_pointer_not_runtime_behavior`.
+- 6/6 build files; 32/32 MonoBehaviour, 5/5 TextAsset; 0 scanner errors, 1 resolved pointer, 7 asset records.
+- v0.4 score **3 exact / 1 template / 1 unproven (T001)**; no Qwen test, no runtime hook. T002 source was already counted as exact v0.3; v0.4 improves proof quality.
+- Independent local reproduction of `provenance_links.json`, `baseline_static.json`, `evaluation_private.json`: semantic JSON matches 3/3, 34/34 unit tests pass. Uploads use CRLF; regenerated files use LF. SHA-256 manifest included.
+- [RAR original](../raw_uploads/Outputs_M03_v04_20261102.rar), [report](../reports/m03/BAO_CAO_XAC_MINH_M03_V04_20261102.md). Respect public repository exposure of evaluation reference.
