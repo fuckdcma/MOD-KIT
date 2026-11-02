@@ -93,3 +93,12 @@ Không coi `provenance_links.json` v0.3 là đã có trong kho vì người dùn
 - [Source and PowerShell installer](../source/m04_script_binding_fix_v02/) · [ZIP](../archives/ModStudioAI_M04_ScriptBindingFix_v02.zip) · [README](../source/m04_script_binding_fix_v02/README_VI.md).
 - Includes C# editor repair script, Unity runtime classes separated into matching files, backup/build guard script, 9 offline tests and SHA-256 manifest.
 - No user screenshot, private UnityTextLabB scene/spec/ground-truth/seed, regenerated source, or invalid build binary uploaded to public GitHub.
+
+
+## M04 Autonomous Bounded Context v0.9 — isolated public engineering package
+
+- [Source, PowerShell runner, tests and protocol](../source/m04_autonomous_bounded_v09/)
+- [Download ZIP](../archives/ModStudioAI_M04_Autonomous_BoundedContext_v09.zip)
+- [Public SHA256 manifest](../source/m04_autonomous_bounded_v09/PUBLIC_SHA256_MANIFEST.json)
+- Test report: **7/7 offline Python tests**; no live Windows/Ollama benchmark completed; existing first-attempt Autonomous failure preserved.
+- Contains public engine/testing code only: **no user-generated UnityTextLab-B text, answers, seed, AgentInput, model outputs, screenshots or game project files**.

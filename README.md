@@ -111,3 +111,10 @@ Không thể tự động chép nguyên văn toàn bộ transcript ChatGPT sang 
 - User demonstrated Unity Editor Play and successful Windows Mono build, but Console shows **5 missing/invalid script warnings** from M04 readers and ScriptableObject, with several UI placeholders still `...`. **Do not evaluate this build yet.**
 - Root cause: the public generator template `M04LabRuntime.cs` defines multiple MonoBehaviour/ScriptableObject classes in one file; their Unity MonoScript asset mapping is ambiguous. [Source/repair instructions](source/m04_script_binding_fix_v02/) · [ZIP](archives/ModStudioAI_M04_ScriptBindingFix_v02.zip).
 - Patch backs up files, splits classes into matching `.cs` names, repairs six readers and rebuilds one ScriptableObject from the EXISTING private local spec (no seed regeneration), and adds a pre-build guard. **9/9 offline static tests pass; Unity Windows compile/rebuild not tested yet.** Only publish public patch code, never screenshot/private spec/seed/cases.
+
+
+## M04 Autonomous Bounded Context v0.9 — experimental recovery (2026-11-02)
+
+The original M03 v0.8 Autonomous r01 failed at step 8 with invalid JSON `finish=length` x3. A separate 2560-token retry against identical SHA-matched REA/UnityPy input **also failed** at the same step with identical three JSON error details. Guided M03 v0.8 completed 3/3 runs (11 observations each, **not scored**). This does not establish an accuracy score or uniquely prove context overflow.
+
+A [new **experimental** v0.9 bounded-history runner](source/m04_autonomous_bounded_v09/) and [Windows ZIP](archives/ModStudioAI_M04_Autonomous_BoundedContext_v09.zip) change Autonomous chat-context management and set native Ollama `num_ctx=8192` (also `num_predict=2560`, 16 steps), without modifying the **frozen M03 v0.8 source**. Includes SHA-fingerprint checks and isolated output directory. **7/7 offline Python tests passed; no live Ollama/Windows run yet.** Private B game labels, ground truth, source, agent outputs and raw traces were not committed.

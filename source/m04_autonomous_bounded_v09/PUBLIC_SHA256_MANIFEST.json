@@ -1,0 +1,42 @@
+{
+  "release": "ModStudioAI_M04_Autonomous_BoundedContext_v09",
+  "date": "2026-11-02",
+  "privacy": "PUBLIC CODE ONLY; NO USER-GENERATED HOLDOUT ANSWERS",
+  "files": [
+    {
+      "path": "Docs/PROTOCOL.md",
+      "sha256": "ee6be5e779772ff074c76b15b141c9bed4b4bfe3e5361f24abb3d9fe5bc6344a",
+      "bytes": 1551
+    },
+    {
+      "path": "Docs/RELEASE_NOTES.md",
+      "sha256": "132c12117469935d2306418105d466ab5f4a48fed555beb36696dbd27fdfc951",
+      "bytes": 1601
+    },
+    {
+      "path": "Docs/TEST_RESULTS.txt",
+      "sha256": "9a4978a5ba8eaeccf20c2e9ed56888841767106cb99c9d3d6ebfd911725d7596",
+      "bytes": 415
+    },
+    {
+      "path": "README_VI.md",
+      "sha256": "04e05c8cd9180f315d3ef5c0bd66f308b3069d85a20c8746898ea2b07fc2a2dd",
+      "bytes": 6653
+    },
+    {
+      "path": "Scripts/Run_M04_Autonomous_v09.ps1",
+      "sha256": "01090726715a864b71130a1f8444e3b028c4e7726041f7fb143fac6dd18094d0",
+      "bytes": 5306
+    },
+    {
+      "path": "src/modstudio_m03_v09.py",
+      "sha256": "ced35b88b173b36524d75484447d172bf98ec35102123d0c1c853ef375064083",
+      "bytes": 65607
+    },
+    {
+      "path": "tests/test_bounded_agent.py",
+      "sha256": "a334a7328c6db9ef7db7e046c17da918db0cd28364fcd1eaba45e6824e970646",
+      "bytes": 6635
+    }
+  ]
+}

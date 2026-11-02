@@ -1,0 +1,6 @@
+M04 Autonomous Bounded Context v0.9 EXPERIMENTAL
+Python unittest: 7 passed, 0 failed (offline, Python 3.13).
+Tests: bounded input over 12 tool calls, retry context reset, incomplete max steps,
+ledger byte budget, Ollama payload num_ctx=8192/num_predict=2560, unknown asset proof preservation, SHA-256 frozen function sections.
+No Windows PowerShell runtime or Ollama Qwen 3.5 4B inference was performed.
+2026-11-02
