@@ -59,3 +59,8 @@ Kết quả thực tế do người dùng cung cấp trong `Outputs.rar` đã gi
 - **T002 now source+key+value proven**: `ModStudioLab.LabStringTable`, `entries[0].key=menu.load`, `entries[0].value=Load Game`, `sharedassets0.assets#path_id=16`. REA sees `TableTextExample.Start → LabStringTable.TryGet → TMP_Text.set_text` but **serialized pointer unresolved** (`m_FileID=3,m_PathID=16`).
 - T001 still **not_proven** as prefab source; a scene TMP snapshot isn't prefab-origin proof.
 - evaluator **3 exact + 1 template + 1 unproven** (tool, not Qwen); independently reproduced with Python v0.3.
+
+
+## Hướng nghiên cứu tiếp — v0.4 (code verified, Windows scan pending)
+
+Bản v0.4 đã được đóng gói: [Source](../source/m03_pointer_v04/), [ZIP](../archives/ModStudioAI_M03_PointerResolver_Fix_v04.zip), [Báo cáo](../reports/m03/BAO_CAO_M03_V04.md). **34/34 unit tests đạt**; chưa có kiểm chứng với bản build Unity 6.3 qua scanner v0.4. Nâng cấp đọc `SerializedFile.externals` theo `m_FileID - 1`, đối chiếu `m_PathID`, class `LabStringTable`, cặp key/value, file basename duy nhất; nếu thiếu, không nâng trạng thái. Score v0.3 người dùng đã tải lên vẫn **3 exact + 1 template + 1 not proven**, không phải Qwen. T001 serialized prefab origin chưa chứng minh.

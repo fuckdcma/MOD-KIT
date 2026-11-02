@@ -45,3 +45,11 @@
 - Evaluation: **3 exact + 1 dynamic template + 1 unproven (T001)**, not a Qwen result.
 - Independent offline reproduction matches user's `baseline_static.json`, `provenance_links.json`, `evaluation_private.json`.
 - Next engineering task: external-reference table resolver to bind `level0 (FileID=3, PathID=16)` to correct sharedassets0 target; don't infer prefab source from TMP `m_text`.
+
+
+## M03 v0.4 — cross-file pointer resolver code & tests (2026-11-02)
+
+- 12 unit tests mới, tổng 34/34 đạt; có false-positive guards và mock external UnityPy.
+- v0.4 scanner mới sẽ cố xác nhận reader `level0#path_id=40` PPtr fileID3/pathID16 tới `sharedassets0.assets#path_id=16` qua external file table, không suy luận từ tên string hay PathID.
+- Chưa chạy v0.4 scanner thực tế trên máy Windows. Replay dữ liệu v0.3 không tự nâng pointer; evaluator vẫn 3 exact + 1 template + 1 unknown.
+- T001 còn thiếu prefab-origin proof; Qwen local chưa kiểm thử.

@@ -76,3 +76,10 @@ Chạy PowerShell trong `D:\\ModStudioAI\\Milestone03`: `tests` → `scan-assets
 **T002** có key/value serialized (`menu.load → Load Game`) đúng class `ModStudioLab.LabStringTable` ở `sharedassets0.assets#path_id=16`. Reader `level0#path_id=40` giữ key `menu.load` và pointer `m_FileID=3,m_PathID=16` nhưng `binding_status=unresolved_build_pointer`. Chưa xác minh target external mapping; **không gọi là runtime binding proven**. **T001** chỉ được thấy như UI snapshot `level0#path_id=35`, chưa chứng minh prefab origin.
 
 Bước tiếp theo: đọc external references table `level0` để chứng minh pointer tới asset; giữ T001 not_proven; sau đó chạy Qwen nền local. **Không dùng evaluation_private.json hoặc Editor provenance trong agent prompt.**
+
+
+## Bản vá v0.4 — cần xác minh bằng Unity build (2026-11-02)
+
+[Source v0.4](../source/m03_pointer_v04/) và [ZIP installer](../archives/ModStudioAI_M03_PointerResolver_Fix_v04.zip) đã được tạo, **34/34 unit tests Python đạt**. v0.4 dùng `UnityPy obj.assets_file.externals[m_FileID-1]` để kiểm tra quan hệ PPtr tới bảng ScriptableObject theo file name duy nhất, PathID, class và key. `m_FileID=0` tham chiếu cùng file. Nếu bảng externals không có/khác, vẫn giữ `unresolved_build_pointer` — không suy đoán theo PathID/key. **Đây là proof cấu hình serialized**, không phải chứng cứ runtime đã gọi hàm.
+
+Đã chạy logic v0.4 trên JSON v0.3 cũ: score vẫn `3 exact + 1 template + 1 unproven` và pointer vẫn unresolved vì dữ liệu cũ thiếu external mapping. **Chưa có `build_assets.json` v0.4 từ Windows.** Để tiếp tục, cài bản vá, chạy `tests -> scan-assets -> provenance -> baseline -> evaluate`; gửi mới `build_assets.json`, `provenance_links.json`, `evaluation_private.json`. Giữ T001 chưa chứng minh prefab origin. [README chi tiết](../source/m03_pointer_v04/README_VI.md).

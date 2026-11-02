@@ -1,0 +1,54 @@
+{
+  "schema": "modstudio.patch.sha256.v0.4",
+  "source": "local_source_bytes",
+  "files": [
+    {
+      "path": "src/modstudio_m03.py",
+      "size_bytes": 42859,
+      "sha256": "5acbd34c662d2418ea22d208aa3aaeedafeb7445bf47f831b3b1fed97b013881",
+      "git_blob_sha1": "1cbae0e0381669c67303d33beba84b19dc6025fa"
+    },
+    {
+      "path": "tests/test_pointer_v04.py",
+      "size_bytes": 9607,
+      "sha256": "230044ec799fa2fde222a5ae88de8e4f5d50c6913280602d9844546db4fa8b28",
+      "git_blob_sha1": "889f7211fe13afaac2fde142a40f130f79c3f5a0"
+    },
+    {
+      "path": "Fixtures/build_assets_v03.json",
+      "size_bytes": 4600,
+      "sha256": "b27ab1d62c5a100a7897a138a694b86d41e36bef9b53ef81babd2aadef5895dc",
+      "git_blob_sha1": "368d8812a80abbd42d95a53ad0d7567ae119021d"
+    },
+    {
+      "path": "Run_M03.ps1",
+      "size_bytes": 3479,
+      "sha256": "867d63721e7d8b14b5e12be387bbfa0fcd1a46bf6ce8b328d40d9fad541ec16a",
+      "git_blob_sha1": "6d85a59c5e1479a3d41337395fc31565acde39f6"
+    },
+    {
+      "path": "Install_Fix_v04.ps1",
+      "size_bytes": 1651,
+      "sha256": "22092035feba585dad66d7d8f49f42de72b03f1e62e2f95c889f58f145ee57b0",
+      "git_blob_sha1": "a570e7b4fcc6249b518ba75d73eab362f579fa2e"
+    },
+    {
+      "path": "README_VI.md",
+      "size_bytes": 4551,
+      "sha256": "bf2220de1144c45257c7df761425d28b3cdafcbbcb7c547de6947e50197937dd",
+      "git_blob_sha1": "2533258a75a1add3a182c48ce2c93ceea4a64d2b"
+    },
+    {
+      "path": "DATA_CONTRACT.md",
+      "size_bytes": 1380,
+      "sha256": "5064a30156ac5e4ad3a18157a411b5191473fc324335633dd74a7cdf842aa010",
+      "git_blob_sha1": "b07d0b949c6c10f1a26959bb6fa483224522454d"
+    },
+    {
+      "path": "Reports/BAO_CAO_M03_V04.md",
+      "size_bytes": 1731,
+      "sha256": "0f5c232c2fefb3e6af768292f28163d1facab474fdbede4861651aa5917e73e3",
+      "git_blob_sha1": "f21403299945135b5615ae51b4d93000748ba098"
+    }
+  ]
+}

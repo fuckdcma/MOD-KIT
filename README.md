@@ -48,3 +48,10 @@ Không thể tự động chép nguyên văn toàn bộ transcript ChatGPT sang 
 - [Mã nguồn & installer v0.3](source/m03_provenance_v03/) · [Tải gói ZIP](archives/ModStudioAI_M03_Provenance_Fix_v03.zip)
 - [Báo cáo v0.3](reports/m03/BAO_CAO_M03_V03.md); 22/22 unit tests; **chưa chạy scanner v0.3 trên PC Windows**.
 - Bản v0.3 giải quyết việc bảo toàn `LabStringTable.entries[N].key` cùng `entries[N].value`; T001 prefab origin vẫn chưa có proof. **Điểm chấm thực tế hiện vẫn 2 exact +1 template +2 not proven cho dữ liệu v0.2**.
+
+
+## Milestone 03 v0.4 — Cross-file PPtr Resolver (2026-11-02)
+
+- [Source, tests and installer v0.4](source/m03_pointer_v04/) · [Download ZIP](archives/ModStudioAI_M03_PointerResolver_Fix_v04.zip) · [Engineering report](reports/m03/BAO_CAO_M03_V04.md)
+- **34/34 local synthetic unit tests passed.** Unity 6.3 v0.4 build scan has **not** been run on the user's PC; do not claim pointer resolved until new scan.
+- v0.3 real run: **3 exact + 1 template + 1 unproven (T001)**. New resolver checks actual serialized file external table before linking T002 reader to table.

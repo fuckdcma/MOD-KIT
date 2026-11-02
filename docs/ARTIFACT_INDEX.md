@@ -28,3 +28,12 @@ Mỗi lần có milestone mới, cập nhật cả source, evidence và CHANGELO
 - [Báo cáo](../reports/m03/BAO_CAO_M03_V03.md)
 
 Không coi `provenance_links.json` v0.3 là đã có trong kho vì người dùng cần chạy lại bản build trên Windows.
+
+
+## M03 v0.4 — Pointer Resolver
+
+- [Mã nguồn, installer, fixture, tests](../source/m03_pointer_v04/)
+- [Manifest SHA256](../source/m03_pointer_v04/SHA256_MANIFEST.json)
+- [ZIP nguyên bản](../archives/ModStudioAI_M03_PointerResolver_Fix_v04.zip)
+- [Báo cáo kỹ thuật v0.4](../reports/m03/BAO_CAO_M03_V04.md)
+- Chưa có Windows scan v0.4; không nhầm với kết quả mới nhất v0.3 trong `evidence/m03/runs/20261102_v03/`.
