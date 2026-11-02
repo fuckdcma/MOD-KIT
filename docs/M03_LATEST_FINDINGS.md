@@ -98,3 +98,11 @@ Bản v0.4 đã được đóng gói: [Source](../source/m03_pointer_v04/), [ZIP
 - v0.6 [guided trace](../evidence/m03/runs/20261102_ollama_v06_guided_timeout/qwen_agent_guided.json): `completed:false`; 4,706-character brief built, first Ollama call ended with `TimeoutError`, zero observations. **No valid score for guided**.
 - [v0.7 source and tests](../source/m03_timeout_v07/) · [ZIP](../archives/ModStudioAI_M03_OllamaTimeout_Fix_v07.zip) · [QA report](../reports/m03/BAO_CAO_M03_V07.md). The patch increases configurable client timeout to 600s, shortens generation budget to 1280 tokens and guided brief to 3900 chars, and adds lightweight JSON-only API probe.
 - **80/80 offline unit tests pass**, including fixture reproducing actual v0.6 timeout. Replay v0.7 baseline on user's build JSON scores **3 exact + 1 template + 1 unproven**. Windows/Ollama guided retest pending.
+
+
+## Verified latest user run: Qwen v0.7 Guided completed (2026-11-02)
+
+- [Real uploaded Guided trace](../evidence/m03/runs/20261102_ollama_v07_guided_completed/qwen_agent_guided.json): `completed:true`, eight observations, 3 agent steps; a transient JSON `finish=length` was retried, so final output was valid. Ollama probe succeeded in **5.56s**.
+- [Guided evaluation](../benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_v07_guided_completed/evaluation_private_guided.json): **3 exact + 0 template + 2 unproven**, correct T002 ScriptableObject, T003 hardcoded and T005 JSON. Qwen saw `Health: {0}/100` but mislabeled it `hardcoded_managed`; T001 prefab origin still unproven. Static rule baseline: 3 exact + 1 template +1 unproven.
+- [v0.8 fix](../source/m03_semantic_v08/) adds semantic source-type checks, clearer Guided prompt, correct CLI evaluate summary. **96/96 offline tests pass**; revalidation of old Qwen answer keeps score 3/0/2 but downgrades misclassified Health to candidate_only. **v0.8 model inference still pending Windows run**.
+- [QA report](../reports/m03/BAO_CAO_XAC_MINH_QWEN_GUIDED_V07_20261102.md), [ZIP](../archives/ModStudioAI_M03_SemanticValidation_Fix_v08.zip). Public repository ground truth is not a secret blind test.

@@ -60,3 +60,11 @@ Không coi `provenance_links.json` v0.3 là đã có trong kho vì người dùn
 - [Original Guided timeout trace](../evidence/m03/runs/20261102_ollama_v06_guided_timeout/qwen_agent_guided.json), [RAR upload](../raw_uploads/Outputs_M03_Ollama_v06_GuidedTimeout_20261102.rar).
 - [v0.7 browsable Python/PowerShell/test source](../source/m03_timeout_v07/), [release ZIP](../archives/ModStudioAI_M03_OllamaTimeout_Fix_v07.zip) containing full data contract, [QA analysis](../reports/m03/BAO_CAO_M03_V07.md).
 - No completed v0.6 guided report or v0.7 Windows test output exists yet.
+
+
+## M03 Guided v0.7 uploaded run, v0.8 follow-up
+
+- [All user-uploaded JSON + upload hash manifest](../evidence/m03/runs/20261102_ollama_v07_guided_completed/) from original [Outputs.rar](../raw_uploads/Outputs_M03_Ollama_Guided_v07_20261102.rar), plus [Windows log](../history/M03_Ollama_v07_Run_Log_20261102.txt).
+- [Guided evaluation](../benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_v07_guided_completed/evaluation_private_guided.json) is PUBLIC (separated by convention only).
+- [v0.8 source and tests](../source/m03_semantic_v08/), [ZIP installer](../archives/ModStudioAI_M03_SemanticValidation_Fix_v08.zip), [QA report](../reports/m03/BAO_CAO_XAC_MINH_QWEN_GUIDED_V07_20261102.md).
+- No v0.8 live Ollama report yet; replay file in patch demonstrates only revalidation of prior model output.

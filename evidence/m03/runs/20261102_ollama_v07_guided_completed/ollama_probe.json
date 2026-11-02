@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "kind": "local_model_probe",
+  "server": "http://127.0.0.1:11434",
+  "model": "qwen3.5:4b",
+  "elapsed_seconds": 5.56,
+  "timeout_seconds": 120,
+  "note": "Small probe success does not guarantee a long guided request will finish."
+}

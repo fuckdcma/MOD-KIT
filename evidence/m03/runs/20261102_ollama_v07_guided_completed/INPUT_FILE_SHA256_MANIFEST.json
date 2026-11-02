@@ -1,0 +1,71 @@
+{
+  "schema": "modstudio.m03.v0.7.upload_manifest",
+  "files": [
+    {
+      "name": "baseline_static.json",
+      "bytes": 3732,
+      "sha256": "284bf7593f3e497637431fa1742181438cdd7243ae97993b16b391c3bc0718cf",
+      "git_blob_sha1": "10c30dc7058c8b6a0649c50af57bec049cf044e7"
+    },
+    {
+      "name": "build_assets.json",
+      "bytes": 5595,
+      "sha256": "efab8a832a83cf3092449dd967d795e670fc560e608ce99d3258e98b7818b9b3",
+      "git_blob_sha1": "f722a199431e671598cb56cb14228fffe3fbc3ba"
+    },
+    {
+      "name": "evaluation_private.json",
+      "bytes": 1305,
+      "sha256": "f03be162e106d22e62531d8ac168efae5cf2ba710c873ba1b6c129deff65b786",
+      "git_blob_sha1": "c80e7195c6dca951198d5f88a3a703895b762b00"
+    },
+    {
+      "name": "evaluation_private_agent.json",
+      "bytes": 1247,
+      "sha256": "495bc15e65f78dd6c38587f38818410dada094700e48fdb4d30006b3c2cf10db",
+      "git_blob_sha1": "f1e87cb9c4cb453f546a271f6fcd59b9c7562088"
+    },
+    {
+      "name": "evaluation_private_guided.json",
+      "bytes": 1282,
+      "sha256": "f2aab6db31135e59d20fe7ecdede4bedeac96ef857440ae12d2f41be21248418",
+      "git_blob_sha1": "6ff1852002f50b545b0be76708787bb01f812a1d"
+    },
+    {
+      "name": "ollama_probe.json",
+      "bytes": 264,
+      "sha256": "845d798d17ba124c82f9d549109513b3d21a75d4c9e0d8fb761509901852bba3",
+      "git_blob_sha1": "9f4b316eb59c51de1c5e16ea8981a6342caa0a5a"
+    },
+    {
+      "name": "provenance_links.json",
+      "bytes": 5535,
+      "sha256": "4946554a31daf99dc405e92666a98109244c4f43fa785c1d92fb0d5f01c92f5e",
+      "git_blob_sha1": "0eb77b949613751bc34b4265bd4172d03d2c516e"
+    },
+    {
+      "name": "qwen_agent.json",
+      "bytes": 2168,
+      "sha256": "ffe6a7f7e9799baec4e45e7a2a1e34880a2dc7ea3433785d694237bbdc53b9fa",
+      "git_blob_sha1": "e420714f70d172acb6d80ada4fceace0a5752d70"
+    },
+    {
+      "name": "qwen_agent_guided.json",
+      "bytes": 6288,
+      "sha256": "371dd43f2324495cf87f678b0f3349faf6b2878bfb9b40b049670ae1289735c2",
+      "git_blob_sha1": "1046ca2794ccee68644ccad0f809093002a2c462"
+    },
+    {
+      "name": "Outputs.rar",
+      "bytes": 7630,
+      "sha256": "c2f2d710c25662ae613c1a6632f97db2ce42f41cdfbfd67f473615aad233c36b",
+      "git_blob_sha1": "c75cb345e0deac58e943a6264bd38b2e5d43d542"
+    },
+    {
+      "name": "Pasted text.txt",
+      "bytes": 13032,
+      "sha256": "636f7ed63b67b6567b04f57e701c445a690bc1f4a9ab79b0f3fa28345ebe2a7b",
+      "git_blob_sha1": "c77fcdb8d5ff82cc9c9fa3312f1eeb67b2604bce"
+    }
+  ]
+}

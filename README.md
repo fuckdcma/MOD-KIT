@@ -82,3 +82,10 @@ Không thể tự động chép nguyên văn toàn bộ transcript ChatGPT sang 
 - User's guided v0.6 output returned `completed:false`, `observations:[]` due to HTTP `TimeoutError('timed out')` on request 1, after controller prepared a 4,706-char brief. **No guided accuracy score exists.** [Raw trace](evidence/m03/runs/20261102_ollama_v06_guided_timeout/qwen_agent_guided.json) · [original RAR](raw_uploads/Outputs_M03_Ollama_v06_GuidedTimeout_20261102.rar).
 - [Timeout/Probe v0.7 code](source/m03_timeout_v07/) · [complete ZIP including data contract](archives/ModStudioAI_M03_OllamaTimeout_Fix_v07.zip) · [QA report](reports/m03/BAO_CAO_M03_V07.md).
 - v0.7 provides local JSON probe, configurable HTTP timeout default 600s, `num_predict=1280`, bounded brief 3900 chars retaining 6 REA methods and 2 source-qualified assets. **80/80 local tests pass (66 old +14 new)**; not yet tested live with user Ollama. Baseline replay scores 3 exact + 1 template + 1 unknown.
+
+
+## Verified v0.7 Guided Qwen + v0.8 semantic consistency fix (2026-11-02)
+
+- [Qwen v0.7 guided run](evidence/m03/runs/20261102_ollama_v07_guided_completed/qwen_agent_guided.json), [evaluator](benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_v07_guided_completed/evaluation_private_guided.json): **completed=true**, 8 observations, **3 exact + 0 format template + 2 unproven**. Tool static baseline: **3 exact + 1 template + 1 unproven**. Ollama probe passed in 5.56 seconds. Trace includes one invalid/truncated JSON reply that was retried successfully.
+- Key gap: Qwen found `Health: {0}/100` but labeled it `hardcoded_managed`, not `runtime_generated`. [v0.8 semantic validation patch](source/m03_semantic_v08/) marks that incorrect assertion `candidate_only` without auto-correcting the model answer. [ZIP](archives/ModStudioAI_M03_SemanticValidation_Fix_v08.zip), [report](reports/m03/BAO_CAO_XAC_MINH_QWEN_GUIDED_V07_20261102.md).
+- **96/96 offline Python tests passed**; v0.8 live Windows/Ollama inference pending. Keep public lab as functional regression only, not a secret holdout.

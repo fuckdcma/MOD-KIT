@@ -84,3 +84,11 @@
 - v0.6 66/66 Windows unit tests passed, but Ollama guided 1st request exceeded 180s; trace has `completed:false` and no observations. Avoid treating this as zero correct.
 - v0.7 code patch introduces `-Mode probe`, `-TimeoutSeconds`, `-NumPredict`, `-BriefChars`; default 600s/1280/3900, `num_ctx=4096`. 14 new + 66 old tests = **80/80 offline passed**; baseline counts unchanged 3/1/1.
 - Next: run v0.7 probe and guided on user's Windows Ollama; no claim of GPU inference performance or success yet.
+
+
+## M03 Guided v0.7 verified, Semantic Validation v0.8 built (2026-11-02)
+
+- User installed v0.7, Windows 80/80 unit tests, native Ollama probe 5.56s. Qwen Guided `completed=true`, 8 observations, one invalid_json retry then finish.
+- Guided Qwen score = **3 exact + 0 format template + 2 unproven** (T004 source-type wrong, T001 unknown). v0.4 tool baseline = 3 exact + 1 format template + 1 unknown. Autonomous v0.5 = 1 exact.
+- Validator v0.7 classed Health template as `observed` with `hardcoded_managed` despite `String.Format` call; v0.8 marks that assertion `candidate_only`, no auto-correction.
+- v0.8 source/tests/installer packaged and **96/96 local tests passed**; CLI score feedback improved; live Qwen retest pending. Need private game holdout later.

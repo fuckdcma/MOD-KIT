@@ -1,0 +1,60 @@
+{
+  "schema": "modstudio.m03.patch.v0.8.sha256",
+  "created": "2026-11-02",
+  "files": [
+    {
+      "path": "src/modstudio_m03.py",
+      "bytes": 61948,
+      "sha256": "c84a0ac61c194a0fd290bdd7af339d4cecee914c2d1b15008acb374db34b97f0",
+      "git_blob_sha1": "3b2df2f7de57c57032ca39568924f406419d8ae4"
+    },
+    {
+      "path": "tests/test_semantics_v08.py",
+      "bytes": 7700,
+      "sha256": "e4f613fce9c3e556904206e287322ed1534e4794bc40ba6a6253c5babd19c68a",
+      "git_blob_sha1": "69ac8645dbda6b838f6aa0a264621e1e16224b8b"
+    },
+    {
+      "path": "Run_M03.ps1",
+      "bytes": 4751,
+      "sha256": "4d5c686ae56e4582b5482741a47cb0b21616fe811e59296e2951b3917855ce95",
+      "git_blob_sha1": "ae25346f31618e4f01bc201f5155bf2be192162c"
+    },
+    {
+      "path": "Install_Fix_v08.ps1",
+      "bytes": 2354,
+      "sha256": "64ec4cde8e73a775b045ffb47fca623c16c6b2eb39dbb7d0e8ba169712095ca3",
+      "git_blob_sha1": "50d20e6c06220c36bf2cd0bc710e6401006df512"
+    },
+    {
+      "path": "README_VI.md",
+      "bytes": 4693,
+      "sha256": "91ad31f1cce3716e5722d36afe7eae5240b0e29010c5a9208b2dcdc44959aa32",
+      "git_blob_sha1": "f06a522563e01b2e285cfdb2b5d5c2c0ddd99161"
+    },
+    {
+      "path": "DATA_CONTRACT.md",
+      "bytes": 1363,
+      "sha256": "cc1a513afdf86706160532fbd027de90839f4b6f5d5d0c42930aa99a44f6a4a9",
+      "git_blob_sha1": "3c7b4d65bbda12f359d69f6b74f980a4cac4000d"
+    },
+    {
+      "path": "Reports/BAO_CAO_M03_V08.md",
+      "bytes": 2086,
+      "sha256": "0cc13493c3a085ddd243801fffbcd5ec47c46d79e5ec0277f17cc04954e2c3ae",
+      "git_blob_sha1": "2c60133ce175df00a50787a99c592ae007a9348a"
+    },
+    {
+      "path": "Reports/TEST_RESULTS_V08.txt",
+      "bytes": 12565,
+      "sha256": "e40718a580eaaf37484243a32f49b05379699dc27b994a0b6186915e8a1d90e9",
+      "git_blob_sha1": "5fe7839b8a8f85af6aa340fe3f71601661d593bd"
+    },
+    {
+      "path": "Reports/REPLAY_V07_WITH_V08_REVALIDATION.json",
+      "bytes": 3324,
+      "sha256": "bb8ce80f1340f12296a9c84b74ee6b668406525ab98d3643bdc4b7d97aa2730b",
+      "git_blob_sha1": "7c92b78666bb4834f26bd5fda37ae38e20812a38"
+    }
+  ]
+}

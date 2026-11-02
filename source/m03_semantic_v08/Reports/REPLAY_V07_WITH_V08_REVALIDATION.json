@@ -1,0 +1,91 @@
+{
+  "schema": "modstudio.m03.semantic_consistency_review.v0.8",
+  "source": "User uploaded v0.7 qwen_agent_guided.json revalidated with v0.8; NOT a fresh Qwen v0.8 inference",
+  "v07_reported_evaluation": {
+    "exact_text_and_source_proven": 3,
+    "format_template_and_source_proven": 0,
+    "unproven": 2
+  },
+  "v08_revalidated_same_qwen_output": {
+    "exact_text_and_source_proven": 3,
+    "format_template_and_source_proven": 0,
+    "unproven": 2
+  },
+  "static_baseline_using_real_build": {
+    "exact_text_and_source_proven": 3,
+    "format_template_and_source_proven": 1,
+    "unproven": 1
+  },
+  "observation_validation_status": [
+    {
+      "id": "O0001",
+      "text": "Hello, Commander",
+      "model_source_type": "external_json",
+      "v07_status": "observed",
+      "v08_status": "observed",
+      "reason": "Text read from build asset; asset origin may be uncertain"
+    },
+    {
+      "id": "O0002",
+      "text": "Quest Completed",
+      "model_source_type": "hardcoded_managed",
+      "v07_status": "observed",
+      "v08_status": "observed",
+      "reason": "Exact method ldstr and TMP setter observed where applicable; IL stack-to-setter dataflow not proven"
+    },
+    {
+      "id": "O0003",
+      "text": "Health: {0}/100",
+      "model_source_type": "hardcoded_managed",
+      "v07_status": "observed",
+      "v08_status": "candidate_only",
+      "reason": "Format template + String.Format in method conflicts with hardcoded_managed; classify runtime_generated if supported"
+    },
+    {
+      "id": "O0004",
+      "text": "Load Game",
+      "model_source_type": "scriptable_object",
+      "v07_status": "observed",
+      "v08_status": "observed",
+      "reason": "Text read from build asset; asset origin may be uncertain"
+    },
+    {
+      "id": "O0005",
+      "text": "[ModStudioLab] Assets/Resources/dialogue.json missing.",
+      "model_source_type": "hardcoded_managed",
+      "v07_status": "candidate_only",
+      "v08_status": "candidate_only",
+      "reason": "Diagnostic-looking literal; cannot attribute it to UI setter without IL dataflow"
+    },
+    {
+      "id": "O0006",
+      "text": "[ModStudioLab] Could not parse dialogue: ",
+      "model_source_type": "hardcoded_managed",
+      "v07_status": "candidate_only",
+      "v08_status": "candidate_only",
+      "reason": "Diagnostic-looking literal; cannot attribute it to UI setter without IL dataflow"
+    },
+    {
+      "id": "O0007",
+      "text": "[ModStudioLab] HardcodedTextExample: missing label.",
+      "model_source_type": "hardcoded_managed",
+      "v07_status": "candidate_only",
+      "v08_status": "candidate_only",
+      "reason": "Diagnostic-looking literal; cannot attribute it to UI setter without IL dataflow"
+    },
+    {
+      "id": "O0008",
+      "text": "menu.load",
+      "model_source_type": "hardcoded_managed",
+      "v07_status": "candidate_only",
+      "v08_status": "candidate_only",
+      "reason": "Literal observed, but this method has no TMP_Text.set_text call"
+    }
+  ],
+  "caveats": [
+    "No new model execution; revalidation only.",
+    "IL string+setter in one method still does not establish stack-to-setter dataflow.",
+    "Editor ground truth used only during offline private scoring, never in model prompt.",
+    "Repository is public and this Unity lab is not a secret holdout."
+  ]
+}

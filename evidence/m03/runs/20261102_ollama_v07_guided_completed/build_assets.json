@@ -1,0 +1,178 @@
+{
+  "schema": "modstudio.m03.v0.4",
+  "source": "read_only_build_asset_scan",
+  "files_considered": 6,
+  "files_scanned": 6,
+  "truncated": false,
+  "assets": [
+    {
+      "text": "Load Game",
+      "source_type": "unknown",
+      "source_ref": "level0#path_id=31",
+      "asset_type": "MonoBehaviour",
+      "evidence_type": "asset_text",
+      "metadata": {
+        "field_path": "m_text",
+        "identity": "build-serialized-object",
+        "original_asset_source": "unproven",
+        "mono_script": {
+          "assembly": "Unity.TextMeshPro",
+          "full_class_name": "TMPro.TextMeshProUGUI"
+        }
+      }
+    },
+    {
+      "text": "Quest Completed",
+      "source_type": "unknown",
+      "source_ref": "level0#path_id=32",
+      "asset_type": "MonoBehaviour",
+      "evidence_type": "asset_text",
+      "metadata": {
+        "field_path": "m_text",
+        "identity": "build-serialized-object",
+        "original_asset_source": "unproven",
+        "mono_script": {
+          "assembly": "Unity.TextMeshPro",
+          "full_class_name": "TMPro.TextMeshProUGUI"
+        }
+      }
+    },
+    {
+      "text": "Health: 75/100",
+      "source_type": "unknown",
+      "source_ref": "level0#path_id=33",
+      "asset_type": "MonoBehaviour",
+      "evidence_type": "asset_text",
+      "metadata": {
+        "field_path": "m_text",
+        "identity": "build-serialized-object",
+        "original_asset_source": "unproven",
+        "mono_script": {
+          "assembly": "Unity.TextMeshPro",
+          "full_class_name": "TMPro.TextMeshProUGUI"
+        }
+      }
+    },
+    {
+      "text": "Hello, Commander",
+      "source_type": "unknown",
+      "source_ref": "level0#path_id=34",
+      "asset_type": "MonoBehaviour",
+      "evidence_type": "asset_text",
+      "metadata": {
+        "field_path": "m_text",
+        "identity": "build-serialized-object",
+        "original_asset_source": "unproven",
+        "mono_script": {
+          "assembly": "Unity.TextMeshPro",
+          "full_class_name": "TMPro.TextMeshProUGUI"
+        }
+      }
+    },
+    {
+      "text": "New Game",
+      "source_type": "unknown",
+      "source_ref": "level0#path_id=35",
+      "asset_type": "MonoBehaviour",
+      "evidence_type": "asset_text",
+      "metadata": {
+        "field_path": "m_text",
+        "identity": "build-serialized-object",
+        "original_asset_source": "unproven",
+        "mono_script": {
+          "assembly": "Unity.TextMeshPro",
+          "full_class_name": "TMPro.TextMeshProUGUI"
+        }
+      }
+    },
+    {
+      "text": "Hello, Commander",
+      "source_type": "external_json",
+      "source_ref": "resources.assets#path_id=9",
+      "asset_type": "TextAsset",
+      "evidence_type": "asset_text",
+      "metadata": {
+        "key": "message",
+        "field_path": "message",
+        "asset_name": "dialogue"
+      }
+    },
+    {
+      "text": "Load Game",
+      "source_type": "scriptable_object",
+      "source_ref": "sharedassets0.assets#path_id=16",
+      "asset_type": "MonoBehaviour",
+      "evidence_type": "asset_text",
+      "metadata": {
+        "field_path": "entries[0].value",
+        "identity": "build-serialized-object",
+        "original_asset_source": "unproven",
+        "mono_script": {
+          "assembly": "Assembly-CSharp",
+          "full_class_name": "ModStudioLab.LabStringTable"
+        },
+        "entry_key": "menu.load",
+        "key_field_path": "entries[0].key"
+      }
+    }
+  ],
+  "raw_candidates": [],
+  "reader_bindings": [
+    {
+      "source_ref": "level0#path_id=40",
+      "reader_class": "ModStudioLab.TableTextExample",
+      "reader_key": "menu.load",
+      "table_pointer": {
+        "m_FileID": 3,
+        "m_PathID": 16
+      },
+      "pointer_file_lookup": {
+        "status": "file_mapped",
+        "source_file": "level0",
+        "m_FileID": 3,
+        "m_PathID": 16,
+        "reference_kind": "external",
+        "file_name": "sharedassets0.assets",
+        "external_index": 2,
+        "external_path": "sharedassets0.assets"
+      },
+      "binding_status": "serialized_pointer_resolved",
+      "resolved_target_ref": "sharedassets0.assets#path_id=16",
+      "resolution_evidence": {
+        "reader_ref": "level0#path_id=40",
+        "serialized_file": "level0",
+        "m_FileID": 3,
+        "m_PathID": 16,
+        "external_index": 2,
+        "external_path": "sharedassets0.assets",
+        "target_ref": "sharedassets0.assets#path_id=16",
+        "target_class": "ModStudioLab.LabStringTable",
+        "target_key": "menu.load",
+        "proof_kind": "build_serialized_pointer_not_runtime_behavior"
+      }
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "monobehaviours_seen": 32,
+    "monobehaviours_decoded": 32,
+    "textassets_seen": 5,
+    "textassets_decoded": 5,
+    "raw_candidate_count": 0,
+    "reader_pointers_resolved": 1
+  },
+  "type_tree_generator": {
+    "module_imported": true,
+    "loaded_versions": [
+      "6000.3.27f2"
+    ],
+    "errors_by_version": {}
+  },
+  "limitations": [
+    "Build cannot reliably recover Unity Editor prefab or scene asset paths.",
+    "Unclassified MonoBehaviour fields are not evidence of source category.",
+    "Raw candidates are length-prefixed strings only; field ownership is unproven.",
+    "TypeTreeGenerator may fail for Unity 6 or unresolved cross-file script references.",
+    "Pointer file ID mapping requires exact external-reference table and unique file name."
+  ]
+}
