@@ -53,3 +53,10 @@ Không coi `provenance_links.json` v0.3 là đã có trong kho vì người dùn
 - [Qwen v0.5 run](../evidence/m03/runs/20261102_ollama_v05_completed/) including [qwen_agent.json](../evidence/m03/runs/20261102_ollama_v05_completed/qwen_agent.json); [evaluator output](../benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_v05_completed/evaluation_private_agent.json) and [RAR original](../raw_uploads/Outputs_M03_Ollama_v05_completed_20261102.rar).
 - [v0.6 source, installer, unit tests](../source/m03_evidence_guided_v06/), [patch ZIP](../archives/ModStudioAI_M03_EvidenceGuided_Fix_v06.zip), [QA review](../reports/m03/BAO_CAO_QWEN_V05_REVIEW_V06.md).
 - v0.6 outputs are not available until running on user's Windows Ollama. Public GitHub evaluation files are NOT a secret blind benchmark.
+
+
+## M03 Guided v0.6 timeout and v0.7 patch
+
+- [Original Guided timeout trace](../evidence/m03/runs/20261102_ollama_v06_guided_timeout/qwen_agent_guided.json), [RAR upload](../raw_uploads/Outputs_M03_Ollama_v06_GuidedTimeout_20261102.rar).
+- [v0.7 browsable Python/PowerShell/test source](../source/m03_timeout_v07/), [release ZIP](../archives/ModStudioAI_M03_OllamaTimeout_Fix_v07.zip) containing full data contract, [QA analysis](../reports/m03/BAO_CAO_M03_V07.md).
+- No completed v0.6 guided report or v0.7 Windows test output exists yet.

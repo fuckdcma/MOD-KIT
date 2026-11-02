@@ -75,3 +75,10 @@ Không thể tự động chép nguyên văn toàn bộ transcript ChatGPT sang 
 - [User's completed Qwen autonomous trace](evidence/m03/runs/20261102_ollama_v05_completed/qwen_agent.json) — `completed=true`, 3 steps, 2 observations; [evaluator](benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_v05_completed/evaluation_private_agent.json): **1 exact, 0 template, 4 unproven**. Extra observation is a diagnostic/error literal, not proven UI text. Tool baseline: **3 exact + 1 template**.
 - [v0.6 guided source](source/m03_evidence_guided_v06/) · [install ZIP](archives/ModStudioAI_M03_EvidenceGuided_Fix_v06.zip) · [QA report](reports/m03/BAO_CAO_QWEN_V05_REVIEW_V06.md).
 - v0.6 uses compact REA+build-only evidence brief and conservative `candidate_only` diagnostic status. **66/66 local Python tests passed; no Windows/Ollama v0.6 model run yet.** Guided and autonomous results must be measured separately.
+
+
+## M03 Guided v0.6 timeout — repair v0.7 (2026-11-02)
+
+- User's guided v0.6 output returned `completed:false`, `observations:[]` due to HTTP `TimeoutError('timed out')` on request 1, after controller prepared a 4,706-char brief. **No guided accuracy score exists.** [Raw trace](evidence/m03/runs/20261102_ollama_v06_guided_timeout/qwen_agent_guided.json) · [original RAR](raw_uploads/Outputs_M03_Ollama_v06_GuidedTimeout_20261102.rar).
+- [Timeout/Probe v0.7 code](source/m03_timeout_v07/) · [complete ZIP including data contract](archives/ModStudioAI_M03_OllamaTimeout_Fix_v07.zip) · [QA report](reports/m03/BAO_CAO_M03_V07.md).
+- v0.7 provides local JSON probe, configurable HTTP timeout default 600s, `num_predict=1280`, bounded brief 3900 chars retaining 6 REA methods and 2 source-qualified assets. **80/80 local tests pass (66 old +14 new)**; not yet tested live with user Ollama. Baseline replay scores 3 exact + 1 template + 1 unknown.

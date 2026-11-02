@@ -1,0 +1,51 @@
+{
+  "schema": "modstudio.m03.patch_manifest.v0.7",
+  "created_on": "2026-11-02",
+  "files": [
+    {
+      "path": "src/modstudio_m03.py",
+      "bytes": 59780,
+      "sha256": "7903cecb01e30e61c4d2e10f647e9557f00ac0f08d2ce7689a6785d0094c91c0"
+    },
+    {
+      "path": "Run_M03.ps1",
+      "bytes": 4751,
+      "sha256": "4d5c686ae56e4582b5482741a47cb0b21616fe811e59296e2951b3917855ce95"
+    },
+    {
+      "path": "tests/test_timeout_v07.py",
+      "bytes": 6963,
+      "sha256": "43ebc52ee2ec5674a1a4a6f116ea959aee7cb1003b0b49efafeb171fd9daba41"
+    },
+    {
+      "path": "Fixtures/guided_v06_timeout.json",
+      "bytes": 974,
+      "sha256": "893f23e561090ef9600d70838819f0f23b24acf9d60a89c432f7262822434728"
+    },
+    {
+      "path": "Install_Fix_v07.ps1",
+      "bytes": 2536,
+      "sha256": "317d1096b7f0550eb17410d5bfe908d08e12b392776f8afe8124a9296fb16131"
+    },
+    {
+      "path": "README_VI.md",
+      "bytes": 5001,
+      "sha256": "0474ab69312e8580ab3ec4386b884f58ad9501ef5c3286b555ce5d618253fbef"
+    },
+    {
+      "path": "DATA_CONTRACT.md",
+      "bytes": 1029,
+      "sha256": "29fdb54caade4789e9351f8899d7f6736b2071fa75a237c04b69801e757c10e0"
+    },
+    {
+      "path": "Reports/TEST_RESULTS_V07.txt",
+      "bytes": 10321,
+      "sha256": "daa8f84f2f9e44c1d60bccb5b13b85d923c40ac9f623439225d0e736bf29620f"
+    },
+    {
+      "path": "Reports/BAO_CAO_M03_V07.md",
+      "bytes": 1703,
+      "sha256": "3d8f767557a010dcf604b77e273349a72299b2b429f9aae10eef0f45cb8cbc76"
+    }
+  ]
+}

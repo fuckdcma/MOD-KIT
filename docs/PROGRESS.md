@@ -77,3 +77,10 @@
 - v0.5 Ollama native: Windows 51/51 tests, `completed:true`, 3 steps, two IL observations; evaluator 1 exact (T003), 0 template, 4 not proven. Model prematurely ended tool exploration; diagnostic log literal wrongly considered observed by previous validator.
 - v0.6 guided evidence brief (REA + build assets), separated autonomous strategy, diagnostic `candidate_only`: 66/66 Python tests local (51 old +15 new). Replay old Agent 1/5 and static baseline 3 exact + 1 template unchanged. **No new live Qwen run yet**.
 - Need new `qwen_agent_guided.json` and `evaluation_private_guided.json`, followed by separate holdout to assess generalization.
+
+
+## M03 Guided v0.6 real run failed at HTTP client timeout; v0.7 fix (2026-11-02)
+
+- v0.6 66/66 Windows unit tests passed, but Ollama guided 1st request exceeded 180s; trace has `completed:false` and no observations. Avoid treating this as zero correct.
+- v0.7 code patch introduces `-Mode probe`, `-TimeoutSeconds`, `-NumPredict`, `-BriefChars`; default 600s/1280/3900, `num_ctx=4096`. 14 new + 66 old tests = **80/80 offline passed**; baseline counts unchanged 3/1/1.
+- Next: run v0.7 probe and guided on user's Windows Ollama; no claim of GPU inference performance or success yet.

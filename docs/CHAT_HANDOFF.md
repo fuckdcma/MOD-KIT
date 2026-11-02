@@ -113,3 +113,12 @@ User's `Run_M03.ps1 -Mode tests` passed **51/51**, then `-Mode agent -Transport 
 Developed [v0.6 evidence-guided patch](../source/m03_evidence_guided_v06/), [ZIP](../archives/ModStudioAI_M03_EvidenceGuided_Fix_v06.zip), [report](../reports/m03/BAO_CAO_QWEN_V05_REVIEW_V06.md): **66/66 local Python tests passed** (51 prior + 15 new). Guided brief uses only REA method evidence and build-only asset reader; no Unity Editor data or evaluator ground truth supplied. Diagnostic-looking `ldstr` is `candidate_only`. Distinct result files: `qwen_agent_guided.json` vs `qwen_agent_autonomous.json`; this is a strategy experiment, not an unbiased model generalization test. **Windows Ollama v0.6 run not yet done.**
 
 Next run: install v0.6, run `tests`, `agent -Strategy guided -Transport ollama -Server http://127.0.0.1:11434 -Model qwen3.5:4b`; only evaluate with `-EvaluateTarget guided` if `qwen_agent_guided.json.completed = true`. User should send `qwen_agent_guided.json` and `evaluation_private_guided.json`. Keep T001 prefab provenance unproven. Public GitHub lab isn't a secret holdout.
+
+
+## M03 Guided v0.6 real timeout; v0.7 pending Ollama retest (2026-11-02)
+
+User installed v0.6, passed **66/66 Windows tests**, ran `-Mode agent -Strategy guided -Transport ollama -Model qwen3.5:4b`. [User's output](../evidence/m03/runs/20261102_ollama_v06_guided_timeout/qwen_agent_guided.json) shows `completed:false` and no observations; step0 evidence brief 4706 chars, six REA methods, two qualified assets and five UI snapshots; step1 `transport_error: TimeoutError: timed out`. v0.6 local_chat timeout=180 seconds, Ollama `num_predict=2048`; cause is client timeout, **not model accuracy**. Screenshot GPU 100% but cannot infer throughput.
+
+Developed v0.7 [source](../source/m03_timeout_v07/) / [ZIP](../archives/ModStudioAI_M03_OllamaTimeout_Fix_v07.zip), test **80/80** offline. New `-Mode probe` sends tiny JSON to Ollama localhost; `-TimeoutSeconds 600`, `-NumPredict 1280`, `-BriefChars 3900` for Guided; `num_ctx=4096`. On fixture, two source-qualified assets + six REA methods remain; unverified UI snapshots can be trimmed. Incomplete runs remain unscored; baseline replay remains 3+1+1. **No Windows v0.7 run yet.**
+
+Next: apply v0.7, run tests, run probe with `-TimeoutSeconds 120`, then guided with 600/1280/3900 if probe succeeds, inspect completed before evaluate. Upload `ollama_probe.json` and `qwen_agent_guided.json` and PowerShell log if still timed out. Never feed public ground truth/Editor data into Agent. Prefab T001 remains unproven.

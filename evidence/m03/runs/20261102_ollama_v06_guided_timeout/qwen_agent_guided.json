@@ -1,0 +1,32 @@
+{
+  "schema": "modstudio.m03.v0.4",
+  "mode": "agent",
+  "assembly_sha256": "ab9cf9e569815b6d1d1f49dbc455521bb426b6118b891c8c0a3052244d24a29e",
+  "completed": false,
+  "strategy": "guided",
+  "observations": [],
+  "trace": [
+    {
+      "step": 0,
+      "action": "controller_evidence_brief",
+      "evidence_chars": 4706,
+      "methods_included": 6,
+      "qualified_sources_included": 2,
+      "unverified_ui_snapshots_included": 5,
+      "truncated": false,
+      "note": "Controller collected build/REA evidence; classification remains model-generated."
+    },
+    {
+      "step": 1,
+      "status": "transport_error",
+      "error_type": "TimeoutError",
+      "detail": "timed out"
+    }
+  ],
+  "limitations": [
+    "No source-project or Editor ground truth is used.",
+    "No code is injected; no hooking is performed.",
+    "Static evidence does not prove runtime behavior.",
+    "Unknown build asset text must not be guessed."
+  ]
+}

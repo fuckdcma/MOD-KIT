@@ -91,3 +91,10 @@ Bản v0.4 đã được đóng gói: [Source](../source/m03_pointer_v04/), [ZIP
 - [Completed v0.5 Qwen trace](../evidence/m03/runs/20261102_ollama_v05_completed/qwen_agent.json): 2 observations from one method; one correct `Quest Completed`, one diagnostic message; score **1 exact / 0 template / 4 unproven** from private evaluator (but public repo). Not a transport failure.
 - [v0.6 guided patch](../source/m03_evidence_guided_v06/) assembles concise REA and serialized asset evidence for Qwen with 4096 context, separates unknown TMP snapshots, marks diagnostic-looking IL `candidate_only`. Also retains autonomous mode for a separate measurement.
 - **66/66 local tests pass; live Windows/Ollama v0.6 pending.** Rule baseline remains 3 exact + 1 template + 1 unknown (T001 prefab origin).
+
+
+## Guided v0.6 Windows result: HTTP timeout, v0.7 code ready
+
+- v0.6 [guided trace](../evidence/m03/runs/20261102_ollama_v06_guided_timeout/qwen_agent_guided.json): `completed:false`; 4,706-character brief built, first Ollama call ended with `TimeoutError`, zero observations. **No valid score for guided**.
+- [v0.7 source and tests](../source/m03_timeout_v07/) · [ZIP](../archives/ModStudioAI_M03_OllamaTimeout_Fix_v07.zip) · [QA report](../reports/m03/BAO_CAO_M03_V07.md). The patch increases configurable client timeout to 600s, shortens generation budget to 1280 tokens and guided brief to 3900 chars, and adds lightweight JSON-only API probe.
+- **80/80 offline unit tests pass**, including fixture reproducing actual v0.6 timeout. Replay v0.7 baseline on user's build JSON scores **3 exact + 1 template + 1 unproven**. Windows/Ollama guided retest pending.
