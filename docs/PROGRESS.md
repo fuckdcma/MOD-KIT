@@ -28,3 +28,11 @@
 - Qwen GGUF download/load test; agent tool use eval.
 - SDF broken-cases lab, font 1:1 runtime mapping validation.
 - Standalone mod bootstrap, hook adapter compiler/test, IL2CPP/Unreal.
+
+
+## M03 v0.3 — provenance linker (code completed, runtime pending)
+
+- Source/installer packaged; **22/22 Python unit tests passed**.
+- New table key/value pairing, reader metadata and build-only provenance output. Validity guard rejects unknown TMP snapshot and ScriptableObject missing entry key.
+- **No Windows v0.3 build scan yet**; v0.2 user upload still 2 exact + 1 template + 2 unknown.
+- Next: install patch on Windows, run scanner and evaluate; then develop one-to-one binding validation and start Qwen baseline if stable.

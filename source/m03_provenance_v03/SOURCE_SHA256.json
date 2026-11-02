@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "path": "source/m03_provenance_v03/src/modstudio_m03.py",
+      "size": 37655,
+      "sha256": "af6eceaf58596cec57fa741848f1ae28e68cf9be51d0d42d585c39542f5f56ee",
+      "git_blob_sha1": "fa54fb5e0a50d68d5667c8c43f0871d0a963306c",
+      "bom": false,
+      "newline": true
+    },
+    {
+      "path": "source/m03_provenance_v03/tests/test_provenance_v03.py",
+      "size": 9309,
+      "sha256": "bde645fe3e93742d2474974ad08d88a63835898cbfec507835e25c8fcb2e5a1e",
+      "git_blob_sha1": "1fd1465c35522b75fa2c6f61eab53d912c2a18ff",
+      "bom": false,
+      "newline": true
+    },
+    {
+      "path": "source/m03_provenance_v03/Run_M03.ps1",
+      "size": 3479,
+      "sha256": "867d63721e7d8b14b5e12be387bbfa0fcd1a46bf6ce8b328d40d9fad541ec16a",
+      "git_blob_sha1": "6d85a59c5e1479a3d41337395fc31565acde39f6",
+      "bom": true,
+      "newline": true
+    },
+    {
+      "path": "source/m03_provenance_v03/Install_Fix_v03.ps1",
+      "size": 1574,
+      "sha256": "8dbb40defdca09cd0e7231ff8dac3c2f9e434ed718fecfa996bdf86971fa0898",
+      "git_blob_sha1": "10261497ca1ae168030948a4f4bc48c64a706292",
+      "bom": false,
+      "newline": true
+    },
+    {
+      "path": "source/m03_provenance_v03/README_VI.md",
+      "size": 4551,
+      "sha256": "a1210985c29bce3fde5b88840ab2530ced3836cb2387326b00e92a8c46515f92",
+      "git_blob_sha1": "11602ee0fbd6bb05e15098017a3e4835ea8e1bf8",
+      "bom": false,
+      "newline": true
+    },
+    {
+      "path": "source/m03_provenance_v03/DATA_CONTRACT.md",
+      "size": 1503,
+      "sha256": "5f7f0fa8ddc1bb88beaea1c42e2b387291d70f9c42ee0027b1f97d0e10840ad5",
+      "git_blob_sha1": "02469896c736be2f5cc1a861149079c681b11111",
+      "bom": false,
+      "newline": true
+    },
+    {
+      "path": "reports/m03/BAO_CAO_M03_V03.md",
+      "size": 2851,
+      "sha256": "be05c45355a6007b6f15b91090248cf548fcac10cf2f6eb27733d9c8d44d010a",
+      "git_blob_sha1": "03e8f2b92f02971dd3cdbfa628e5ef91e58c28c9",
+      "bom": false,
+      "newline": true
+    }
+  ]
+}

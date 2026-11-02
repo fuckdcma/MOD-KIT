@@ -18,3 +18,13 @@
 Không có API tự động xuất nguyên văn lịch sử chat ChatGPT. Phần đã lưu chỉ là *tài liệu bàn giao + toàn bộ file hiện vật khả dụng*. Bản UnityTextLab đang nằm trên máy tác giả có thể có scene/prefab/build khác những file đã tải lên; không coi các tệp cục bộ chưa đồng bộ là đã có trên GitHub.
 
 Mỗi lần có milestone mới, cập nhật cả source, evidence và CHANGELOG. Không commit token/secret, thư mục .venv/Library, game thương mại hoặc trọng số model không được phép chia sẻ.
+
+
+## Bản vá gần nhất — M03 v0.3
+
+- [Mã nguồn, tests, installer, README](../source/m03_provenance_v03/)
+- [Source hash manifest](../source/m03_provenance_v03/SOURCE_SHA256.json)
+- [ZIP nguyên bản](../archives/ModStudioAI_M03_Provenance_Fix_v03.zip)
+- [Báo cáo](../reports/m03/BAO_CAO_M03_V03.md)
+
+Không coi `provenance_links.json` v0.3 là đã có trong kho vì người dùng cần chạy lại bản build trên Windows.

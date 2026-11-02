@@ -41,3 +41,10 @@ Không thể tự động chép nguyên văn toàn bộ transcript ChatGPT sang 
 ### Final synchronization status
 
 [Snapshot status / SHA-256 manifest](docs/SNAPSHOT_STATUS.md): archived 88 available original files, published 47 browsable source/evidence text files. Source copies were checked against original SHA-256/Git object IDs. Raw chat messages are **not** exported.
+
+
+## Milestone 03 v0.3 — Provenance Linker (2026-11-02)
+
+- [Mã nguồn & installer v0.3](source/m03_provenance_v03/) · [Tải gói ZIP](archives/ModStudioAI_M03_Provenance_Fix_v03.zip)
+- [Báo cáo v0.3](reports/m03/BAO_CAO_M03_V03.md); 22/22 unit tests; **chưa chạy scanner v0.3 trên PC Windows**.
+- Bản v0.3 giải quyết việc bảo toàn `LabStringTable.entries[N].key` cùng `entries[N].value`; T001 prefab origin vẫn chưa có proof. **Điểm chấm thực tế hiện vẫn 2 exact +1 template +2 not proven cho dữ liệu v0.2**.

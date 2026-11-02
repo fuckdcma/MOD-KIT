@@ -38,3 +38,14 @@ T001 và T002 đã xuất hiện dưới dạng text *trong build*, nhưng `sour
 2. Truy vết prefab source, scene instance relationship và object identity cho T001; có thể không khôi phục đầy đủ original prefab path từ bản build.
 3. Đưa schema provenance, evidence refs, confidence vào one canonical report; giữ `unknown` khi thiếu bằng chứng.
 4. Chuẩn bị local llama-server Vulkan, Qwen3.5-4B GGUF, benchmark agent không nhìn reference.
+
+
+## Phát triển tiếp theo — v0.3 (code test offline, chưa có scan Windows)
+
+- [Source v0.3](../source/m03_provenance_v03/) được kiểm thử với **22/22 tests** (12 cũ, 10 mới). Mock TypeTree/UnityPy synthetic nhằm chứng minh chính sách không tự nâng score khi thiếu key; **không phải bằng chứng đã chạy UnityPy v0.3 trên build thật**.
+- v0.3 `scan-assets` thu `metadata.entry_key` khi có cùng entry `entries[N].key/value` và class `ModStudioLab.LabStringTable`, cùng `reader_bindings` của `TableTextExample` nếu tìm thấy.
+- `provenance_links.json` tách `source_key_value_observed` và trạng thái `reader...pointer_unresolved`; vẫn không cho phép gán `serialized_prefab` chỉ từ `level0#path_id=35`.
+- Trên **JSON v0.2 thực** đã có, chạy lại baseline bằng code v0.3 vẫn cho **2 exact + 1 template + 2 unproven**. Cần quét lại trên PC để kiểm tra T002. Chưa chạy Qwen.
+- PowerShell evaluator mặc định chấm baseline, không tự ưu tiên file Qwen cũ; `-EvaluateTarget agent` là tùy chọn rõ ràng.
+
+[Tải bản vá](../archives/ModStudioAI_M03_Provenance_Fix_v03.zip) · [Báo cáo](../reports/m03/BAO_CAO_M03_V03.md).

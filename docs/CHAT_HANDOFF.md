@@ -60,3 +60,10 @@ Game đã chạy, Player.log có `sameAtlas=True` cho LiberationSans SDF / Liber
 ## Lưu trữ
 
 Repo này là **public**. Các file từ ChatGPT chưa được commit đầy đủ (đặc biệt các ZIP tool, ảnh screenshot, thư mục code giải nén) được nêu trong `ARTIFACT_INDEX.md`. Có công cụ `tools/Sync_Local_Artifacts.ps1` để người dùng tự đồng bộ nguồn local sau khi kiểm tra. Hồ sơ này không phải bản sao nguyên văn toàn bộ cuộc chat.
+
+
+## Cập nhật v0.3 — cuối ngày 2026-11-02
+
+Đã phát triển, test Python **22/22 đạt** và commit [Provenance Linker v0.3](../source/m03_provenance_v03/) cùng [ZIP cài đặt](../archives/ModStudioAI_M03_Provenance_Fix_v03.zip). Bản này đọc key/value serialized trên cùng `LabStringTable`, bảo toàn `TableTextExample.key` và PPtr dưới dạng metadata, phân loại `TMP_Text.m_text` là UI snapshot; không tự nhận prefab origin hoặc runtime binding. Cần **cài bản v0.3 trên máy Windows rồi scan-assets mới**. Trên JSON v0.2 đã được người dùng gửi, điểm vẫn **2 exact / 1 template / 2 unproven**; chỉ khi JSON v0.3 có paired key từ build mới có khả năng nâng T002 lên source+text proven. **Chưa có log thực tế v0.3.**
+
+Chạy PowerShell trong `D:\\ModStudioAI\\Milestone03`: `tests` → `scan-assets` → `provenance` → `baseline` → `evaluate`, theo README tại `source/m03_provenance_v03/README_VI.md`. Gửi `build_assets.json`, `provenance_links.json`, `evaluation_private.json` để tiếp tục.
