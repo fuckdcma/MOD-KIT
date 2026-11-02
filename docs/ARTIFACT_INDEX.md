@@ -46,3 +46,10 @@ Không coi `provenance_links.json` v0.3 là đã có trong kho vì người dùn
 - [QA report](../reports/m03/BAO_CAO_QWEN_FIRST_RUN_VI.md), [input hash manifest](../reports/m03/QA_INPUT_HASHES_OLLAMA_FIRST_20261102.json)
 - [User's aborted Agent trace](../evidence/m03/runs/20261102_ollama_first/qwen_agent.json), [0/5 incomplete evaluation (invalid as AI score)](../benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_first/evaluation_private_agent.json)
 - [Uploaded RAR original](../raw_uploads/Outputs_M03_Ollama_First_20261102.rar). Contains same baseline/build/provenance as M03 v0.4; no duplicated uploads needed.
+
+
+## M03 Qwen v0.5 successful run & v0.6 patch
+
+- [Qwen v0.5 run](../evidence/m03/runs/20261102_ollama_v05_completed/) including [qwen_agent.json](../evidence/m03/runs/20261102_ollama_v05_completed/qwen_agent.json); [evaluator output](../benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_v05_completed/evaluation_private_agent.json) and [RAR original](../raw_uploads/Outputs_M03_Ollama_v05_completed_20261102.rar).
+- [v0.6 source, installer, unit tests](../source/m03_evidence_guided_v06/), [patch ZIP](../archives/ModStudioAI_M03_EvidenceGuided_Fix_v06.zip), [QA review](../reports/m03/BAO_CAO_QWEN_V05_REVIEW_V06.md).
+- v0.6 outputs are not available until running on user's Windows Ollama. Public GitHub evaluation files are NOT a secret blind benchmark.

@@ -1,0 +1,67 @@
+{
+  "schema": "modstudio.m03.v0.4",
+  "mode": "agent",
+  "assembly_sha256": "ab9cf9e569815b6d1d1f49dbc455521bb426b6118b891c8c0a3052244d24a29e",
+  "completed": true,
+  "observations": [
+    {
+      "text": "Quest Completed",
+      "source_type": "hardcoded_managed",
+      "method": "ModStudioLab.HardcodedTextExample.Awake",
+      "source_ref": "0x70000221",
+      "evidence_type": "il_literal",
+      "evidence_value": "Quest Completed",
+      "confidence": "observed",
+      "note": "Direct IL literal found in build; no external asset provenance.",
+      "validation_status": "observed",
+      "validation_reason": "Exact ldstr literal in specified method",
+      "observation_id": "O0001"
+    },
+    {
+      "text": "[ModStudioLab] HardcodedTextExample: missing label.",
+      "source_type": "hardcoded_managed",
+      "method": "ModStudioLab.HardcodedTextExample.Awake",
+      "source_ref": "0x70000241",
+      "evidence_type": "il_literal",
+      "evidence_value": "[ModStudioLab] HardcodedTextExample: missing label.",
+      "confidence": "observed",
+      "note": "Direct IL literal found in build; no external asset provenance.",
+      "validation_status": "observed",
+      "validation_reason": "Exact ldstr literal in specified method",
+      "observation_id": "O0002"
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_literals",
+      "request": {
+        "action": "search_literals",
+        "query": "Quest"
+      },
+      "result_count": 1,
+      "tool_result_truncated": false
+    },
+    {
+      "step": 2,
+      "action": "inspect_method",
+      "request": {
+        "action": "inspect_method",
+        "method": "ModStudioLab.HardcodedTextExample.Awake"
+      },
+      "result_count": 1,
+      "tool_result_truncated": false
+    },
+    {
+      "step": 3,
+      "action": "finish",
+      "candidate_count": 2
+    }
+  ],
+  "limitations": [
+    "No source-project or Editor ground truth is used.",
+    "No code is injected; no hooking is performed.",
+    "Static evidence does not prove runtime behavior.",
+    "Unknown build asset text must not be guessed."
+  ]
+}

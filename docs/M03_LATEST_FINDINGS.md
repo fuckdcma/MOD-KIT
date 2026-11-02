@@ -84,3 +84,10 @@ Bản v0.4 đã được đóng gói: [Source](../source/m03_pointer_v04/), [ZIP
 - First agent run ended at step2 JSON parse (empty/non-JSON content), `completed=false`; no observations. [Trace](../evidence/m03/runs/20261102_ollama_first/qwen_agent.json). `evaluation_private_agent.json` 0/5 is invalid to interpret as performance.
 - [v0.5 native Ollama transport fix](../source/m03_ollama_fix_v05/) tested 51/51 offline; old v0.4 static baseline unchanged. New code switches to `/api/chat` `think:false` `format:'json'` when server port=11434. OpenAI endpoint still supported for localhost llama-server 9931.
 - **Live Windows Qwen retest pending**; no Qwen intelligence score yet. Tool baseline stays 3 exact + 1 dynamic template + 1 unknown (T001).
+
+
+## Latest Qwen local baseline — v0.5 complete, v0.6 code ready (2026-11-02)
+
+- [Completed v0.5 Qwen trace](../evidence/m03/runs/20261102_ollama_v05_completed/qwen_agent.json): 2 observations from one method; one correct `Quest Completed`, one diagnostic message; score **1 exact / 0 template / 4 unproven** from private evaluator (but public repo). Not a transport failure.
+- [v0.6 guided patch](../source/m03_evidence_guided_v06/) assembles concise REA and serialized asset evidence for Qwen with 4096 context, separates unknown TMP snapshots, marks diagnostic-looking IL `candidate_only`. Also retains autonomous mode for a separate measurement.
+- **66/66 local tests pass; live Windows/Ollama v0.6 pending.** Rule baseline remains 3 exact + 1 template + 1 unknown (T001 prefab origin).

@@ -70,3 +70,10 @@
 - First Qwen run: step1 search_literals(text) returned 2 results; step2 malformed/empty JSON => aborted. `completed=false`. Do not treat 0/5 eval as an AI accuracy number.
 - v0.5 native Ollama JSON mode + thinking off + retries + incomplete-eval guard + 4500-character tool-result bound: **51/51 local tests passed**, no live Windows test yet.
 - Next run v0.5 with existing REA + build_assets (do not rescan) and upload fresh qwen_agent/evaluation files.
+
+
+## Qwen Agent v0.5 completed; v0.6 guided built (2026-11-02)
+
+- v0.5 Ollama native: Windows 51/51 tests, `completed:true`, 3 steps, two IL observations; evaluator 1 exact (T003), 0 template, 4 not proven. Model prematurely ended tool exploration; diagnostic log literal wrongly considered observed by previous validator.
+- v0.6 guided evidence brief (REA + build assets), separated autonomous strategy, diagnostic `candidate_only`: 66/66 Python tests local (51 old +15 new). Replay old Agent 1/5 and static baseline 3 exact + 1 template unchanged. **No new live Qwen run yet**.
+- Need new `qwen_agent_guided.json` and `evaluation_private_guided.json`, followed by separate holdout to assess generalization.

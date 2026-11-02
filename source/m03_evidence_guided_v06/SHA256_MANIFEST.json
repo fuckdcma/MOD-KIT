@@ -1,0 +1,45 @@
+{
+  "schema": "modstudio.m03.v0.6.source_manifest",
+  "files": [
+    {
+      "path": "src/modstudio_m03.py",
+      "bytes": 56926,
+      "sha256": "bc04cd9c65360f95ac9bd930e741e61d938f6da06cc6567eab6f37e449b7b2e5"
+    },
+    {
+      "path": "Run_M03.ps1",
+      "bytes": 4329,
+      "sha256": "d34906f424e0501fa3ccd539c67b927158f101d6f1ea4dd28cd02008b0908cd0"
+    },
+    {
+      "path": "tests/test_guided_v06.py",
+      "bytes": 7985,
+      "sha256": "1705ee9c83c3a6490ad6c82c57a8b6a429e273b9772385b8018430e25998c00e"
+    },
+    {
+      "path": "Install_Fix_v06.ps1",
+      "bytes": 2619,
+      "sha256": "282074d878e71f1b3eff132acd496d2d5e0fd62c7328742d98e60d5a94b7f752"
+    },
+    {
+      "path": "README_VI.md",
+      "bytes": 5056,
+      "sha256": "621ee1f31f605272381fe4f23d48f2e6370a3a873d3262c4d44e5f998a028a04"
+    },
+    {
+      "path": "Reports/BAO_CAO_QWEN_V05_REVIEW_V06.md",
+      "bytes": 2611,
+      "sha256": "be33de6914f9e1a06911c0e5f4a96aa04b2024ee4b9bb65bf57346650abf906b"
+    },
+    {
+      "path": "Reports/TEST_RESULTS_V06.txt",
+      "bytes": 8480,
+      "sha256": "33894836409fd0eb38950bf49810bf6c02feb40af470fd80c5d23e91aaad22a1"
+    },
+    {
+      "path": "Reports/REPLAY_PUBLIC_SUMMARY.json",
+      "bytes": 844,
+      "sha256": "384bda878b0661bb7349634f7ce606a3d4a3ed6ae24ff9e66c30fc8afc4dfe07"
+    }
+  ]
+}

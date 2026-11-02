@@ -1,0 +1,27 @@
+{
+  "schema": "modstudio.m03.v0.6.replay",
+  "source": "v0.5 uploaded build and agent outputs (no live model calls)",
+  "qwen_old_completed": true,
+  "qwen_old_verification": [
+    {
+      "text": "Quest Completed",
+      "status": "observed",
+      "reason": "Exact method ldstr and TMP setter observed where applicable; IL stack-to-setter dataflow not proven"
+    },
+    {
+      "text": "[ModStudioLab] HardcodedTextExample: missing label.",
+      "status": "candidate_only",
+      "reason": "Diagnostic-looking literal; cannot attribute it to UI setter without IL dataflow"
+    }
+  ],
+  "qwen_old_score": {
+    "exact_text_and_source_proven": 1,
+    "format_template_and_source_proven": 0,
+    "unproven": 4
+  },
+  "rule_baseline": {
+    "exact_text_and_source_proven": 3,
+    "format_template_and_source_proven": 1,
+    "unproven": 1
+  }
+}

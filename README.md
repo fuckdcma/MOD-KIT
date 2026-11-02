@@ -68,3 +68,10 @@ Không thể tự động chép nguyên văn toàn bộ transcript ChatGPT sang 
 - GPU confirmed **100% GPU**, `qwen3.5:4b`, ~3.1 GB, context 4096 from user `ollama ps`.
 - [First-run Agent trace](evidence/m03/runs/20261102_ollama_first/qwen_agent.json): incomplete, first tool call OK, second step invalid JSON. **0/5 evaluation is NOT a valid AI performance measurement**, because `completed=false`.
 - [Fix v0.5 sources](source/m03_ollama_fix_v05/) · [ZIP](archives/ModStudioAI_M03_OllamaAgent_Fix_v05.zip) · [QA report](reports/m03/BAO_CAO_QWEN_FIRST_RUN_VI.md). **51/51 local tests passed**. Windows/Ollama live retest pending.
+
+
+## M03 Qwen v0.5 completed; evidence-guided v0.6 (2026-11-02)
+
+- [User's completed Qwen autonomous trace](evidence/m03/runs/20261102_ollama_v05_completed/qwen_agent.json) — `completed=true`, 3 steps, 2 observations; [evaluator](benchmarks/reference_DO_NOT_FEED_MODEL/m03/runs/20261102_ollama_v05_completed/evaluation_private_agent.json): **1 exact, 0 template, 4 unproven**. Extra observation is a diagnostic/error literal, not proven UI text. Tool baseline: **3 exact + 1 template**.
+- [v0.6 guided source](source/m03_evidence_guided_v06/) · [install ZIP](archives/ModStudioAI_M03_EvidenceGuided_Fix_v06.zip) · [QA report](reports/m03/BAO_CAO_QWEN_V05_REVIEW_V06.md).
+- v0.6 uses compact REA+build-only evidence brief and conservative `candidate_only` diagnostic status. **66/66 local Python tests passed; no Windows/Ollama v0.6 model run yet.** Guided and autonomous results must be measured separately.
