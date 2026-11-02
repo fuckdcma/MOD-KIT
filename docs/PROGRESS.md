@@ -114,3 +114,11 @@
 - Windows Unity 6000.3 scene/Play renders UI; BuildPipeline created UnityTextLabB.exe; Console reports five missing/no-valid-script warnings on M04 readers and table asset and several UI `...` placeholders.
 - Determined public generator v0.1 has ambiguous MonoBehaviour/ScriptableObject types in one source file. [Repair v0.2](../source/m04_script_binding_fix_v02/) separates types and rebuilds six reader refs/table asset from existing local spec, preserving seed/truth. Adds build guard; 9/9 Python structural tests passed; NO Windows Unity compile/test yet.
 - Block M04 score until a clean rebuild, 15/15 populated UI labels, no missing-script warnings, new sealed build hash. Treat exposed screenshot cases as integration smoke test rather than perfect holdout.
+
+
+## M04 Script Binding Fix v0.2 — Unity Editor Play visual smoke check (2026-11-02)
+
+- User applied repair and validation menus, then posted Game View. All **15 UI labels display populated strings**, no `...` placeholders; Console shows **0 errors, 2 warning messages** consistent with intentional diagnostic cases, **no visible missing-script warnings**.
+- This screenshot does **NOT** show the separate `[M04] Validation OK...` message because Console was cleared/Play logs only; formal validation status and a new Windows Mono rebuild still require explicit confirmation. **Do not run M04 AI scoring on prior invalid build.**
+- Required next: exit Play mode, clear Console, run `Tools > Mod Studio AI > M04 > Validate Scene Bindings`, confirm `Validation OK`; then rebuild Windows Mono, inspect current build warnings; only if clean, proceed `seal -> rea -> evidence` against new build.
+- Private screenshot exposes generated case text within chat; **do not upload screenshot or strings to public repo**. The current seed should be treated as integration smoke-test, not pristine secret holdout.
